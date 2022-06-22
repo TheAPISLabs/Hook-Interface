@@ -22,14 +22,13 @@ const SHeaderBox = styled.div`
 `;
 const SHeader = styled.div`
   margin-top: -1px;
-  width: 1920px;
+  width: 1210px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   //   max-width: 100%;
-  padding: 34px 156px;
   background: #000000;
   margin: 0 auto;
 `;
@@ -127,8 +126,8 @@ const SDisconnect = styled.div<IHeaderStyle>`
 const SConnectButton = styled(Button as any)`
   font-size: ${fonts.size.large};
   background: #7651ff;
-  width: 160px;
-  height: 64px;
+  width: 186px;
+  height: 54px;
   color: #fff;
   & > div {
     background: transparent !important;
@@ -232,7 +231,6 @@ const Header = ({ connected, killSession, connect, fetching }: IHeaderProps) => 
             </a>
           </SActiveChain>
           <HowAndFaq>
-            <About>How it works</About>
             <About>Discover</About>
             <About>Artwork</About>
             <About>About</About>
