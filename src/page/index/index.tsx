@@ -8,7 +8,7 @@ import passImg from "../../assets/PassCard.png";
 import planImg from "../../assets/pricing.png";
 // import { useWeb3React } from "@web3-react/core";
 const HookWrap = styled.div`
-  padding: 22px 350px 404px 350px;
+  padding: 93px 350px 404px 350px;
   background: #000000;
 `;
 const HookTitle = styled.div`
@@ -18,14 +18,14 @@ const HookTitle = styled.div`
   line-height: 90px;
   letter-spacing: -1.2px;
   color: #ffffff;
-  -webkit-animation: animal 1s forwards linear;
+  -webkit-animation: animal 0.5s forwards linear;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
 `;
 const HookIntroduce = styled.div`
   width: 1107px;
-  height: 216px;
+  height: 174px;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 20px;
@@ -33,7 +33,7 @@ const HookIntroduce = styled.div`
   text-align: center;
   color: #ffffff;
   margin-top: 30px;
-  -webkit-animation: animals 1s 1s forwards linear;
+  -webkit-animation: animals 0.5s 0.5s forwards linear;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
@@ -44,7 +44,7 @@ const ComAndPass = styled.div`
   width: 1210px;
   justify-content: space-between;
   height: 580px;
-  -webkit-animation: animal1 1s 2s forwards linear;
+  -webkit-animation: animal1 0.5s 1s forwards linear;
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
@@ -147,14 +147,14 @@ export default function Home({ connected, killSession, connect, fetching }: IHom
             setTransforms("rotate(0deg)");
           } else {
             console.log("down", e.nativeEvent);
-            if (e.nativeEvent.screenY > 300) {
-              setAnimations("animal 2.5s forwards linear");
+            if (e.nativeEvent.screenY > 200) {
+              setAnimations("animal 0.5s forwards linear");
             }
             if (e.nativeEvent.screenY > 200) {
-              setAnimationse(" animals 2.5s 2s forwards linear");
+              setAnimationse(" animals 0.5s 1s forwards linear");
             }
             if (e.nativeEvent.screenY > 200) {
-              setAnimationses(" animals 2.5s 4s forwards linear");
+              setAnimationses(" animals 0.5s 2s forwards linear");
             }
             setTransforms("rotate(10deg)");
           }

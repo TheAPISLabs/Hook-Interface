@@ -24,12 +24,8 @@
 }
 @-webkit-keyframes animal {
   0% {
-    transform: translateY(30px);
+    transform: translateY(5px);
     opacity: 0;
-  }
-  50% {
-    transform: translateY(20px);
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0px);
@@ -38,12 +34,8 @@
 }
 @-webkit-keyframes animals {
   0% {
-    transform: translateY(30px);
+    transform: translateY(5px);
     opacity: 0;
-  }
-  50% {
-    transform: translateY(20px);
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0px);
@@ -52,12 +44,8 @@
 }
 @-webkit-keyframes animal1 {
   0% {
-    transform: translateY(30px);
+    transform: translateY(5px);
     opacity: 0;
-  }
-  50% {
-    transform: translateY(20px);
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0px);
