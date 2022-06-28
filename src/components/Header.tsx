@@ -33,10 +33,11 @@ const SHeader = styled.div`
   margin: 0 auto;
 `;
 const HowAndFaq = styled.div`
-  width: 560px;
+  width: 520px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 165px;
 `;
 const About = styled.div`
   font-family: "Helvetica";

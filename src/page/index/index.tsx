@@ -8,11 +8,10 @@ import passImg from "../../assets/PassCard.png";
 import planImg from "../../assets/pricing.png";
 // import { useWeb3React } from "@web3-react/core";
 const HookWrap = styled.div`
-  padding: 93px 350px 404px 350px;
+  padding: 70px 350px 404px 350px;
   background: #000000;
 `;
 const HookTitle = styled.div`
-  font-family: "Poppins";
   font-weight: 900;
   font-size: 60px;
   line-height: 90px;
@@ -26,7 +25,7 @@ const HookTitle = styled.div`
 const HookIntroduce = styled.div`
   width: 1107px;
   height: 174px;
-  font-family: "Poppins";
+  font-family: Poppins;
   font-weight: 500;
   font-size: 20px;
   line-height: 43px;
@@ -53,7 +52,6 @@ const ComAndPass = styled.div`
 const Coming = styled.div`
   width: 407px;
   height: 90px;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
@@ -80,7 +78,7 @@ const RewardsBox = styled.div`
   margin-bottom: 145px;
 `;
 const LaunchingTitle = styled.div`
-  font-family: "Poppins";
+  font-family: Poppins;
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
@@ -95,7 +93,7 @@ const LaunchingTitle = styled.div`
   opacity: 0;
 `;
 const Launching = styled.div`
-  font-family: "Poppins";
+  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -110,7 +108,7 @@ const PricingBox = styled.div`
   height: 880px;
 `;
 const PricingTitle = styled.div`
-  font-family: "Poppins";
+  font-family: Poppins;
   font-style: normal;
   font-weight: 900;
   font-size: 36px;
