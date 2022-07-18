@@ -1,33 +1,71 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { createGlobalStyle } from "styled-components";
-import { Web3ReactProvider } from "@web3-react/core";
-import { ExternalProvider, JsonRpcFetchFunc, Web3Provider } from "@ethersproject/providers";
+import '@reach/dialog/styles.css'
+import 'inter-ui'
+import 'polyfills'
+import 'components/analytics'
 
-import App from "./App";
-import { globalStyle } from "./styles";
-const GlobalStyle = createGlobalStyle`
-  ${globalStyle}
-`;
+import { BlockNumberProvider } from 'lib/hooks/useBlockNumber'
+import { MulticallUpdater } from 'lib/state/multicall'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { HashRouter } from 'react-router-dom'
 
-declare global {
-  // tslint:disable-next-line
-  interface Window {
-    blockies: any;
-  }
+import Blocklist from './components/Blocklist'
+import Web3Provider from './components/Web3Provider'
+import { LanguageProvider } from './i18n'
+import App from './pages/App'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import store from './state'
+import ApplicationUpdater from './state/application/updater'
+import ListsUpdater from './state/lists/updater'
+import LogsUpdater from './state/logs/updater'
+import TransactionUpdater from './state/transactions/updater'
+import UserUpdater from './state/user/updater'
+import ThemeProvider, { ThemedGlobalStyle } from './theme'
+import RadialGradientByChainUpdater from './theme/RadialGradientByChainUpdater'
+
+if (!!window.ethereum) {
+  window.ethereum.autoRefreshOnNetworkChange = false
 }
-function getLibrary(provider: ExternalProvider | JsonRpcFetchFunc) {
-  const library = new Web3Provider(provider);
-  library.pollingInterval = 8000;
-  return library;
+
+function Updaters() {
+  return (
+    <>
+      <RadialGradientByChainUpdater />
+      <ListsUpdater />
+      <UserUpdater />
+      <ApplicationUpdater />
+      <TransactionUpdater />
+      <MulticallUpdater />
+      <LogsUpdater />
+    </>
+  )
 }
 
-ReactDOM.render(
-  <>
-    <GlobalStyle />
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <App />
-    </Web3ReactProvider>
-  </>,
-  document.getElementById("root"),
-);
+const container = document.getElementById('root') as HTMLElement
+
+createRoot(container).render(
+  <StrictMode>
+    <Provider store={store}>
+      <HashRouter>
+        <LanguageProvider>
+          <Web3Provider>
+            <Blocklist>
+              <BlockNumberProvider>
+                <Updaters />
+                <ThemeProvider>
+                  <ThemedGlobalStyle />
+                  <App />
+                </ThemeProvider>
+              </BlockNumberProvider>
+            </Blocklist>
+          </Web3Provider>
+        </LanguageProvider>
+      </HashRouter>
+    </Provider>
+  </StrictMode>
+)
+
+if (process.env.REACT_APP_SERVICE_WORKER !== 'false') {
+  serviceWorkerRegistration.register()
+}
