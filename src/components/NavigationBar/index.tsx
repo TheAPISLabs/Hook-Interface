@@ -24,7 +24,12 @@ export default function NavigationBar() {
       <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
       <Nav.Item itemKey={'union-management'} text={'MarketData'} icon={<div className="iconfont">&#xe615;</div>} />{' '}
       <Nav.Item itemKey={'unions'} text={'Trending'} icon={<div className="iconfont">&#xe605;</div>} />
-      <Nav.Footer collapseButton={true} />
+      <Nav.Footer
+        collapseButton={true}
+        collapseText={() => {
+          return 'Expand the sidebar'
+        }}
+      />
     </Nav>
   )
 }
