@@ -1,3 +1,6 @@
+import './App.css'
+
+import { Layout } from '@douyinfe/semi-ui'
 import { initializeAnalytics } from 'components/AmplitudeAnalytics'
 import Loader from 'components/Loader'
 import TopLevelModals from 'components/TopLevelModals'
@@ -9,13 +12,13 @@ import styled from 'styled-components/macro'
 
 import { useAnalyticsReporter } from '../components/analytics'
 import ErrorBoundary from '../components/ErrorBoundary'
-import Header from '../components/Header'
+import Headers from '../components/Header'
 import Polling from '../components/Header/Polling'
+import NavigationBar from '../components/NavigationBar'
 import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
-
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -48,7 +51,7 @@ const HeaderWrapper = styled.div`
 const Marginer = styled.div`
   margin-top: 5rem;
 `
-
+const { Header, Footer, Sider, Content } = Layout
 export default function App() {
   const history = useHistory()
   useAnalyticsReporter(useLocation())
@@ -67,24 +70,39 @@ export default function App() {
     <ErrorBoundary>
       <Route component={DarkModeQueryParamReader} />
       <Route component={ApeModeQueryParamReader} />
-      <AppWrapper>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
-        <BodyWrapper>
-          <Popups />
-          <Polling />
-          <TopLevelModals />
-          <Suspense fallback={<Loader />}>
-            <Switch>
-              <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-              <Route exact strict path="/swap" component={Swap} />
-              <Route component={RedirectPathToSwapOnly} />
-            </Switch>
-          </Suspense>
-          <Marginer />
-        </BodyWrapper>
-      </AppWrapper>
+      <Layout className="components-layout-demo">
+        <Sider>
+          <NavigationBar />
+        </Sider>
+        <Layout>
+          <Header>
+            {' '}
+            <Headers />
+          </Header>
+          <Content>
+            {' '}
+            <AppWrapper>
+              {/* <HeaderWrapper>
+       
+        </HeaderWrapper> */}
+              <BodyWrapper>
+                <Popups />
+                <Polling />
+                <TopLevelModals />
+                <Suspense fallback={<Loader />}>
+                  <Switch>
+                    <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
+                    <Route exact strict path="/swap" component={Swap} />
+                    <Route component={RedirectPathToSwapOnly} />
+                  </Switch>
+                </Suspense>
+                <Marginer />
+              </BodyWrapper>
+            </AppWrapper>
+          </Content>
+          <Footer>Footer</Footer>
+        </Layout>
+      </Layout>
     </ErrorBoundary>
   )
 }

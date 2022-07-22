@@ -1,0 +1,49 @@
+.semi-navigation {
+  height: 100vh !important;
+  background-color: #111C44 !important;
+  width: 287px;
+}
+.semi-navigation-collapsed {
+  height: 100vh !important;
+  width: 95px;
+}
+.NavBar .semi-navigation-list > .semi-navigation-item {
+  font-weight: 400;
+  font-size: 16px;
+  color: #A5AFCD;
+}
+.NavBar .semi-navigation-item-icon-info {
+  color: #A5AFCD;
+}
+.NavBar .semi-navigation-item-selected {
+  color: #fff;
+}
+.NavBar .semi-navigation-header-logo {
+  margin-left: 0;
+  margin-right: 8px;
+  display: inline-flex;
+  width: 162px;
+  height: 45px;
+  margin: auto;
+}
+.NavBar .semi-navigation-header-logo > .semi-icon,
+.NavBar .semi-navigation-header-logo > img {
+  width: 162px;
+  height: 45px;
+  object-fit: scale-down;
+}
+.NavBar .iconfont {
+  font-size: 18px;
+}
+.NavBar .semi-navigation-sub-wrap .semi-navigation-sub-title,
+.NavBar .semi-navigation-item {
+  padding: 8px 28px;
+  margin-bottom: 29px;
+}
+.semi-navigation-vertical .semi-navigation-header-collapsed {
+  padding-left: 19.5px;
+}
+.semi-navigation-vertical .semi-navigation-header {
+  padding-top: 50px ;
+  padding-bottom: 75px ;
+}

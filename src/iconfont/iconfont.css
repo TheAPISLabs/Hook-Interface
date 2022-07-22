@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3377203 */
+  src: url('iconfont.woff2?t=1658391125753') format('woff2'),
+       url('iconfont.woff?t=1658391125753') format('woff'),
+       url('iconfont.ttf?t=1658391125753') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel-1-copy:before {
+  content: "\e61a";
+}
+
+.icon-icon-:before {
+  content: "\e65a";
+}
+
+.icon-jiahao:before {
+  content: "\e726";
+}
+
+.icon-caidan:before {
+  content: "\e68c";
+}
+
+.icon-zuojiantou:before {
+  content: "\e6a7";
+}
+
+.icon-a-bianzubeifen32:before {
+  content: "\e60b";
+}
+
+.icon-shandian:before {
+  content: "\e60a";
+}
+
+.icon-a-bianzubeifen31:before {
+  content: "\e609";
+}
+
+.icon-Vector:before {
+  content: "\e608";
+}
+
+.icon-Vectorbeifen:before {
+  content: "\e607";
+}
+
+.icon-a-Gamebeifen5:before {
+  content: "\e606";
+}
+
+.icon-Categorybeifen:before {
+  content: "\e605";
+}
+
+.icon-a-Game1:before {
+  content: "\e604";
+}
+
+.icon-Game1:before {
+  content: "\e603";
+}
+
+.icon-Game:before {
+  content: "\e602";
+}
+
+.icon-Icon:before {
+  content: "\e601";
+}
+
+.icon-huaban:before {
+  content: "\e610";
+}
+
+.icon-a-1iconbeifen:before {
+  content: "\e611";
+}
+
+.icon-a-huabanbeifen3:before {
+  content: "\e612";
+}
+
+.icon-a-huabanbeifen2:before {
+  content: "\e613";
+}
+
+.icon-a-bianzubeifen3:before {
+  content: "\e614";
+}
+
+.icon-Iconbeifen:before {
+  content: "\e615";
+}
+
+.icon-Activitybeifen:before {
+  content: "\e616";
+}
+
+.icon-huabanbeifen:before {
+  content: "\e617";
+}
+
+.icon-Searchbeifen:before {
+  content: "\e618";
+}
+
+.icon-a-Logonewbeifen:before {
+  content: "\e619";
+}
+
