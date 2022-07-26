@@ -1,16 +1,36 @@
 .semi-navigation {
-  height: 100vh !important;
+  height: 100%;
   background-color: #111C44 !important;
   width: 287px;
 }
+@media screen and (max-width: 1440px) {
+  .semi-navigation {
+    height: 100%;
+    background-color: #111C44 !important;
+    width: 214px;
+  }
+}
 .semi-navigation-collapsed {
-  height: 100vh !important;
+  height: 100%;
   width: 95px;
+}
+@media screen and (max-width: 1440px) {
+  .semi-navigation-collapsed {
+    height: 100%;
+    width: 72px;
+  }
 }
 .NavBar .semi-navigation-list > .semi-navigation-item {
   font-weight: 400;
   font-size: 16px;
   color: #A5AFCD;
+}
+@media screen and (max-width: 1440px) {
+  .NavBar .semi-navigation-list > .semi-navigation-item {
+    font-weight: 400;
+    font-size: 12px;
+    color: #A5AFCD;
+  }
 }
 .NavBar .semi-navigation-item-icon-info {
   color: #A5AFCD;
@@ -26,19 +46,49 @@
   height: 45px;
   margin: auto;
 }
+@media screen and (max-width: 1440px) {
+  .NavBar .semi-navigation-header-logo {
+    margin-left: 0;
+    margin-right: 8px;
+    display: inline-flex;
+    width: 126px;
+    height: 34px;
+    margin: auto;
+  }
+}
 .NavBar .semi-navigation-header-logo > .semi-icon,
 .NavBar .semi-navigation-header-logo > img {
   width: 162px;
   height: 45px;
   object-fit: scale-down;
 }
+@media screen and (max-width: 1440px) {
+  .NavBar .semi-navigation-header-logo > .semi-icon,
+  .NavBar .semi-navigation-header-logo > img {
+    width: 126px;
+    height: 34px;
+    object-fit: scale-down;
+  }
+}
 .NavBar .iconfont {
   font-size: 18px;
+}
+@media screen and (max-width: 1440px) {
+  .NavBar .iconfont {
+    font-size: 15px;
+  }
 }
 .NavBar .semi-navigation-sub-wrap .semi-navigation-sub-title,
 .NavBar .semi-navigation-item {
   padding: 8px 28px;
   margin-bottom: 29px;
+}
+@media screen and (max-width: 1440px) {
+  .NavBar .semi-navigation-sub-wrap .semi-navigation-sub-title,
+  .NavBar .semi-navigation-item {
+    padding: 8px 20px;
+    margin-bottom: 11px;
+  }
 }
 .semi-navigation-vertical .semi-navigation-list > .semi-navigation-item-selected:not(.semi-navigation-item-disabled).semi-navigation-item-normal:hover .semi-navigation-item-icon:first-child {
   color: #fff;
@@ -59,8 +109,18 @@
 .semi-icon-default {
   font-size: 18px;
 }
+@media screen and (max-width: 1440px) {
+  .semi-icon-default {
+    font-size: 15px;
+  }
+}
 .semi-navigation-vertical .semi-navigation-footer {
   padding-left: 24px;
+}
+@media screen and (max-width: 1440px) {
+  .semi-navigation-vertical .semi-navigation-footer {
+    padding-left: 14px;
+  }
 }
 .semi-navigation-vertical .semi-navigation-footer .semi-navigation-collapse-btn > .semi-button {
   color: #fff;
@@ -68,7 +128,32 @@
 .semi-navigation-vertical .semi-navigation-header-collapsed {
   padding-left: 19.5px;
 }
+@media screen and (max-width: 1440px) {
+  .semi-navigation-vertical .semi-navigation-header-collapsed {
+    padding-left: 9.5px;
+  }
+}
 .semi-navigation-vertical .semi-navigation-header {
-  padding-top: 50px ;
-  padding-bottom: 75px ;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+@media screen and (max-width: 1440px) {
+  .semi-navigation-vertical .semi-navigation-header {
+    padding-top: 56px;
+    padding-bottom: 38px;
+  }
+}
+.semi-navigation-vertical .semi-navigation-footer .semi-navigation-collapse-btn .semi-button-content-right {
+  margin-left: 12px;
+  opacity: 1;
+  transition: opacity 0.2s cubic-bezier(0.5, -0.1, 1, 0.4);
+  font-size: 18px;
+}
+@media screen and (max-width: 1440px) {
+  .semi-navigation-vertical .semi-navigation-footer .semi-navigation-collapse-btn .semi-button-content-right {
+    margin-left: 12px;
+    opacity: 1;
+    transition: opacity 0.2s cubic-bezier(0.5, -0.1, 1, 0.4);
+    font-size: 12px;
+  }
 }

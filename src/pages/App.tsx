@@ -19,6 +19,7 @@ import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
+import MarketData from './MarketData'
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -27,10 +28,9 @@ const AppWrapper = styled.div`
 
 const BodyWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+
   width: 100%;
-  padding: 120px 16px 0px 16px;
-  align-items: center;
+  padding: 20px 20px 20px 30px;
   flex: 1;
   z-index: 1;
 
@@ -91,6 +91,7 @@ export default function App() {
                 <TopLevelModals />
                 <Suspense fallback={<Loader />}>
                   <Switch>
+                    <Route path="/marketdata" component={MarketData} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/swap" component={Swap} />
                     <Route component={RedirectPathToSwapOnly} />
