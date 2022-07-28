@@ -2,9 +2,14 @@
 import '../index.css'
 
 import { Col, Row, TabPane, Tabs } from '@douyinfe/semi-ui'
-import React, { useState } from 'react'
+import BigNumber from 'bignumber.js'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
-export default function MarketCapData() {
+
+export default function MarketCapData(props: any) {
+  const { value } = props
+  // const [MarketCapData, setMarketCapData] = useState(value)
+
   const [MarketCapData, setMarketCapData] = useState([
     {
       MarketName: 'NFT',
@@ -12,6 +17,7 @@ export default function MarketCapData() {
       children: [
         {
           MarkTitle: 'Market Cap',
+          valueNum: value,
         },
         {
           MarkTitle: 'Volume',
@@ -52,6 +58,9 @@ export default function MarketCapData() {
       ],
     },
   ])
+  useEffect(() => {
+    setMarketCapData(value)
+  }, [value])
   const MarketCap = styled.div`
     height: 126px;
     background-color: #111c44;
@@ -115,12 +124,12 @@ export default function MarketCapData() {
     }
   `
   const SineNum = styled.div`
-    color: rgba(1, 181, 116, 1);
+    // color: rgba(1, 181, 116, 1);
     font-size: 15.6px;
     font-weight: 700;
     text-align: left;
     @media screen and (max-width: 1440px) {
-      color: rgba(1, 181, 116, 1);
+      // color: rgba(1, 181, 116, 1);
       font-size: 12px;
       font-weight: 700;
       text-align: left;
@@ -129,32 +138,55 @@ export default function MarketCapData() {
   return (
     <div className="max">
       <Tabs type="button">
-        {MarketCapData.map((item, index) => {
-          return (
-            <TabPane tab={item.MarketName} itemKey={item.indexNum}>
-              <>
-                <MarkBox className="grid">
-                  <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
-                    {item?.children?.map((item, index) => {
-                      return (
-                        <Col xs={8} sm={8} md={8} lg={8} xl={8}>
-                          <MarketCap>
-                            <MarkTitle>{item.MarkTitle}</MarkTitle>
-                            <CapNum>$574.35</CapNum>
-                            <SineLast>
-                              <SineNum>+23%</SineNum>
-                              since last 24H
-                            </SineLast>
-                          </MarketCap>
-                        </Col>
-                      )
-                    })}
-                  </Row>
-                </MarkBox>
-              </>
-            </TabPane>
-          )
-        })}
+        {MarketCapData &&
+          MarketCapData.map(
+            (
+              item: {
+                MarketName: string
+                indexNum: string | undefined
+                children: any[]
+              },
+              index: any
+            ) => {
+              return (
+                <TabPane tab={item.MarketName} itemKey={item.indexNum}>
+                  <>
+                    <MarkBox className="grid">
+                      <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+                        {item?.children?.map(
+                          (
+                            item: {
+                              MarkTitle: string
+                              valueNum: number
+                              VolumRatios: number
+                            },
+                            index: any
+                          ) => {
+                            return (
+                              <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                <MarketCap className="MarketCapTab">
+                                  <MarkTitle>{item.MarkTitle}</MarkTitle>
+                                  <CapNum>{item.valueNum?.toLocaleString()}</CapNum>
+                                  <SineLast>
+                                    <SineNum className={item.VolumRatios > 0 ? 'SineNum' : 'RedSineNum'}>
+                                      {item?.VolumRatios && Number(item.VolumRatios.toFixed(2)) > 0
+                                        ? `+${new BigNumber(item.VolumRatios || 0).times(100).toFixed(2)}%`
+                                        : new BigNumber(item.VolumRatios || 0).times(100).toFixed(2) + '%'}
+                                    </SineNum>
+                                    since last 24H
+                                  </SineLast>
+                                </MarketCap>
+                              </Col>
+                            )
+                          }
+                        )}
+                      </Row>
+                    </MarkBox>
+                  </>
+                </TabPane>
+              )
+            }
+          )}
       </Tabs>
     </div>
   )

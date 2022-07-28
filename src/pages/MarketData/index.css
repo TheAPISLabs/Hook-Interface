@@ -180,7 +180,7 @@
 }
 @media screen and (max-width: 1440px) {
   .AddressesBox {
-    width: 250px;
+    width: 220px;
   }
 }
 .semi-progress-track {
@@ -275,36 +275,12 @@
     height: 15px;
   }
 }
-.DeFiTrending .renderName {
-  width: 224px;
-}
-@media screen and (max-width: 1440px) {
-  .DeFiTrending .renderName {
-    width: 167px;
-  }
-}
 .DeFiTrending .KeyWidth {
   width: 76px;
 }
 @media screen and (max-width: 1440px) {
   .DeFiTrending .KeyWidth {
     width: 58px;
-  }
-}
-.DeFiTrending .renderPrice {
-  width: 168px;
-}
-@media screen and (max-width: 1440px) {
-  .DeFiTrending .renderPrice {
-    width: 126px;
-  }
-}
-.DeFiTrending .hours {
-  width: 161px;
-}
-@media screen and (max-width: 1440px) {
-  .DeFiTrending .hours {
-    width: 120px;
   }
 }
 .NFTTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
@@ -378,14 +354,6 @@
     text-align: left;
   }
 }
-.NFTTrending .renderName {
-  width: 224px;
-}
-@media screen and (max-width: 1440px) {
-  .NFTTrending .renderName {
-    width: 167px;
-  }
-}
 .NFTTrending .KeyWidth {
   width: 76px;
 }
@@ -394,19 +362,9 @@
     width: 58px;
   }
 }
-.NFTTrending .renderPrice {
-  width: 168px;
+.MarketCapTab .SineNum {
+  color: #01B574;
 }
-@media screen and (max-width: 1440px) {
-  .NFTTrending .renderPrice {
-    width: 126px;
-  }
-}
-.NFTTrending .renderVolume {
-  width: 161px;
-}
-@media screen and (max-width: 1440px) {
-  .NFTTrending .renderVolume {
-    width: 120px;
-  }
+.MarketCapTab .RedSineNum {
+  color: #ac0909;
 }

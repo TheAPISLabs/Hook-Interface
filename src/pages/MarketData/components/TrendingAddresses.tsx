@@ -2,30 +2,20 @@ import '../index.css'
 
 import { Table } from '@douyinfe/semi-ui'
 import { Progress } from '@douyinfe/semi-ui'
-import React from 'react'
+import { getScreenWidth } from 'hook/untils'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
-const data = [
-  {
-    key: '1',
-    name: '0x2fa…9948',
-    Progresse: '80',
-  },
-  {
-    key: '2',
-    name: '0x2fa…9948',
-    Progresse: '10',
-  },
-  {
-    key: '3',
-    name: '0x2fa…9948',
-    Progresse: '10',
-  },
-]
 
-const renderName = (text, record, index) => {
-  return <div>{text}</div>
+const renderName = (text: string, record: any, index: any) => {
+  return (
+    <div>
+      {' '}
+      {text?.slice(0, 4)}...
+      {text?.slice(13, 17)}
+    </div>
+  )
 }
-const reProgresse = (text, record, index) => {
+const reProgresse = (text: any, record: any, index: any) => {
   return (
     <div className="ProgressBox">
       {text}
@@ -36,7 +26,31 @@ const reProgresse = (text, record, index) => {
   )
 }
 const { Column } = Table
-export default function TrendingAddresses() {
+export default function TrendingAddresses(props: any) {
+  const { value } = props
+  const [AddessData, setAddessData] = useState([
+    {
+      key: '1',
+      name: '0x2fa…9948',
+      Progresse: '80',
+    },
+    {
+      key: '2',
+      name: '0x2fa…9948',
+      Progresse: '10',
+    },
+    {
+      key: '3',
+      name: '0x2fa…9948',
+      Progresse: '10',
+    },
+  ])
+
+  const scroll = { y: getScreenWidth() > 1440 ? 210 : 150 }
+  useEffect(() => {
+    setAddessData(value)
+    console.log(value, 'value')
+  }, [value])
   const TrendingBox = styled.div`
     height: 345px;
     border-radius: 20px;
@@ -99,9 +113,9 @@ export default function TrendingAddresses() {
         <Title>Trending Addresses</Title>
         <Volume className="iconfont">&#xe600;</Volume>
       </TitleBox>
-      <Table dataSource={data} pagination={false}>
-        <Column title="Addresses" dataIndex="name" key="name" render={renderName} className="AddressesBox" />
-        <Column title="Search Times" dataIndex="Progresse" key="Progresse" render={reProgresse} />
+      <Table dataSource={AddessData} pagination={false} scroll={scroll}>
+        <Column title="Addresses" dataIndex="searchName" key="name" render={renderName} className="AddressesBox" />
+        <Column title="Search Times" dataIndex="heat" key="Progresse" render={reProgresse} />
       </Table>
     </TrendingBox>
   )

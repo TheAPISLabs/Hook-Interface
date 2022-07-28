@@ -1,66 +1,94 @@
 import '../index.css'
-import '../index.css'
 
-import { Avatar, Table } from '@douyinfe/semi-ui'
+import { Table } from '@douyinfe/semi-ui'
 import React from 'react'
 import styled from 'styled-components/macro'
-
-import imgHeader from '../../../assets/images/logo/flowers.png'
 const data = [
   {
     key: '1',
     name: 'Marketplace',
-    nameIconSrc: imgHeader,
     Price: '4,420,262',
-    hours: '231.18',
-    Volume: '4,420,262',
+    Volumes: '4,420,262',
+    Sales: '1.024',
   },
   {
     key: '2',
     name: 'Venus PRO',
-    nameIconSrc: imgHeader,
     Price: '4,420,262',
-    hours: '231.18',
-    Volume: '1.485',
+    Volumes: '1.485',
+    Sales: '1.024',
   },
   {
     key: '3',
     name: 'Uranus Kit',
-    nameIconSrc: imgHeader,
     Price: '4,420,262',
-    hours: '231.18',
-    Volume: '1.485',
+    Volumes: '1.485',
+    Sales: '1.024',
   },
 ]
 
-const renderName = (text, record, index) => {
-  return (
-    <div>
-      <Avatar size="small" shape="square" src={record.nameIconSrc} style={{ marginRight: 5 }}></Avatar>
-      {text}
-    </div>
-  )
+const renderName = (
+  text:
+    | string
+    | number
+    | boolean
+    | React.ReactFragment
+    | React.ReactPortal
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | null
+    | undefined,
+  record: any,
+  index: any
+) => {
+  return <div>{text}</div>
 }
-const renderPrice = (text, record, index) => {
+const renderPrice = (
+  text:
+    | string
+    | number
+    | boolean
+    | React.ReactFragment
+    | React.ReactPortal
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | null
+    | undefined,
+  record: any,
+  index: any
+) => {
   return <div>${text}</div>
 }
-const renderVolume = (text, record, index) => {
+const renderVolume = (
+  text:
+    | string
+    | number
+    | boolean
+    | React.ReactFragment
+    | React.ReactPortal
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | null
+    | undefined,
+  record: any,
+  index: any
+) => {
   return <div>${text}</div>
 }
-const renderHours = (text, record, index) => {
-  return (
-    <div
-      style={{
-        color: '#01B574',
-        fontWeight: 700,
-      }}
-    >
-      +{text}%
-    </div>
-  )
+const renderSales = (
+  text:
+    | string
+    | number
+    | boolean
+    | React.ReactFragment
+    | React.ReactPortal
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | null
+    | undefined,
+  record: any,
+  index: any
+) => {
+  return <div>${text}</div>
 }
 const { Column } = Table
-export default function DeFiTrending() {
+export default function TrendingAddresses() {
   const TrendingBox = styled.div`
     height: 345px;
     border-radius: 20px;
@@ -118,17 +146,17 @@ export default function DeFiTrending() {
     }
   `
   return (
-    <TrendingBox className="DeFiTrending">
+    <TrendingBox className="NFTTrending">
       <TitleBox>
-        <Title>DeFi Trending</Title>
+        <Title>NFT Trending</Title>
         <Volume className="iconfont">&#xe600;</Volume>
       </TitleBox>
       <Table dataSource={data} pagination={false}>
         <Column title="#" dataIndex="key" key="key" className="KeyWidth" />
-        <Column title="Name" dataIndex="name" key="name" render={renderName} className="renderName" />
-        <Column title="Price" dataIndex="Price" key="Price" render={renderPrice} className="renderPrice" />
-        <Column title="24h" dataIndex="hours" key="hours" render={renderHours} className="hours" />
-        <Column title="Volume" dataIndex="Volume" key="Volume" render={renderVolume} />
+        <Column title="Collection" dataIndex="name" key="name" render={renderName} className="renderName" />
+        <Column title="Floor Price" dataIndex="Price" key="Price" render={renderPrice} className="renderPrice" />
+        <Column title="Voulme" dataIndex="Volumes" key="Volumes" render={renderVolume} className="renderVolume" />
+        <Column title="Sales" dataIndex="Sales" key="Sales" render={renderSales} />
       </Table>
     </TrendingBox>
   )

@@ -17,6 +17,7 @@ import Polling from '../components/Header/Polling'
 import NavigationBar from '../components/NavigationBar'
 import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
+import Foot from './Footer'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
 import MarketData from './MarketData'
@@ -101,7 +102,9 @@ export default function App() {
               </BodyWrapper>
             </AppWrapper>
           </Content>
-          <Footer>Footer</Footer>
+          <Footer>
+            <Foot />
+          </Footer>
         </Layout>
       </Layout>
     </ErrorBoundary>
