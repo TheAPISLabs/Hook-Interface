@@ -1,114 +1,72 @@
 import '../index.css'
-import '../index.css'
 
 import { Avatar, Table } from '@douyinfe/semi-ui'
-import React from 'react'
+import BigNumber from 'bignumber.js'
+import { getScreenWidth } from 'hook/untils'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
 import imgHeader from '../../../assets/images/logo/flowers.png'
-const data = [
-  {
-    key: '1',
-    name: 'Marketplace',
-    nameIconSrc: imgHeader,
-    Price: '4,420,262',
-    hours: '231.18',
-    Volume: '4,420,262',
-  },
-  {
-    key: '2',
-    name: 'Venus PRO',
-    nameIconSrc: imgHeader,
-    Price: '4,420,262',
-    hours: '231.18',
-    Volume: '1.485',
-  },
-  {
-    key: '3',
-    name: 'Uranus Kit',
-    nameIconSrc: imgHeader,
-    Price: '4,420,262',
-    hours: '231.18',
-    Volume: '1.485',
-  },
-]
 
-const renderName = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined,
-  record: { nameIconSrc: string | undefined },
-  index: any
-) => {
+const renderName = (text: any, record: any, index: any) => {
   return (
     <div>
-      <Avatar size="small" shape="square" src={record.nameIconSrc} style={{ marginRight: 5 }}></Avatar>
-      {text}
+      <Avatar
+        size="small"
+        shape="square"
+        src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${text.id}.png`}
+        style={{ marginRight: 5 }}
+      />
+      {text.text}
     </div>
   )
 }
-const renderPrice = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return <div>${text}</div>
+const renderPrice = (text: any, record: any, index: any) => {
+  return <div>${new BigNumber(text).toFixed(4)}</div>
 }
-const renderVolume = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return <div>${text}</div>
+const renderVolume = (text: any, record: any, index: any) => {
+  return <div>${new BigNumber(text).toFixed(2)}</div>
 }
-const renderHours = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | React.ReactFragment
-    | React.ReactPortal
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return (
-    <div
-      style={{
-        color: '#01B574',
-        fontWeight: 700,
-      }}
-    >
-      +{text}%
-    </div>
-  )
+const renderHours = (text: any, record: any, index: any) => {
+  return <div className={text > 0 ? 'SineNum' : 'RedSineNum'}>{text?.toFixed(2)}%</div>
+}
+const renderIndex = (text: any, record: any, index: any) => {
+  return <div>{index + 1}</div>
 }
 const { Column } = Table
-export default function DeFiTrending() {
+export default function DeFiTrending(props: any) {
+  const { value } = props
+  const [DiFiGameData, setDiFiGameData] = useState([
+    {
+      key: '1',
+      name: 'Marketplace',
+      nameIconSrc: imgHeader,
+      Price: '4,420,262',
+      hours: '231.18',
+      Volume: '4,420,262',
+    },
+    {
+      key: '2',
+      name: 'Venus PRO',
+      nameIconSrc: imgHeader,
+      Price: '4,420,262',
+      hours: '231.18',
+      Volume: '1.485',
+    },
+    {
+      key: '3',
+      name: 'Uranus Kit',
+      nameIconSrc: imgHeader,
+      Price: '4,420,262',
+      hours: '231.18',
+      Volume: '1.485',
+    },
+  ])
+  const scroll = { y: getScreenWidth() > 1440 ? 210 : 150 }
+  useEffect(() => {
+    setDiFiGameData(value)
+    console.log(value, 'value')
+  }, [value])
   const TrendingBox = styled.div`
     height: 345px;
     border-radius: 20px;
@@ -168,15 +126,15 @@ export default function DeFiTrending() {
   return (
     <TrendingBox className="DeFiTrending">
       <TitleBox>
-        <Title>DeFi Trending</Title>
+        <Title>Gaming Token Trending</Title>
         <Volume className="iconfont">&#xe600;</Volume>
       </TitleBox>
-      <Table dataSource={data} pagination={false}>
-        <Column title="#" dataIndex="key" key="key" className="KeyWidth" />
+      <Table dataSource={DiFiGameData} pagination={false} scroll={scroll}>
+        <Column title="#" dataIndex="key" key="key" render={renderIndex} className="KeyWidth" />
         <Column title="Name" dataIndex="name" key="name" render={renderName} className="renderName" />
-        <Column title="Price" dataIndex="Price" key="Price" render={renderPrice} className="renderPrice" />
-        <Column title="24h" dataIndex="hours" key="hours" render={renderHours} className="hours" />
-        <Column title="Volume" dataIndex="Volume" key="Volume" render={renderVolume} />
+        <Column title="Price" dataIndex="price" key="Price" render={renderPrice} className="renderPrice" />
+        <Column title="24h" dataIndex="oneDay" key="hours" render={renderHours} className="hours" />
+        <Column title="Volume" dataIndex="volume" key="Volume" render={renderVolume} />
       </Table>
     </TrendingBox>
   )

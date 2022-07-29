@@ -4,7 +4,7 @@ import './index.css'
 import { Col, Row } from '@douyinfe/semi-ui'
 import React, { useEffect, useState } from 'react'
 
-import { getMarketCapAndVolume, getSearchRank } from '../../hook/hook'
+import { getCmcDatas, getMarketCapAndVolume, getSearchRank } from '../../hook/hook'
 import DeFi from './components/DeFi'
 import DeFiTrending from './components/DeFiTrending'
 import NFTTrending from './components/NFTTrending'
@@ -13,6 +13,8 @@ import Trending from './components/TrendingAddresses'
 export default function MarketData() {
   const [tabsData, setTabsData] = useState<any>()
   const [TrendAddData, setTrendAddData] = useState<any>()
+  const [defiRank, setDefiRank] = useState<any>()
+  const [nftRank, setNftRank] = useState<any>()
   const formataData = async () => {
     const nftVolumeDatas = (await getMarketCapAndVolume('NFT')).data.data
     const defiVolumDatas = (await getMarketCapAndVolume('DEFI')).data.data
@@ -75,14 +77,50 @@ export default function MarketData() {
   }
   const AddressesData = async () => {
     const TrendAddDatas = (await getSearchRank(10)).data.data
-    console.log(TrendAddDatas, 'ddddddddd')
-
     setTrendAddData(TrendAddDatas)
   }
-
+  const DeFiTrend = async () => {
+    const defiRanks = (await getCmcDatas(5, 1, 'metaverse')).data.data.Metaverse.data.cryptoCurrencyList
+    const defiRankData = defiRanks.map(
+      (item: {
+        symbol: any
+        quotes: {
+          volume24h: any
+          percentChange24h: any
+          price: any
+        }[]
+        id: any
+        percentChange24h: any
+        volume24h: any
+      }) => {
+        return {
+          name: { text: item.symbol, id: item.id },
+          oneDay: item.quotes[2].percentChange24h,
+          volume: item.quotes[2].volume24h,
+          price: item.quotes[2].price,
+          id: item.id,
+        }
+      }
+    )
+    setDefiRank(defiRankData)
+  }
+  const NftTrend = async () => {
+    const nftData = (await getCmcDatas(5, 1, 'NFT')).data.data.NFT.data.collections
+    const nftArr = nftData.map((item: { floorPriceUsd: any; volumeAT: any; marketCapUsd: any; name: any }) => {
+      return {
+        collection: item.name,
+        mkt: item.marketCapUsd,
+        volume: item.volumeAT,
+        price: item.floorPriceUsd,
+      }
+    })
+    setNftRank(nftArr)
+  }
   useEffect(() => {
     formataData()
     AddressesData()
+    DeFiTrend()
+    NftTrend()
   }, [])
 
   return (
@@ -102,10 +140,10 @@ export default function MarketData() {
         </Row>
         <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }} className="mt">
           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-            <DeFiTrending />
+            <DeFiTrending value={defiRank} />
           </Col>
           <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-            <NFTTrending />
+            <NFTTrending value={nftRank} />
           </Col>
         </Row>
       </div>

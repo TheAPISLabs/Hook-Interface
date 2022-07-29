@@ -1,94 +1,56 @@
 import '../index.css'
 
 import { Table } from '@douyinfe/semi-ui'
-import React from 'react'
+import BigNumber from 'bignumber.js'
+import { getScreenWidth } from 'hook/untils'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
-const data = [
-  {
-    key: '1',
-    name: 'Marketplace',
-    Price: '4,420,262',
-    Volumes: '4,420,262',
-    Sales: '1.024',
-  },
-  {
-    key: '2',
-    name: 'Venus PRO',
-    Price: '4,420,262',
-    Volumes: '1.485',
-    Sales: '1.024',
-  },
-  {
-    key: '3',
-    name: 'Uranus Kit',
-    Price: '4,420,262',
-    Volumes: '1.485',
-    Sales: '1.024',
-  },
-]
-
-const renderName = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactFragment
-    | React.ReactPortal
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
+const renderIndex = (text: any, record: any, index: any) => {
+  return <div>{index + 1}</div>
+}
+const renderName = (text: any, record: any, index: any) => {
   return <div>{text}</div>
 }
-const renderPrice = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactFragment
-    | React.ReactPortal
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return <div>${text}</div>
+const renderPrice = (text: any, record: any, index: any) => {
+  return <div>${new BigNumber(text).toFixed(2)}</div>
 }
-const renderVolume = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactFragment
-    | React.ReactPortal
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return <div>${text}</div>
+const renderVolume = (text: any, record: any, index: any) => {
+  return <div>${new BigNumber(text).toFixed(2)}</div>
 }
-const renderSales = (
-  text:
-    | string
-    | number
-    | boolean
-    | React.ReactFragment
-    | React.ReactPortal
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | null
-    | undefined,
-  record: any,
-  index: any
-) => {
-  return <div>${text}</div>
+const renderSales = (text: any, record: any, index: any) => {
+  return <div>${new BigNumber(text).toFixed(2)}</div>
 }
 const { Column } = Table
-export default function TrendingAddresses() {
+export default function TrendingAddresses(props: any) {
+  const { value } = props
+  const [NFTGameData, setNFTGameData] = useState([
+    {
+      key: '1',
+      name: 'Marketplace',
+      Price: '4,420,262',
+      Volumes: '4,420,262',
+      Sales: '1.024',
+    },
+    {
+      key: '2',
+      name: 'Venus PRO',
+      Price: '4,420,262',
+      Volumes: '1.485',
+      Sales: '1.024',
+    },
+    {
+      key: '3',
+      name: 'Uranus Kit',
+      Price: '4,420,262',
+      Volumes: '1.485',
+      Sales: '1.024',
+    },
+  ])
+  const scroll = { y: getScreenWidth() > 1440 ? 210 : 150 }
+  useEffect(() => {
+    setNFTGameData(value)
+    console.log(value, 'value')
+  }, [value])
   const TrendingBox = styled.div`
     height: 345px;
     border-radius: 20px;
@@ -148,15 +110,15 @@ export default function TrendingAddresses() {
   return (
     <TrendingBox className="NFTTrending">
       <TitleBox>
-        <Title>NFT Trending</Title>
+        <Title>NFT Gaming Trending</Title>
         <Volume className="iconfont">&#xe600;</Volume>
       </TitleBox>
-      <Table dataSource={data} pagination={false}>
-        <Column title="#" dataIndex="key" key="key" className="KeyWidth" />
-        <Column title="Collection" dataIndex="name" key="name" render={renderName} className="renderName" />
-        <Column title="Floor Price" dataIndex="Price" key="Price" render={renderPrice} className="renderPrice" />
-        <Column title="Voulme" dataIndex="Volumes" key="Volumes" render={renderVolume} className="renderVolume" />
-        <Column title="Sales" dataIndex="Sales" key="Sales" render={renderSales} />
+      <Table dataSource={NFTGameData} pagination={false} scroll={scroll}>
+        <Column title="#" dataIndex="key" key="key" render={renderIndex} className="KeyWidth" />
+        <Column title="Collection" dataIndex="collection" key="name" render={renderName} className="renderName" />
+        <Column title="Floor" dataIndex="price" key="Price" render={renderPrice} className="renderPrice" />
+        <Column title="mkt" dataIndex="mkt" key="Sales" render={renderSales} />
+        <Column title="Voulme" dataIndex="volume" key="Volumes" render={renderVolume} className="renderVolume" />
       </Table>
     </TrendingBox>
   )
