@@ -15,6 +15,7 @@ const FallbackWrapper = styled.div`
   width: 100%;
   align-items: center;
   z-index: 1;
+  min-height: 100vh;
 `
 
 const BodyWrapper = styled.div<{ margin?: string }>`

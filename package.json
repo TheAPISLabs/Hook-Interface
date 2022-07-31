@@ -189,6 +189,7 @@
     "redux-localstorage-simple": "^2.3.1",
     "setimmediate": "^1.0.5",
     "styled-components": "^5.3.5",
+    "swiper": "^8.3.2",
     "tiny-invariant": "^1.2.0",
     "ua-parser-js": "^0.7.28",
     "use-count-up": "^2.2.5",

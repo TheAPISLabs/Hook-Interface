@@ -18,6 +18,7 @@ import NavigationBar from '../components/NavigationBar'
 import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Foot from './Footer'
+import Game from './game'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
 import MarketData from './MarketData'
@@ -93,6 +94,7 @@ export default function App() {
                 <Suspense fallback={<Loader />}>
                   <Switch>
                     <Route path="/marketdata" component={MarketData} />
+                    <Route path="/game" component={Game} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/swap" component={Swap} />
                     <Route component={RedirectPathToSwapOnly} />
