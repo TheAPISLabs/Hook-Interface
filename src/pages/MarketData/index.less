@@ -189,7 +189,7 @@
   width: 305px;
 
   @media screen and (max-width: 1440px) {
-    width: 220px;
+    width: 222px;
   }
 }
 
@@ -450,4 +450,18 @@
   .RedSineNum {
     color: rgb(172, 9, 9);
   }
+}
+
+.SkeletonParagraph {
+  width: 1583px;
+
+  @media screen and (max-width: 1440px) {
+    width: 1184px;
+  }
+}
+
+.semi-skeleton-active .semi-skeleton-paragraph li {
+  background: linear-gradient(90deg, rgb(81 87 96 / 66%) 25%, var(--semi-color-fill-1) 44%, var(--semi-color-fill-0) 88%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
 }

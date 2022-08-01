@@ -19,6 +19,7 @@ import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
 import Foot from './Footer'
 import Game from './game'
+import GameList from './GameList'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
 import MarketData from './MarketData'
@@ -97,6 +98,7 @@ export default function App() {
                     <Route path="/game" component={Game} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/swap" component={Swap} />
+                    <Route exact strict path="/gamelist" component={GameList} />
                     <Route component={RedirectPathToSwapOnly} />
                   </Switch>
                 </Suspense>

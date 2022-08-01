@@ -23,7 +23,15 @@ export default function NavigationBar() {
       onCollapseChange={handleCollapse}
     >
       <Nav.Header logo={isClolapse ? <img src={Logo} /> : <img src={Logos} />} />
-      <Nav.Item indent={false} itemKey={'union'} text={'Games'} icon={<div className="iconfont">&#xe606;</div>} />
+      <Nav.Item
+        indent={false}
+        itemKey={'union'}
+        text={'Games'}
+        icon={<div className="iconfont">&#xe606;</div>}
+        onClick={() => {
+          history.push({ pathname: '/game' })
+        }}
+      />
       <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
       <Nav.Item
         itemKey={'union-management'}

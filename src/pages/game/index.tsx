@@ -853,6 +853,9 @@ export default function Track() {
               lineHeight: '71.76px',
               marginTop: '113.24px',
             }}
+            onClick={() => {
+              history.push({ pathname: '/gamelist' })
+            }}
           >
             Explore all games
           </Box>
