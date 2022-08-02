@@ -822,7 +822,7 @@ export default function Track() {
                         </Box>
                         <Box
                           onClick={() => {
-                            localStorage.setItem('game', JSON.stringify(item))
+                            localStorage.setItem('/game', JSON.stringify(item))
 
                             history.push({
                               pathname: '/admin/profile/gameDetail',
@@ -838,7 +838,7 @@ export default function Track() {
               })}
           </Swiper>
         </Box>
-        <Link href="#/admin/profile/allGame">
+        <Link href="#/gamelist">
           <Box
             className="VIewBtn"
             style={{
@@ -852,9 +852,6 @@ export default function Track() {
               textAlign: 'center',
               lineHeight: '71.76px',
               marginTop: '113.24px',
-            }}
-            onClick={() => {
-              history.push({ pathname: '/gamelist' })
             }}
           >
             Explore all games

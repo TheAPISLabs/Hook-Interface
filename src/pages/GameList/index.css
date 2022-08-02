@@ -1,0 +1,30 @@
+.rankText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.afterShandow {
+  position: relative;
+}
+.afterShandow::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background: linear-gradient(to top, #0c1538, rgba(12, 21, 56, 0));
+}
+.chatFrame {
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+.chatFrame:hover {
+  background: #3f8cffa3 !important;
+}
+.chatFrame:hover .chatFullText {
+  color: #fff !important;
+}

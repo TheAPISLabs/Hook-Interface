@@ -96,9 +96,10 @@ export default function App() {
                   <Switch>
                     <Route path="/marketdata" component={MarketData} />
                     <Route path="/game" component={Game} />
+                    <Route exact path="/gamelist" component={GameList} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/swap" component={Swap} />
-                    <Route exact strict path="/gamelist" component={GameList} />
+
                     <Route component={RedirectPathToSwapOnly} />
                   </Switch>
                 </Suspense>
