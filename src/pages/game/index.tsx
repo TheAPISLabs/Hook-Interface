@@ -822,10 +822,10 @@ export default function Track() {
                         </Box>
                         <Box
                           onClick={() => {
-                            localStorage.setItem('/game', JSON.stringify(item))
+                            localStorage.setItem('game', JSON.stringify(item))
 
                             history.push({
-                              pathname: '/admin/profile/gameDetail',
+                              pathname: '/gamedetails',
                             })
                           }}
                         >
