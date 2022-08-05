@@ -1,0 +1,32 @@
+.CoreNftImg,
+.defiItem {
+  margin-left: 10px;
+}
+.CoreNftImg:first-child,
+.defiItem:first-child {
+  margin-left: 0px;
+}
+.CoreNftImg:hover .CoreNftHover {
+  display: block;
+}
+.defiItem:hover .CoreNftHover {
+  display: block;
+}
+.CoreNftHover {
+  background: #0b1437;
+  border-radius: 2.736px 13.68px 13.68px 13.68px;
+  box-shadow: 1px 1px 6px #0202025e;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+  position: absolute;
+  display: none;
+  left: 30px;
+  margin-top: 10px;
+}

@@ -1377,6 +1377,16 @@
     scroll-into-view-if-needed "^2.2.24"
     utility-types "^3.10.0"
 
+"@emoji-mart/data@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@emoji-mart/data/-/data-1.0.3.tgz#a216a9a8cead038b756d2b882e1c9da0f7777e8a"
+  integrity sha512-SwxtfLOPiis9iXwWLjZHpUIUwYV/ghfBG6jpVP2HZgCt/dE8Q4r1RQg1Y5TyYBYKk8N5RKuLWJi1DNrEUIWj+A==
+
+"@emoji-mart/react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emoji-mart/react/-/react-1.0.0.tgz#485ffef5c34f0cde04ecb2820f150a483744346e"
+  integrity sha512-pRZ+e0uWJKVpUBcALevyjnp14HUFG/7p+XsUqNAkz322ruPzyDQ7/qUNONU0KGjQF71O4OIoFdvDPcxVpx1/xg==
+
 "@emotion/cache@^10.0.27":
   version "10.0.29"
   resolved "https://registry.npmjs.org/@emotion/cache/-/cache-10.0.29.tgz"
@@ -8659,6 +8669,11 @@ emittery@^0.7.1:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
   integrity sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ==
+
+emoji-mart@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/emoji-mart/-/emoji-mart-5.2.0.tgz#e6e30df81f75c6c5150f77a7c6714e05c3798e45"
+  integrity sha512-0ZTIbemlRjEV0ydF8lDqho2N5l4M7qdNFWGp+w3v32D+F6+DYsmuaZr/k4O79EBvqlDx6rx+B8jeaH2qa0ZNDQ==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
