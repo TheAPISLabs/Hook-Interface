@@ -7,11 +7,13 @@ export default function Footer() {
     width: 1540px;
     margin: auto;
     margin-bottom: 57px;
+    margin-top: 26px;
     @media screen and (max-width: 1440px) {
       display: flex;
       width: 1173px;
       margin: auto;
       margin-bottom: 26px;
+      margin-top: 16px;
     }
   `
   const Blockchains = styled.div`

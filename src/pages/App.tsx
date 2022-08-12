@@ -17,13 +17,17 @@ import Polling from '../components/Header/Polling'
 import NavigationBar from '../components/NavigationBar'
 import Popups from '../components/Popups'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
+import ErrorPage from './ErrorPage'
 import Foot from './Footer'
 import Game from './game'
 import GameDetails from './GameDetails'
 import GameList from './GameList'
 import Swap from './home'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
+import HookPass from './HookPass'
 import MarketData from './MarketData'
+import MoreGame from './MoreGame'
+import PortfolioTrack from './PortfolioTrack'
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -99,6 +103,10 @@ export default function App() {
                     <Route path="/game" component={Game} />
                     <Route exact path="/gamelist" component={GameList} />
                     <Route exact path="/gamedetails" component={GameDetails} />
+                    <Route exact path="/portfolioTrack" component={PortfolioTrack} />
+                    <Route exact path="/errorpage" component={ErrorPage} />
+                    <Route exact path="/moregame" component={MoreGame} />
+                    <Route exact path="/hookpass" component={HookPass} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/swap" component={Swap} />
 

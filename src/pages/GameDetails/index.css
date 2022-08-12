@@ -30,3 +30,27 @@
   left: 30px;
   margin-top: 10px;
 }
+.per-tips {
+  width: 56px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 6px;
+  background: #1b1d21;
+  margin-bottom: 16px;
+  position: absolute;
+  top: -44px;
+  right: -27px;
+}
+.per-tips::after {
+  position: absolute;
+  content: '';
+  left: 46%;
+  bottom: -4px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-top: 4px solid #1b1d21;
+  border-right: 4px solid transparent;
+  border-bottom: 0px solid transparent;
+}

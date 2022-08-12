@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo/HookLogo.png'
 import Logos from '../../assets/images/logo/HookLogoText.png'
+import PassCard from './component/PassCard'
 
 export default function NavigationBar() {
   const [isClolapse, setIsClolapse] = useState(false)
@@ -16,7 +17,7 @@ export default function NavigationBar() {
   return (
     <Nav
       className="NavBar"
-      bodyStyle={{ height: 320 }}
+      bodyStyle={{ height: 720 }}
       defaultOpenKeys={['user', 'union']}
       onSelect={(data) => console.log('trigger onSelect: ', data)}
       onClick={(data) => console.log('trigger onClick: ', data)}
@@ -33,15 +34,18 @@ export default function NavigationBar() {
         }}
       />
       <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
+      <Nav.Item itemKey={'union-management'} text={'MarketData'} icon={<div className="iconfont">&#xe615;</div>} />{' '}
       <Nav.Item
-        itemKey={'union-management'}
-        text={'MarketData'}
-        icon={<div className="iconfont">&#xe615;</div>}
+        itemKey={'unions'}
+        text={'Trending'}
+        icon={<div className="iconfont">&#xe605;</div>}
         onClick={() => {
-          history.push({ pathname: '/marketdata' })
+          history.push({ pathname: '/portfolioTrack' })
         }}
-      />{' '}
-      <Nav.Item itemKey={'unions'} text={'Trending'} icon={<div className="iconfont">&#xe605;</div>} />
+      />
+      <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
+        <PassCard />
+      </div>
       <Nav.Footer
         collapseButton={true}
         collapseText={() => {

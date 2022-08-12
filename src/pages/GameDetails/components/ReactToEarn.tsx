@@ -1,11 +1,10 @@
 import '../index.css'
 
-// import data from '@emoji-mart/data'
-// import Picker from '@emoji-mart/react'
+// index.d.ts
+// declare module 'emoji-mart
 import React from 'react'
 import styled from 'styled-components/macro'
 
-// import { BASE64 } from './base64'
 export default function Earn(props: any) {
   // const [gameIcons, SetGameIcons] = useState([])
   // const ref = useRef()
@@ -19,84 +18,64 @@ export default function Earn(props: any) {
     font-weight: 500;
     text-align: left;
   `
-  // const EarnsBox = styled.div`
+  // const EarnsBigBox = styled.div`
   //   height: 819px;
   // `
-  // const SolidBox = styled.div`
-  //   border: 1px solid rgba(225, 225, 225, 0.2);
-  //   border-radius: 16px;
-  //   height: 80px;
+  // const EarnBox = styled.div`
   //   display: flex;
   //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  //   padding: 16px 20px;
+  //   margin-bottom: 12px;
+  //   border-radius: 16px;
+  //   border: 1px solid rgba(225, 225, 225, 0.2);
   // `
-  // const Backers = styled.div`
-  //   width: 48px;
-  //   height: 48px;
-  //   border: 2px solid #0049c6;
-  //   border-radius: 50%;
+  // const EmojiBox = styled.div`
   //   position: relative;
   // `
-  // const BackersImg = styled.div`
-  //   height: 996px;
-  // `
-  // const BackersHover = styled.img`
-  //   width: 200px;
-  //   position: absolute;
-  //   max-width: none;
-  //   top: -20px;
-  //   left: -70px;
-  // `
-  // const TheUserBox = styled.div`
-  //   width: 240px;
-  //   height: 43px;
-  //   display: flex;
-  //   justify-content: space-between;
-  // `
-  // const TheUser = styled.div`
-  //   width: 197px;
-  //   display: flex;
-  //   justify-content: space-between;
-  // `
-  // const TheUsers = styled.img`
-  //   width: 32px;
-  //   height: 32px;
-  //   border-radius: 50%;
-  // `
-  // const TheAdd = styled.img`
-  //   width: 43px;
-  //   height: 43px;
-  //   border-radius: 50%;
-  // `
+
+  // const uId = localStorage.getItem('uId')
+  // const [gameIcons, SetGameIcons] = useState([])
+  // const { gpId } = props
+  // const [animate, setAnimate] = useState(false)
+  // const [idx, setIdx] = useState('')
+  // const toast = useToast()
+  // const [showEmojiModa, setShowEmojiModa] = useState(false)
+  // const [emoji, setEmojia] = useState('')
+  // function EmojiPicker(props) {
+  //   const ref = React.useRef()
+  //   React.useEffect(() => {
+  //     new Picker({ ...props, data, ref })
+  //   }, [])
+  //   return <div ref={ref} />
+  // }
+  // const checkEmoji = (emoji, event) => {
+  //   setEmojia(emoji.native)
+  // }
+  // const ref = useRef()
   // useEffect(() => {
   //   new Picker({ data, ref })
-  //   // getGameIconByGpId(gpId, uId).then((res) => {
-  //   //   SetGameIcons(res.data.data.records)
-  //   // })
+  //   getGameIconByGpId(gpId, uId).then((res) => {
+  //     SetGameIcons(res.data.data.records)
+  //   })
   // }, [])
   return (
     <Earns>
       <EarnTitle>React to earn</EarnTitle>
-      {/* <EarnsBox>
+      {/* <EarnsBigBox>
         {gameIcons.map((item: any, index: any) => {
           return (
-            <SolidBox key={index}>
-              <Backers>
-                <BackersImg data-idx={`${index}`}> {BASE64.decrypt(item.icon)}</BackersImg>
-                <BackersHover src={''}></BackersHover>
-              </Backers>
-              <TheUserBox>
-                <TheUser>
-                  {item.userIcons &&
-                    item.userIcons.map((item: any, index: any) => {
-                      return <TheUsers key={index}></TheUsers>
-                    })}
-                </TheUser>
-                <TheAdd></TheAdd>
-              </TheUserBox>
-            </SolidBox>
+            <EarnBox key={index}>
+              <EmojiBox>
+                <EmojiBoxBorder>
+  
+</EmojiBoxBorder>
+              </EmojiBox>
+            </EarnBox>
           )
         })}
-      </EarnsBox> */}
+      </EarnsBigBox> */}
     </Earns>
   )
 }
