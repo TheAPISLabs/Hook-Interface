@@ -70,11 +70,12 @@ export default function Vote(props: any) {
   `
   const PriceValue = styled.div`
     color: rgba(255, 255, 255, 1);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     font-family: 'Poppins';
     text-align: left;
-    margin-top: 10px;
+    margin-top: 13px;
+    margin-bottom: 8px;
   `
   const VolumeBox = styled.div`
     width: 40%;
@@ -91,7 +92,6 @@ export default function Vote(props: any) {
     font-weight: 700;
     font-family: 'Poppins';
     text-align: left;
-    margin-left: 18px;
   `
   const VotedBox = styled.div`
     width: 48%;
@@ -236,10 +236,8 @@ export default function Vote(props: any) {
             <PriceImage src={volumeIcon}></PriceImage>
             <PriceText>Volume</PriceText>
           </VolumeFlex>
-          <PriceValue>
-            Ξ {toThousands(new BigNumber(game.top[0].volume).toFixed(2))}
-            <VolumeText>${toThousands((game.top[0].volume / 1000).toFixed(2))}K</VolumeText>
-          </PriceValue>
+          <PriceValue>Ξ {toThousands(new BigNumber(game.top[0].volume).toFixed(2))}</PriceValue>
+          <VolumeText>${toThousands((game.top[0].volume / 1000).toFixed(2))}K</VolumeText>
         </VolumeBox>
         <SupplyBox>
           <VolumeFlex>

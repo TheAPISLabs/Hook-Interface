@@ -34,7 +34,14 @@ export default function NavigationBar() {
         }}
       />
       <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
-      <Nav.Item itemKey={'union-management'} text={'MarketData'} icon={<div className="iconfont">&#xe615;</div>} />{' '}
+      <Nav.Item
+        itemKey={'union-management'}
+        text={'MarketData'}
+        icon={<div className="iconfont">&#xe615;</div>}
+        onClick={() => {
+          history.push({ pathname: '/marketdata' })
+        }}
+      />{' '}
       <Nav.Item
         itemKey={'unions'}
         text={'Trending'}

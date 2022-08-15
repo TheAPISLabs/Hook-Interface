@@ -110,8 +110,8 @@ export default function HookPass() {
     width: 330px;
     height: 208px;
     @media screen and (max-width: 1440px) {
-      width: 330px;
-      height: 208px;
+      width: 230px;
+      height: 144px;
     }
   `
   const FreeBox = styled.div`
@@ -124,8 +124,8 @@ export default function HookPass() {
     width: 765px;
     height: 747px;
     @media screen and (max-width: 1440px) {
-      width: 765px;
-      height: 747px;
+      width: 574px;
+      height: 562px;
     }
   `
   return (

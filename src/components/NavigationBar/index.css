@@ -164,6 +164,12 @@
   top: 260px;
   position: relative;
 }
+@media screen and (max-width: 1440px) {
+  .PassCardShow {
+    width: 172px;
+    margin: auto;
+  }
+}
 .PassCardHid {
   display: none;
 }

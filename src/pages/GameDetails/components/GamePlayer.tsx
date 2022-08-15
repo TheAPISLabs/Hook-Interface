@@ -14,7 +14,7 @@ export default function GamePlayers(props: any) {
     setCoreData(game.nfts)
     setDefiData(game.defis)
     setBackersData(game.backers)
-  }, [])
+  }, [game.backers, game.defis, game.nfts])
   const GamePlayersBox = styled.div`
     height: 996px;
   `
@@ -217,14 +217,14 @@ export default function GamePlayers(props: any) {
           <CoreAsset>
             <CoreAssetText>Backers</CoreAssetText>
             <BackersBox>
-              {BackersData.map((item: any, index: any) => {
+              {/* {BackersData.map((item: any, index: any) => {
                 return (
                   <Backers key={index} className="defiItem">
-                    <BackersImg src={item.imgUrl} />
+                    <BackersImg src={item.backericon} />
                     <BackersHover className="CoreNftHover">{item.introductionCurrency}</BackersHover>
                   </Backers>
                 )
-              })}
+              })} */}
             </BackersBox>
           </CoreAsset>
         </CardBox>
