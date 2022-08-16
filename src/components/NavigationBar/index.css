@@ -114,12 +114,25 @@
     font-size: 15px;
   }
 }
+@media screen and (max-width: 500px) {
+  .semi-icon-default {
+    font-size: 30px;
+  }
+}
 .semi-navigation-vertical .semi-navigation-footer {
   padding-left: 24px;
 }
 @media screen and (max-width: 1440px) {
   .semi-navigation-vertical .semi-navigation-footer {
     padding-left: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .semi-navigation-vertical .semi-navigation-footer {
+    padding-left: 14px;
+    position: absolute;
+    left: 0px;
+    z-index: 999;
   }
 }
 .semi-navigation-vertical .semi-navigation-footer .semi-navigation-collapse-btn > .semi-button {
@@ -160,16 +173,35 @@
 .PassCardShow {
   width: 228px;
   height: 190px;
-  margin: auto;
-  top: 260px;
-  position: relative;
+  top: 651px;
+  left: 29px;
+  position: fixed;
+  animation: mymove 1s;
+  animation-iteration-count: 1;
+}
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1440px) {
   .PassCardShow {
     width: 172px;
-    margin: auto;
+    top: 651px;
+    left: 21px;
+    position: fixed;
   }
 }
 .PassCardHid {
   display: none;
+}
+@media screen and (max-width: 500px) {
+  .semi-navigation-collapsed {
+    height: 100%;
+    width: 0px;
+    padding: 0;
+  }
 }

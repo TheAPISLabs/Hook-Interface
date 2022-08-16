@@ -5,6 +5,7 @@ import styled from 'styled-components/macro'
 
 import { getTwitterList } from '../../../hook/hook'
 import { dateDiff } from '../../../hook/untils'
+import { isMobile } from '../../GameDetails/components/until.js'
 
 export default function Twitter() {
   const [TwitterData, setTwitterData] = useState<any>()
@@ -15,6 +16,10 @@ export default function Twitter() {
       overflow: hidden;
       height: 756px;
     }
+  `
+  const MobileTwitterBigBox = styled.div`
+    overflow: hidden;
+    height: 907px;
   `
   const TwitterTitle = styled.div`
     color: rgba(255, 255, 255, 1);
@@ -30,6 +35,13 @@ export default function Twitter() {
       margin-bottom: 16px;
     }
   `
+  const MobileTwitterTitle = styled.div`
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 52px;
+  `
   const TwitterBox = styled.div`
     max-height: 911px;
     margin-left: 0px;
@@ -41,6 +53,12 @@ export default function Twitter() {
       padding-right: 0px;
       overflow-y: auto;
     }
+  `
+  const MobileTwitterBox = styled.div`
+    max-height: 882px;
+    margin-left: 0px;
+    padding-right: 0px;
+    overflow-y: auto;
   `
   const TwitterDatas = styled.div`
     display: flex;
@@ -163,34 +181,68 @@ export default function Twitter() {
     })
   }, [])
   return (
-    <TwitterBigBox className="afterShandow">
-      <TwitterTitle className="font-Inter-SemiBold">Twitter</TwitterTitle>
+    <>
+      {isMobile() ? (
+        <MobileTwitterBigBox className="afterShandow">
+          <MobileTwitterTitle className="font-Inter-SemiBold">Twitter</MobileTwitterTitle>
 
-      <TwitterBox>
-        {TwitterData &&
-          TwitterData.map((item: any, index: any) => {
-            return (
-              <TwitterDatas key={index}>
-                <TwitterImageBox>
-                  <TwitterImage src={item.profileImageUrlHttps} />
-                </TwitterImageBox>
-                <TwitterTextBox>
-                  <TwitterNameBox>
-                    <TwitterName>{item.name}</TwitterName>
-                    <TwitterScreenName>@{item.screenName}</TwitterScreenName>
-                    <TwitterTime>{dateDiff(item.createdAt, null)}</TwitterTime>
-                  </TwitterNameBox>
-                  <TwitterChatBox className="chatFrame">
-                    <TwitterChat className="chatFullText">
-                      {item.fullText}
-                      {item?.mediaUrl ? <TwitterChatImg src={item.mediaUrl} alt="" /> : ''}
-                    </TwitterChat>
-                  </TwitterChatBox>
-                </TwitterTextBox>
-              </TwitterDatas>
-            )
-          })}
-      </TwitterBox>
-    </TwitterBigBox>
+          <MobileTwitterBox>
+            {TwitterData &&
+              TwitterData.map((item: any, index: any) => {
+                return (
+                  <TwitterDatas key={index}>
+                    <TwitterImageBox>
+                      <TwitterImage src={item.profileImageUrlHttps} />
+                    </TwitterImageBox>
+                    <TwitterTextBox>
+                      <TwitterNameBox>
+                        <TwitterName>{item.name}</TwitterName>
+                        <TwitterScreenName>@{item.screenName}</TwitterScreenName>
+                        <TwitterTime>{dateDiff(item.createdAt, null)}</TwitterTime>
+                      </TwitterNameBox>
+                      <TwitterChatBox className="chatFrame">
+                        <TwitterChat className="chatFullText">
+                          {item.fullText}
+                          {item?.mediaUrl ? <TwitterChatImg src={item.mediaUrl} alt="" /> : ''}
+                        </TwitterChat>
+                      </TwitterChatBox>
+                    </TwitterTextBox>
+                  </TwitterDatas>
+                )
+              })}
+          </MobileTwitterBox>
+        </MobileTwitterBigBox>
+      ) : (
+        <TwitterBigBox className="afterShandow">
+          <TwitterTitle className="font-Inter-SemiBold">Twitter</TwitterTitle>
+
+          <TwitterBox>
+            {TwitterData &&
+              TwitterData.map((item: any, index: any) => {
+                return (
+                  <TwitterDatas key={index}>
+                    <TwitterImageBox>
+                      <TwitterImage src={item.profileImageUrlHttps} />
+                    </TwitterImageBox>
+                    <TwitterTextBox>
+                      <TwitterNameBox>
+                        <TwitterName>{item.name}</TwitterName>
+                        <TwitterScreenName>@{item.screenName}</TwitterScreenName>
+                        <TwitterTime>{dateDiff(item.createdAt, null)}</TwitterTime>
+                      </TwitterNameBox>
+                      <TwitterChatBox className="chatFrame">
+                        <TwitterChat className="chatFullText">
+                          {item.fullText}
+                          {item?.mediaUrl ? <TwitterChatImg src={item.mediaUrl} alt="" /> : ''}
+                        </TwitterChat>
+                      </TwitterChatBox>
+                    </TwitterTextBox>
+                  </TwitterDatas>
+                )
+              })}
+          </TwitterBox>
+        </TwitterBigBox>
+      )}
+    </>
   )
 }

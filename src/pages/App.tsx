@@ -44,6 +44,9 @@ const BodyWrapper = styled.div`
 
   ${({ theme }) => theme.mediaWidth.upToSmall`
     padding: 4rem 8px 16px 8px;
+    @media screen and (max-width: 720px) {
+      padding: 4rem 24px 16px 24px;
+    }
   `};
 `
 
