@@ -2,6 +2,7 @@ import './index.css'
 import 'swiper/swiper.min.css'
 import 'swiper/modules/pagination/pagination.min.css'
 
+import { IconPlusCircle } from '@douyinfe/semi-icons'
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
@@ -36,6 +37,52 @@ const Link = styled.a`
   transition: transform 0.3s ease;
 
   position: relative;
+  text-decoration: none;
+`
+const TypeBox = styled.div`
+  width: 97px;
+  height: 26px;
+  border-radius: 8.64px;
+  opacity: 0.5;
+  background: rgba(108, 93, 211, 1);
+  color: rgba(95, 117, 238, 1);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 26px;
+`
+const ViewBox = styled.div`
+  width: 129px;
+  height: 52px;
+  border-radius: 17.28px;
+  opacity: 1;
+  background: rgba(117, 81, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 52px;
+  margin-right: 16px;
+  cursor: pointer;
+`
+const AddBox = styled.div`
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  opacity: 1;
+  background: rgba(228, 228, 228, 0.25);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+`
+const BotBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
 `
 export default function Track() {
   // Chakra Color Mode
@@ -713,26 +760,6 @@ export default function Track() {
           }}
         >
           <Box className="Gaming">GAMES and Beyond</Box>
-          <Box
-            className="CreateBtn"
-            style={{
-              width: '114px',
-              height: '48px',
-              borderRadius: '14px',
-              background: 'rgba(207,200,255,1)',
-              color: 'rgba(95,117,238,1)',
-              fontSize: '13px',
-              textAlign: 'center',
-
-              // marginBottom: '48px',
-              position: 'absolute',
-              right: '10px',
-            }}
-          >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGpIutxIjaaC3i_wnli1B3_wY5rU91o7UpNqpeISbz2AHnrg/viewform">
-              Create Project
-            </a>
-          </Box>
         </Box>
 
         <Box className=" challenge">From GAME to GAMES and beyond.</Box>
@@ -784,7 +811,7 @@ export default function Track() {
                       </Box>
 
                       <Box style={{ padding: '35px', boxSizing: 'border-box' }}>
-                        <Box>{item.genres}</Box>
+                        <TypeBox>{item.genres}111</TypeBox>
                         <Box
                           style={{
                             color: '#FFFFFF',
@@ -820,17 +847,28 @@ export default function Track() {
                             {formatNumber(item.twitterFollower)} followers
                           </Box>
                         </Box>
-                        <Box
-                          onClick={() => {
-                            localStorage.setItem('game', JSON.stringify(item))
+                        <BotBox>
+                          <ViewBox
+                            onClick={() => {
+                              localStorage.setItem('game', JSON.stringify(item))
 
-                            history.push({
-                              pathname: '/gamedetails',
-                            })
-                          }}
-                        >
-                          View
-                        </Box>
+                              history.push({
+                                pathname: '/gamedetails',
+                              })
+                            }}
+                          >
+                            Follow
+                          </ViewBox>
+                          <AddBox
+                            onClick={() => {
+                              window.open(
+                                'https://docs.google.com/forms/d/e/1FAIpQLSdGpIutxIjaaC3i_wnli1B3_wY5rU91o7UpNqpeISbz2AHnrg/viewform'
+                              )
+                            }}
+                          >
+                            <IconPlusCircle size="extra-large" />
+                          </AddBox>
+                        </BotBox>
                       </Box>
                     </Box>
                   </SwiperSlide>
