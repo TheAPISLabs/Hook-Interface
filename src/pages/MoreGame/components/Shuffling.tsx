@@ -1,6 +1,6 @@
 // import './index.css'
 
-import { Carousel, Space, Typography } from '@douyinfe/semi-ui'
+import { Carousel, Typography } from '@douyinfe/semi-ui'
 import React from 'react'
 import styled from 'styled-components/macro'
 export default function Shuffling() {
@@ -59,7 +59,7 @@ export default function Shuffling() {
         {imgList.map((src, index) => {
           return (
             <div key={index} style={{ backgroundSize: 'cover', backgroundImage: `url(${src})` }}>
-              <Space vertical align="start" spacing="medium" style={titleStyle}>
+              {/* <Space vertical align="start" spacing="medium" style={titleStyle}>
                 {renderLogo()}
                 <Title heading={2} style={colorStyle}>
                   {textList[index][0]}
@@ -68,7 +68,7 @@ export default function Shuffling() {
                   <Paragraph style={colorStyle}>{textList[index][1]}</Paragraph>
                   <Paragraph style={colorStyle}>{textList[index][2]}</Paragraph>
                 </Space>
-              </Space>
+              </Space> */}
             </div>
           )
         })}

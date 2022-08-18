@@ -19,6 +19,14 @@ export default function BuyAxie(props: any) {
     text-align: left;
     line-height: 32px;
     margin: 55px 0 30px 0;
+    @media screen and (max-width: 1440px) {
+      color: rgba(255, 255, 255, 1);
+      font-size: 17px;
+      font-weight: 500;
+      text-align: left;
+      line-height: 23px;
+      margin: 20px 0 30px 0;
+    }
   `
   const ActiviesCard = styled.div`
     width: 100%;
@@ -35,17 +43,38 @@ export default function BuyAxie(props: any) {
     margin-bottom: 12px;
     border-radius: 16px;
     height: 68px;
-    padding-right: 4px;
-    padding-left: 4px;
+    padding-right: 25px;
+    padding-left: 25px;
+    @media screen and (max-width: 1440px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(228, 228, 228, 0.1);
+      width: 100%;
+      margin-bottom: 8px;
+      border-radius: 11px;
+      height: 60px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   `
   const NFTImage = styled.img`
     width: 50px;
     height: 50px;
+    @media screen and (max-width: 1440px) {
+      width: 40px;
+      height: 40px;
+    }
   `
   const NumberFlex = styled.div`
     margin-left: 8px;
     justify-content: center;
     display: flex;
+    @media screen and (max-width: 1440px) {
+      margin-left: 4px;
+      justify-content: center;
+      display: flex;
+    }
   `
   const AxieFlex = styled.div`
     width: 77px;
@@ -59,10 +88,27 @@ export default function BuyAxie(props: any) {
     border-radius: 3px;
     justify-content: center;
     margin: 16px 0px 10px;
+    @media screen and (max-width: 1440px) {
+      width: 77px;
+      height: 13px;
+      padding: 0px 4px;
+      background: rgb(251, 154, 4);
+      line-height: 13px;
+      color: white;
+      display: flex;
+      align-items: center;
+      border-radius: 2px;
+      justify-content: center;
+      margin: 16px 0px 10px;
+    }
   `
   const AxieIconImage = styled.img`
     width: 10px;
     height: 12px;
+    @media screen and (max-width: 1440px) {
+      width: 8px;
+      height: 10px;
+    }
   `
   const NumbersText = styled.span`
     font-size: 10px;
@@ -128,7 +174,7 @@ export default function BuyAxie(props: any) {
     <div>
       <TitleText>Trading Activies</TitleText>
       <ActiviesCard>
-        {normalDate.length > 0 &&
+        {normalDate &&
           normalDate.map((item: any, index: any) => (
             <ActiviesFlex key={index}>
               <HeaderImgFlex>

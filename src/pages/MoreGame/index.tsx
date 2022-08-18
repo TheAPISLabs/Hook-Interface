@@ -5,7 +5,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import SandBox from './components/SandBox'
-import Shuffling from './components/Shuffling'
+// import Shuffling from './components/Shuffling'
 export default function MoreGame() {
   const MoreGameBox = styled.div`
     width: 100%;
@@ -14,7 +14,7 @@ export default function MoreGame() {
     <MoreGameBox>
       <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-          <Shuffling />
+          {/* <Shuffling /> */}
         </Col>
         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
           <SandBox />

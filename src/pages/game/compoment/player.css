@@ -70,4 +70,14 @@
   height: 492px;
   width: 100%;
   border-radius: 32px;
+
+}
+
+@media screen and (max-width: 1440px) {
+  .PlayersVideobox {
+    height: 366px;
+    width: 100%;
+    border-radius: 23px;
+
+  }
 }
