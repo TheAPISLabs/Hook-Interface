@@ -36,7 +36,7 @@ export default function NavigationBar() {
               history.push({ pathname: '/game' })
             }}
           />
-          <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
+          {/* <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '} */}
           <Nav.Item
             itemKey={'union-management'}
             text={'MarketData'}
@@ -45,14 +45,14 @@ export default function NavigationBar() {
               history.push({ pathname: '/marketdata' })
             }}
           />{' '}
-          <Nav.Item
+          {/* <Nav.Item
             itemKey={'unions'}
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
               history.push({ pathname: '/portfolioTrack' })
             }}
-          />
+          /> */}
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
             <PassCard />
           </div>
@@ -82,7 +82,7 @@ export default function NavigationBar() {
               history.push({ pathname: '/game' })
             }}
           />
-          <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '}
+          {/* <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '} */}
           <Nav.Item
             itemKey={'union-management'}
             text={'MarketData'}
@@ -91,14 +91,14 @@ export default function NavigationBar() {
               history.push({ pathname: '/marketdata' })
             }}
           />{' '}
-          <Nav.Item
+          {/* <Nav.Item
             itemKey={'unions'}
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
               history.push({ pathname: '/portfolioTrack' })
             }}
-          />
+          /> */}
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
             <PassCard />
           </div>

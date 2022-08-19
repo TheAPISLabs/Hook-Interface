@@ -1,4 +1,3 @@
-import { Trans } from '@lingui/macro'
 import useScrollPosition from '@react-hook/window-scroll'
 import { useWeb3React } from '@web3-react/core'
 import { getChainInfoOrDefault } from 'constants/chainInfo'
@@ -11,14 +10,7 @@ import { useUserHasSubmittedClaim } from 'state/transactions/hooks'
 import { useDarkModeManager } from 'state/user/hooks'
 import styled from 'styled-components/macro'
 
-import { ThemedText } from '../../theme'
-import ClaimModal from '../claim/ClaimModal'
-import { CardNoise } from '../earn/styled'
 import Row from '../Row'
-import { Dots } from '../swap/styleds'
-import Web3Status from '../Web3Status'
-import HolidayOrnament from './HolidayOrnament'
-import NetworkSelector from './NetworkSelector'
 
 const HeaderFrame = styled.div<{ showBackground: boolean }>`
   display: grid;
@@ -205,10 +197,9 @@ export default function Header() {
 
   return (
     <HeaderFrame showBackground={scrollY > 45}>
-      <ClaimModal />
+      {/* <ClaimModal />
       <Title href=".">
         <UniIcon>
-          {/* <Logo fill={darkMode ? white : black} width="24px" height="100%" title="logo" /> */}
           <HolidayOrnament />
         </UniIcon>
       </Title>
@@ -245,7 +236,7 @@ export default function Header() {
             <Web3Status />
           </AccountElement>
         </HeaderElement>
-      </HeaderControls>
+      </HeaderControls> */}
     </HeaderFrame>
   )
 }

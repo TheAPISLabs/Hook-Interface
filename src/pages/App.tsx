@@ -22,8 +22,7 @@ import Foot from './Footer'
 import Game from './game'
 import GameDetails from './GameDetails'
 import GameList from './GameList'
-import Swap from './home'
-import { RedirectPathToSwapOnly, RedirectToSwap } from './home/redirects'
+import { RedirectPathToSwapOnly } from './home/redirects'
 import HookPass from './HookPass'
 import MarketData from './MarketData'
 import MoreGame from './MoreGame'
@@ -110,8 +109,8 @@ export default function App() {
                     <Route exact path="/errorpage" component={ErrorPage} />
                     <Route exact path="/moregame" component={MoreGame} />
                     <Route exact path="/hookpass" component={HookPass} />
-                    <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
-                    <Route exact strict path="/swap" component={Swap} />
+                    {/* <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} /> */}
+                    {/* <Route exact strict path="/swap" component={Swap} /> */}
 
                     <Route component={RedirectPathToSwapOnly} />
                   </Switch>

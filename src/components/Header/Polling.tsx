@@ -1,6 +1,4 @@
-import { Trans } from '@lingui/macro'
 import { useWeb3React } from '@web3-react/core'
-import { RowFixed } from 'components/Row'
 import { getChainInfo } from 'constants/chainInfo'
 import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 import useGasPrice from 'hooks/useGasPrice'
@@ -11,11 +9,7 @@ import useBlockNumber from 'lib/hooks/useBlockNumber'
 import ms from 'ms.macro'
 import { useEffect, useState } from 'react'
 import styled, { keyframes } from 'styled-components/macro'
-import { ExternalLink, ThemedText } from 'theme'
-import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
-
-import { MouseoverTooltip } from '../Tooltip'
-import { ChainConnectivityWarning } from './ChainConnectivityWarning'
+import { ThemedText } from 'theme'
 
 const StyledPolling = styled.div<{ warning: boolean }>`
   position: fixed;
@@ -138,7 +132,7 @@ export default function Polling() {
 
   return (
     <>
-      <RowFixed>
+      {/* <RowFixed>
         <StyledPolling onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} warning={warning}>
           <ExternalLink href={'https://etherscan.io/gastracker'}>
             {priceGwei ? (
@@ -175,7 +169,7 @@ export default function Polling() {
           <StyledPollingDot warning={warning}>{isMounting && <Spinner warning={warning} />}</StyledPollingDot>{' '}
         </StyledPolling>
         {warning && <ChainConnectivityWarning />}
-      </RowFixed>
+      </RowFixed> */}
     </>
   )
 }

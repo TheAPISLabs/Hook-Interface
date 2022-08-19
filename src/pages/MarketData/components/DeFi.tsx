@@ -2,7 +2,12 @@ import '../index.css'
 
 import React from 'react'
 import styled from 'styled-components/macro'
-export default function DeFiChartsData() {
+
+import { lineChartOptionsTotalSpent } from './charts'
+import LineChart from './LineChar'
+export default function DeFiChartsData(props: { [x: string]: any; chartData: any }) {
+  const { chartData, ...rest } = props
+
   const DefiBox = styled.div`
     height: 345px;
     border-radius: 20px;
@@ -47,6 +52,7 @@ export default function DeFiChartsData() {
     <DefiBox>
       <Title>DeFi VS GameFi VS NFT</Title>
       <Volume>Volume</Volume>
+      {chartData.length > 0 && <LineChart chartData={chartData} chartOptions={lineChartOptionsTotalSpent} />}
     </DefiBox>
   )
 }

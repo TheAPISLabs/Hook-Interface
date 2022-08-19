@@ -4,7 +4,7 @@ import './index.css'
 import { Col, Row, Skeleton } from '@douyinfe/semi-ui'
 import React, { useEffect, useState } from 'react'
 
-import { getCmcDatas, getMarketCapAndVolume, getSearchRank } from '../../hook/hook'
+import { getCmcDatas, getGraphData, getMarketCapAndVolume, getSearchRank } from '../../hook/hook'
 import DeFi from './components/DeFi'
 import DeFiTrending from './components/DeFiTrending'
 import NFTTrending from './components/NFTTrending'
@@ -12,6 +12,8 @@ import Tabss from './components/Tabs'
 import Trending from './components/TrendingAddresses'
 export default function MarketData() {
   const [tabsData, setTabsData] = useState<any>()
+  const [chartData, setChartData] = useState<any>([])
+
   const [TrendAddData, setTrendAddData] = useState<any>()
   const [defiRank, setDefiRank] = useState<any>()
   const [nftRank, setNftRank] = useState<any>()
@@ -116,6 +118,33 @@ export default function MarketData() {
     })
     setNftRank(nftArr)
   }
+
+  getGraphData('1d').then((res) => {
+    if (res.data.code === '200') {
+      const GAMEFI = res.data.data.GAMEFI.volume
+      const DEFI = res.data.data.DEFI.volume
+      const NFT = res.data.data.NFT.volume
+      const time = res.data.data.time.time.map((item: string | number | Date) => {
+        const date = new Date(item)
+        return `${date.getMonth() + 1}-${date.getDate()}`
+      })
+      localStorage.setItem('time', time.join('**'))
+      setChartData([
+        {
+          name: 'DEFI',
+          data: DEFI,
+        },
+        {
+          name: 'GAMEFI',
+          data: GAMEFI,
+        },
+        {
+          name: 'NFT',
+          data: NFT,
+        },
+      ])
+    }
+  })
   const style = {
     display: 'flex',
     alignItems: 'flex-start',
@@ -144,7 +173,7 @@ export default function MarketData() {
       </Skeleton>
       <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
         <Col xs={16} sm={16} md={16} lg={16} xl={16}>
-          <DeFi />
+          <DeFi chartData={chartData} />
         </Col>
         <Col xs={8} sm={8} md={8} lg={8} xl={8} className="Trending">
           <Trending value={TrendAddData} />
