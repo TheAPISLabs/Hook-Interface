@@ -139,7 +139,7 @@ export default function Vote(props: any) {
     margin-top: 13px;
     @media screen and (max-width: 1440px) {
       color: rgba(255, 255, 255, 1);
-      font-size: 29px;
+      font-size: 22px;
       font-weight: 400;
       font-family: 'Poppins';
       text-align: left;

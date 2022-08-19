@@ -151,6 +151,7 @@
     "array.prototype.flat": "^1.2.4",
     "array.prototype.flatmap": "^1.2.4",
     "bignumber.js": "^9.0.2",
+    "braft-editor": "^2.3.9",
     "cids": "^1.0.0",
     "copy-to-clipboard": "^3.2.0",
     "d3": "^7.0.0",

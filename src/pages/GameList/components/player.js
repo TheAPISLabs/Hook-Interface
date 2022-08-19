@@ -128,9 +128,9 @@ export default function GameSwipper() {
           thumbnailPosition="right"
           items={images}
           showFullscreenButton={false}
-          showNav={isMobile() ? true : false}
+          showNav={isMobile() ? true : true}
           showPlayButton={false}
-          showThumbnails={isMobile() ? false : true}
+          showThumbnails={isMobile() ? false : false}
         />
       </div>
     </div>

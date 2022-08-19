@@ -1,6 +1,6 @@
 // Chakra imports
 // import { Avatar, AvatarGroup, div, Button, div, Image, Text, useToast } from '@chakra-ui/react'
-import { Avatar, AvatarGroup, Button, Card } from '@douyinfe/semi-ui'
+import { Avatar, AvatarGroup, Button, Card, Notification } from '@douyinfe/semi-ui'
 import data from '@emoji-mart/data'
 // import Card from 'components/card/Card.js'
 import { Picker } from 'emoji-mart'
@@ -99,6 +99,7 @@ export default function Earn(props) {
                     fontSize: '30px',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    display: 'flex',
                   }}
                   className={idx == index ? (animate ? 'animate' : '') : ''}
                   data-idx={`${index}`}
@@ -109,13 +110,13 @@ export default function Earn(props) {
                     }, 1100)
                     setIdx(e.target.getAttribute('data-idx'))
                     if (!uId) {
-                      // toast({
-                      //   title: `please sign in`,
-                      //   position: 'top',
-                      //   status: 'warning',
-                      //   isClosable: true,
-                      //   duration: 1000,
-                      // })
+                      Notification.open({
+                        title: `please sign in`,
+                        position: 'top',
+                        status: 'warning',
+                        isClosable: true,
+                        duration: 3,
+                      })
                       return
                     }
                     if (item.isLiked) {
@@ -135,32 +136,29 @@ export default function Earn(props) {
                           SetGameIcons(res.data.data.records)
                         })
                       } else {
-                        // toast({
-                        //   title: res.data.msg,
-                        //   position: 'top',
-                        //   status: 'warning',
-                        //   isClosable: true,
-                        //   duration: 2000,
-                        // })
+                        Notification.open({
+                          title: res.data.msg,
+                          position: 'top',
+                          status: 'warning',
+                          isClosable: true,
+                          duration: 3,
+                        })
                       }
                     })
                   }}
                 >
                   {/* {item.icon} */}
-                  <span style={{ height: '44px' }} data-idx={`${index}`}>
-                    {' '}
-                    {BASE64.decrypt(item.icon)}
-                  </span>
+                  <span data-idx={`${index}`}> {BASE64.decrypt(item.icon)}</span>
                 </div>
                 <img
                   src={amin}
-                  display={idx == index ? (animate ? 'block' : 'none') : 'none'}
                   style={{
+                    display: idx == index ? (animate ? 'block' : 'none') : 'none',
                     width: '200px',
                     position: 'absolute',
                     maxWidth: 'none',
                     top: '-20px',
-                    left: '-70px',
+                    left: '-60px',
                   }}
                 />
               </div>
@@ -256,24 +254,24 @@ export default function Earn(props) {
                   onClick={() => {
                     let emcode = BASE64.encoder(emoji)
                     if (!uId) {
-                      // toast({
-                      //   title: `please sign in`,
-                      //   position: 'top',
-                      //   status: 'warning',
-                      //   isClosable: true,
-                      //   duration: 1000,
-                      // })
+                      Notification.open({
+                        title: `please sign in`,
+                        position: 'top',
+                        status: 'warning',
+                        isClosable: true,
+                        duration: 3,
+                      })
                       return
                     }
                     uploadGameIcon('', emcode).then((res) => {
                       if (res.data.code == 200) {
-                        // toast({
-                        //   title: `successful`,
-                        //   position: 'top',
-                        //   status: 'success',
-                        //   isClosable: true,
-                        //   duration: 1000,
-                        // })
+                        Notification.open({
+                          title: `successful`,
+                          position: 'top',
+                          status: 'success',
+                          isClosable: true,
+                          duration: 3,
+                        })
                         setEmojia('')
                         setShowEmojiModa(!showEmojiModa)
                         getGameIconByGpId(gpId, uId).then((emojiRes) => {

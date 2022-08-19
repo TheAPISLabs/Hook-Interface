@@ -4,7 +4,7 @@ import { Col, Row } from '@douyinfe/semi-ui'
 
 import { isMobile } from '../GameDetails/components/until.js'
 import BuyAxie from './components/BuyAxie'
-import Earn from './components/Earn'
+import Earn from './components/Earn.js'
 // import { useHistory } from 'react-router-dom'
 import Player from './components/GamePlayer'
 import ReactToEarn from './components/ReactToEarn.js'
