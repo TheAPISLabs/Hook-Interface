@@ -1,4 +1,6 @@
 /* eslint-disable react/display-name */
+import '../index.css'
+
 import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
 
@@ -105,14 +107,6 @@ export default function GameSwipper() {
         }}
         className="font-Inter-SemiBold"
       >
-        <span
-          style={{
-            fontSize: '16px',
-            display: 'none',
-          }}
-        >
-          Game
-        </span>
         Featured & Recommended
       </div>
       <div
