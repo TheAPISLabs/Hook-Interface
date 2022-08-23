@@ -117,8 +117,8 @@ export default function TrendingAddresses(props: any) {
         <Column title="#" dataIndex="key" key="key" render={renderIndex} className="KeyWidth" />
         <Column title="Collection" dataIndex="collection" key="name" render={renderName} className="renderName" />
         <Column title="Floor" dataIndex="price" key="Price" render={renderPrice} className="renderPrice" />
-        <Column title="mkt" dataIndex="mkt" key="Sales" render={renderSales} />
-        <Column title="Voulme" dataIndex="volume" key="Volumes" render={renderVolume} className="renderVolume" />
+        <Column title="Market Cap" dataIndex="mkt" key="Sales" render={renderSales} />
+        <Column title="Volume" dataIndex="volume" key="Volumes" render={renderVolume} className="renderVolume" />
       </Table>
     </TrendingBox>
   )

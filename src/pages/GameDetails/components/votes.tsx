@@ -332,13 +332,13 @@ export default function Vote(props: any) {
               <PriceValue>Ξ {toThousands(new BigNumber(game.top[0].volume).toFixed(2))}</PriceValue>
               <VolumeText>${toThousands((game.top[0].volume / 1000).toFixed(2))}K</VolumeText>
             </MobileVolumeBox>
-            {/*  <MobileSupplyBox>
+            <MobileSupplyBox>
               <VolumeFlex>
                 <PriceImage src={soldIcon}></PriceImage>
                 <PriceText>CirculatingSupply</PriceText>
               </VolumeFlex>
               <PriceValue>{toThousands(new BigNumber(game.top[0].circulatingSupply).toFixed(2))}</PriceValue>
-            </MobileSupplyBox> */}
+            </MobileSupplyBox>
           </MobileVoteBox>
           <ChooseFlex>
             {isVote ? (
