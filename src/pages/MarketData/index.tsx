@@ -119,32 +119,34 @@ export default function MarketData() {
     setNftRank(nftArr)
   }
 
-  getGraphData('1d').then((res) => {
-    if (res.data.code === '200') {
-      const GAMEFI = res.data.data.GAMEFI.volume
-      const DEFI = res.data.data.DEFI.volume
-      const NFT = res.data.data.NFT.volume
-      const time = res.data.data.time.time.map((item: string | number | Date) => {
-        const date = new Date(item)
-        return `${date.getMonth() + 1}-${date.getDate()}`
-      })
-      localStorage.setItem('time', time.join('**'))
-      setChartData([
-        {
-          name: 'DEFI',
-          data: DEFI,
-        },
-        {
-          name: 'GAMEFI',
-          data: GAMEFI,
-        },
-        {
-          name: 'NFT',
-          data: NFT,
-        },
-      ])
-    }
-  })
+  useEffect(() => {
+    getGraphData('1d').then((res) => {
+      if (res.data.code === '200') {
+        const GAMEFI = res.data.data.GAMEFI.volume
+        const DEFI = res.data.data.DEFI.volume
+        const NFT = res.data.data.NFT.volume
+        const time = res.data.data.time.time.map((item: string | number | Date) => {
+          const date = new Date(item)
+          return `${date.getMonth() + 1}-${date.getDate()}`
+        })
+        localStorage.setItem('time', time.join('**'))
+        setChartData([
+          {
+            name: 'DEFI',
+            data: DEFI,
+          },
+          {
+            name: 'GAMEFI',
+            data: GAMEFI,
+          },
+          {
+            name: 'NFT',
+            data: NFT,
+          },
+        ])
+      }
+    })
+  }, [])
   const style = {
     display: 'flex',
     alignItems: 'flex-start',
