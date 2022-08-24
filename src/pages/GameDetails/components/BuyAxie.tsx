@@ -18,14 +18,14 @@ export default function BuyAxie(props: any) {
     font-weight: 500;
     text-align: left;
     line-height: 32px;
-    margin: 55px 0 30px 0;
+    margin: -32px 0 30px 0;
     @media screen and (max-width: 1440px) {
       color: rgba(255, 255, 255, 1);
       font-size: 17px;
       font-weight: 500;
       text-align: left;
       line-height: 23px;
-      margin: 20px 0 30px 0;
+      margin: 0px 0 30px 0;
     }
   `
   const ActiviesCard = styled.div`

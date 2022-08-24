@@ -67,13 +67,16 @@
   color: #7fba7a;
   margin-left: 17px;
 }
+
 .css-11fb1j9 {
   background-color: #3f8cff !important;
 }
+
 @font-face {
   font-family: 'Inter-SemiBold';
   src: url('../../assets/font/Inter-SemiBold.ttf');
 }
+
 .chakra-stack {
   align-items: center;
 }
@@ -90,6 +93,14 @@
   overflow-y: auto;
   padding: 10px 0 !important;
   padding-right: 10px !important;
+  height: 827px !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .yscroll {
+    height: 585px !important;
+
+  }
 }
 
 .yscroll::-webkit-scrollbar {
@@ -120,10 +131,12 @@
 .public-DraftEditorPlaceholder-root.public-DraftEditorPlaceholder-hasFocus {
   color: rgba(145, 151, 163, 0.5);
 }
+
 .animate {
   animation: scaleDraw 1s ease-in-out infinite;
   border-color: rgba(0, 73, 198, 1) !important;
 }
+
 @keyframes scaleDraw {
   0% {
     transform: scale(1);
@@ -137,6 +150,7 @@
     transform: scale(1);
   }
 }
+
 em-emoji-picker {
   // --border-radius: 24px;
   // --category-icon-size: 24px;
@@ -149,14 +163,16 @@ em-emoji-picker {
   // --rgb-color: 102, 51, 153;
   // --rgb-input: 255, 235, 235;
   // --shadow: 5px 5px 15px -8px rebeccapurple;
-
+  margin-bottom: 40px;
   // height: 50vh;
   // min-height: 400px;
   // max-height: 800px;
 }
+
 .bf-dropdown .dropdown-content-inner {
   background-color: #0b1437 !important;
 }
+
 @media screen and (max-width: 1440px) {
   .chakra-avatar__excess.css-11fb1j9 {
     width: 32px;
@@ -164,6 +180,7 @@ em-emoji-picker {
     font-size: 12px;
   }
 }
+
 .per-tips {
   width: 56px;
   height: 28px;
@@ -176,6 +193,7 @@ em-emoji-picker {
   top: -44px;
   right: -27px;
 }
+
 .per-tips::after {
   position: absolute;
   content: '';
@@ -188,6 +206,7 @@ em-emoji-picker {
   border-right: 4px solid transparent;
   border-bottom: 0px solid transparent;
 }
+
 @media screen and (max-width: 768px) {
   .boder-line {
     background-color: #fff;
@@ -200,31 +219,39 @@ em-emoji-picker {
     border-radius: 24px;
     bottom: -5px;
   }
+
   .boder-line:last-child {
     opacity: 0.05;
     bottom: -10px;
   }
+
   .font-Inter-SemiBold {
     font-family: Inter-SemiBold;
   }
 }
+
 video {
   height: 100px;
   width: 100px;
 }
+
 .CoreNftImg,
 .defiItem {
   margin-left: 10px;
+
   &:first-child {
     margin-left: 0px;
   }
 }
+
 .CoreNftImg:hover .CoreNftHover {
   display: block;
 }
+
 .defiItem:hover .CoreNftHover {
   display: block;
 }
+
 .CoreNftHover {
   background: rgb(11 20 55);
   border-radius: 2.736px 13.68px 13.68px 13.68px;

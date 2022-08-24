@@ -97,7 +97,7 @@ export default function Earn(props) {
                     borderRadius: '50%',
                     border: '2px solid #0049C6',
                     fontSize: '30px',
-                    justifyContent: 'center',
+                    // justifyContent: 'center',
                     alignItems: 'center',
                     display: 'flex',
                   }}
