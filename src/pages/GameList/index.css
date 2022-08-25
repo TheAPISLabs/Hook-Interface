@@ -49,6 +49,12 @@
 .note-masonry-grid_column {
   width: 30% !important;
 }
+@media screen and (max-width: 1200px) {
+  .note-masonry-grid_column {
+    width: 327px !important;
+    margin: auto;
+  }
+}
 .InformationBoxIShow {
   height: 160px;
   padding: 13px 21px 21px 20px;
@@ -64,6 +70,13 @@
     overflow: hidden;
     height: 130px;
   }
+}
+.MobileInformationBoxIShow {
+  height: 160px;
+  padding: 13px 21px 21px 20px;
+  box-sizing: border-box;
+  transition: 1s;
+  overflow: hidden;
 }
 .InformationBox {
   height: 0px;
@@ -93,6 +106,12 @@
     color: #808191;
   }
 }
+.MobileIconChevronDownBoxIShow {
+  transform: rotate(180deg);
+  color: #808191;
+  width: 16px;
+  height: 16px;
+}
 .IconChevronDownBox {
   transform: rotate(0deg);
   color: #808191;
@@ -106,6 +125,12 @@
     transform: rotate(180deg);
     color: #808191;
   }
+}
+.MobileIconChevronDownBox {
+  transform: rotate(0deg);
+  color: #808191;
+  width: 16px;
+  height: 16px;
 }
 .PopoverBox .semi-tag-default,
 .PopoverBox .semi-tag-small {

@@ -49,6 +49,9 @@ export default function Vote(props: any) {
     height: 295px;
     width: 325px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 52px;
   `
   const PriceBox = styled.div`
     width: 30%;
@@ -69,7 +72,6 @@ export default function Vote(props: any) {
     border-right: 1px solid rgba(228, 228, 228, 0.1);
     border-bottom: 1px solid rgba(228, 228, 228, 0.1);
     letter-spacing: -1px;
-    display: inline-block;
   `
   const SupplyBox = styled.div`
     width: 30%;
@@ -84,10 +86,9 @@ export default function Vote(props: any) {
   const MobileSupplyBox = styled.div`
     width: 162px;
     height: 147px;
-
+    padding: 20px;
     border-right: 1px solid rgba(228, 228, 228, 0.1);
     letter-spacing: -1px;
-    display: inline-block;
   `
   const PriceFlex = styled.div`
     display: flex;
@@ -106,6 +107,12 @@ export default function Vote(props: any) {
       justify-content: space-between;
     }
   `
+  const MobileChooseFlex = styled.div`
+    border-top: 1px solid rgba(228, 228, 228, 0.1);
+    padding: 25px 0 20px;
+    margin-top: 0px;
+  `
+
   const PriceImage = styled.img`
     width: 16px;
     height: 16px;
@@ -116,6 +123,12 @@ export default function Vote(props: any) {
       margin-right: 6px;
     }
   `
+  const MobilePriceImage = styled.img`
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+  `
+
   const PriceText = styled.div`
     color: rgba(128, 129, 145, 1);
     font-size: 12px;
@@ -130,6 +143,14 @@ export default function Vote(props: any) {
       line-height: 11px;
     }
   `
+  const MobilePriceText = styled.div`
+    color: rgba(128, 129, 145, 1);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 20px;
+  `
+
   const PriceValue = styled.div`
     color: rgba(255, 255, 255, 1);
     font-size: 32px;
@@ -146,6 +167,16 @@ export default function Vote(props: any) {
       margin-top: 5px;
     }
   `
+  const MobilePriceValue = styled.div`
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins';
+    text-align: left;
+    margin-top: 19px;
+    margin-bottom: 7px;
+  `
+
   const VolumeBox = styled.div`
     width: 40%;
     padding: 24px 0 32px 40px;
@@ -161,10 +192,9 @@ export default function Vote(props: any) {
   const MobileVolumeBox = styled.div`
     width: 169px;
     height: 147px;
-
+    padding: 20px;
     border-bottom: 1px solid rgba(228, 228, 228, 0.1);
     letter-spacing: -1px;
-    display: inline-block;
   `
   const VolumeFlex = styled.div`
     display: flex;
@@ -183,6 +213,14 @@ export default function Vote(props: any) {
       text-align: left;
     }
   `
+  const MobileVolumeText = styled.text`
+    color: rgba(128, 129, 145, 1);
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Poppins';
+    text-align: left;
+  `
+
   const VotedBox = styled.div`
     width: 48%;
   `
@@ -206,6 +244,10 @@ export default function Vote(props: any) {
     width: 48%;
     margin: 14px 0;
   `
+  const MobileTownBox = styled.div`
+    margin: 20px 0;
+  `
+
   const TownText = styled.text`
     font-size: 18px;
     color: #fff;
@@ -319,28 +361,30 @@ export default function Vote(props: any) {
           <MobileVoteBox>
             <MobilePriceBox>
               <PriceFlex>
-                <PriceImage src={saleIcon}></PriceImage>
-                <PriceText>Price</PriceText>
+                <MobilePriceImage src={saleIcon}></MobilePriceImage>
+                <MobilePriceText>Price</MobilePriceText>
               </PriceFlex>
-              <PriceValue>{toThousands(game.top[0].price)}</PriceValue>
+              <MobilePriceValue>{toThousands(game.top[0].price)}</MobilePriceValue>
             </MobilePriceBox>
             <MobileVolumeBox>
               <VolumeFlex>
-                <PriceImage src={volumeIcon}></PriceImage>
-                <PriceText>Volume</PriceText>
+                <MobilePriceImage src={volumeIcon}></MobilePriceImage>
+                <MobilePriceText>Volume</MobilePriceText>
               </VolumeFlex>
-              <PriceValue>Ξ {toThousands(new BigNumber(game.top[0].volume).toFixed(2))}</PriceValue>
-              <VolumeText>${toThousands((game.top[0].volume / 1000).toFixed(2))}K</VolumeText>
+              <MobilePriceValue>Ξ {toThousands(new BigNumber(game.top[0].volume).toFixed(2))}</MobilePriceValue>
+              <MobileVolumeText>${toThousands((game.top[0].volume / 1000).toFixed(2))}K</MobileVolumeText>
             </MobileVolumeBox>
             <MobileSupplyBox>
               <VolumeFlex>
-                <PriceImage src={soldIcon}></PriceImage>
-                <PriceText>CirculatingSupply</PriceText>
+                <MobilePriceImage src={soldIcon}></MobilePriceImage>
+                <MobilePriceText>CirculatingSupply</MobilePriceText>
               </VolumeFlex>
-              <PriceValue>{toThousands(new BigNumber(game.top[0].circulatingSupply).toFixed(2))}</PriceValue>
+              <MobilePriceValue>
+                {toThousands(new BigNumber(game.top[0].circulatingSupply).toFixed(2))}
+              </MobilePriceValue>
             </MobileSupplyBox>
           </MobileVoteBox>
-          <ChooseFlex>
+          <MobileChooseFlex>
             {isVote ? (
               <VotedBox>
                 <VotedText>
@@ -359,10 +403,10 @@ export default function Vote(props: any) {
                 </HoursText>
               </VotedBox>
             ) : (
-              <TownBox>
+              <MobileTownBox>
                 <TownText>How do you feel about {game.name} today？</TownText>
                 <ResultText>Vote to see community result</ResultText>
-              </TownBox>
+              </MobileTownBox>
             )}
             {isVote ? (
               <StarBox>
@@ -437,7 +481,7 @@ export default function Vote(props: any) {
                 </ButtonFlex>
               </ButtonBox>
             )}
-          </ChooseFlex>
+          </MobileChooseFlex>
         </VoteBigBox>
       ) : (
         <VoteBigBox>

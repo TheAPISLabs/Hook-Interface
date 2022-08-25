@@ -58,6 +58,11 @@
 
 .note-masonry-grid_column {
   width: 30% !important;
+
+  @media screen and (max-width: 1200px) {
+    width: 327px !important;
+    margin: auto;
+  }
 }
 
 .InformationBoxIShow {
@@ -74,6 +79,14 @@
     overflow: hidden;
     height: 130px;
   }
+}
+
+.MobileInformationBoxIShow {
+  height: 160px;
+  padding: 13px 21px 21px 20px;
+  box-sizing: border-box;
+  transition: 1s;
+  overflow: hidden;
 }
 
 .InformationBox {
@@ -106,6 +119,13 @@
   }
 }
 
+.MobileIconChevronDownBoxIShow {
+  transform: rotate(180deg);
+  color: rgba(128, 129, 145, 1);
+  width: 16px;
+  height: 16px;
+}
+
 .IconChevronDownBox {
   transform: rotate(0deg);
   color: rgba(128, 129, 145, 1);
@@ -118,6 +138,13 @@
     transform: rotate(180deg);
     color: rgba(128, 129, 145, 1);
   }
+}
+
+.MobileIconChevronDownBox {
+  transform: rotate(0deg);
+  color: rgba(128, 129, 145, 1);
+  width: 16px;
+  height: 16px;
 }
 
 .PopoverBox {

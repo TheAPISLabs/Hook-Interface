@@ -24,7 +24,7 @@ export default function GamePlayers(props: any) {
     }
   `
   const MobileGamePlayersBox = styled.div`
-    height: 1013px;
+    height: 944px;
   `
   const PlayersTitle = styled.div`
     color: rgba(255, 255, 255, 1);
@@ -58,8 +58,6 @@ export default function GamePlayers(props: any) {
   `
   const MobileGamePlayers = styled.div`
     margin-top: 30px;
-    height: 579px;
-    border-radius: 32px;
   `
   const MobileBigCardBox = styled.div`
     width: 343px;
@@ -242,6 +240,21 @@ export default function GamePlayers(props: any) {
     font-weight: 400;
     text-align: left;
   `
+
+  const MobilPlayNow = styled.div`
+    width: 311px;
+    height: 56px;
+    border-radius: 16px;
+    opacity: 1;
+    background: rgba(108, 93, 211, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter';
+    text-align: center;
+    line-height: 56px;
+    margin: 32px auto;
+  `
   const PlayNow = styled.div`
     width: 202px;
     height: 56px;
@@ -382,6 +395,13 @@ export default function GamePlayers(props: any) {
           <MobilePlayersTitle>Overview</MobilePlayersTitle>
           <MobileGamePlayers>
             <Player src={game.videos[0].url}> </Player>
+            <MobilPlayNow
+              onClick={() => {
+                window.open(game.gameUrl)
+              }}
+            >
+              Play Now!
+            </MobilPlayNow>
             <MobileBigCardBox>
               <MobileBorerBox>
                 <MobileFlexGameBox>
@@ -397,14 +417,6 @@ export default function GamePlayers(props: any) {
                       <MobilePlayers>{formatNumber(game.top[0].activeUsers)}players</MobilePlayers>
                     </MobileGameNameLeft>
                   </div>
-
-                  {/* <PlayNow
-                  onClick={() => {
-                    window.open(game.gameUrl)
-                  }}
-                >
-                  Play Now!
-                </PlayNow> */}
                 </MobileFlexGameBox>
               </MobileBorerBox>
               <MobileCardBox>

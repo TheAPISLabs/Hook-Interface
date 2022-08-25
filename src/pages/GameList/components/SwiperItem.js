@@ -13,10 +13,10 @@ export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name
     <div
       style={{
         backgroundColor: 'rgba(17,28,68,1)',
-        borderRadius: '21px',
+        borderRadius: '23px',
         paddingBottom: '32px',
         width: '100%',
-        height: '34vw',
+        height: '720px',
       }}
     >
       <div style={{ borderRadius: '22px', overflow: 'hidden', height: '26vw' }}>
@@ -76,7 +76,7 @@ export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name
             {genres}
           </span>
         </div>
-        <button
+        <div
           style={{
             variant: 'brand',
             width: '82.9vw',
@@ -86,7 +86,7 @@ export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name
             fontWeight: 500,
             fontSize: '3.72vw',
             borderRadius: '16px',
-            marginTop: '6.4vw',
+            // marginTop: '6.4vw',
             display: 'none',
           }}
           onClick={() => {
@@ -100,7 +100,7 @@ export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name
           }}
         >
           View
-        </button>
+        </div>
       </div>
     </div>
   )

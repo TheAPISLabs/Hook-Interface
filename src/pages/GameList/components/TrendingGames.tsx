@@ -111,6 +111,12 @@ export default function Ranking(props: any) {
       width: 100%;
     }
   `
+  const MobileGameCardDataBox = styled.div`
+    border-radius: 24px;
+    background: rgb(17, 28, 68);
+    margin-bottom: 24px;
+    width: 100%;
+  `
   const GameCardImageBox = styled.div`
     cursor: pointer;
   `
@@ -124,9 +130,18 @@ export default function Ranking(props: any) {
       height: 128px;
     }
   `
+  const MobileGameCardImage = styled.img`
+    border-radius: 24px 24px 0px 0px;
+    width: 100%;
+    height: 170px;
+  `
   const GameCardNameBox = styled.div`
     box-sizing: border-box;
     padding: 11px;
+  `
+  const MobileGameCardNameBox = styled.div`
+    box-sizing: border-box;
+    padding: 24px;
   `
   const GameCardName = styled.div`
     color: rgb(255, 255, 255);
@@ -141,6 +156,13 @@ export default function Ranking(props: any) {
       line-height: 18px;
       font-size: 14px;
     }
+  `
+  const MobileGameCardName = styled.div`
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: left;
+    line-height: 24px;
+    font-size: 18px;
   `
   const PlayFlexBox = styled.div`
     align-items: center;
@@ -161,6 +183,13 @@ export default function Ranking(props: any) {
       margin-right: 5px;
     }
   `
+  const MobileRingBox = styled.div`
+    width: 8px;
+    height: 8px;
+    background: rgb(0, 73, 198);
+    border-radius: 50%;
+    margin-right: 10px;
+  `
   const FollowersBox = styled.div`
     color: rgb(128, 129, 145);
     font-weight: 400;
@@ -178,6 +207,14 @@ export default function Ranking(props: any) {
       font-size: 9px;
     }
   `
+  const MobileFollowersBox = styled.div`
+    color: rgb(128, 129, 145);
+    font-weight: 400;
+    text-align: right;
+    line-height: 16px;
+    margin-right: 10px;
+    font-size: 12px;
+  `
   const RingplayBox = styled.div`
     width: 8px;
     height: 8px;
@@ -191,6 +228,13 @@ export default function Ranking(props: any) {
       border-radius: 50%;
       margin-right: 5px;
     }
+  `
+  const MobileRingplayBox = styled.div`
+    width: 8px;
+    height: 8px;
+    background: rgb(127, 186, 122);
+    border-radius: 50%;
+    margin-right: 10px;
   `
   const PlayersBox = styled.div`
     color: rgb(128, 129, 145);
@@ -207,6 +251,13 @@ export default function Ranking(props: any) {
       font-size: 9px;
     }
   `
+  const MobilePlayersBox = styled.div`
+    color: rgb(128, 129, 145);
+    font-weight: 400;
+    text-align: right;
+    line-height: 16px;
+    font-size: 12px;
+  `
   const GameCardHeaderBox = styled.div`
     margin-top: 12px;
     align-items: center;
@@ -221,6 +272,11 @@ export default function Ranking(props: any) {
       height: 18px;
       margin-right: 2%;
     }
+  `
+  const MobileHeaderBox = styled.div`
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
   `
   const HeaderImage = styled.img`
     width: 100%;
@@ -242,6 +298,13 @@ export default function Ranking(props: any) {
       font-size: 10px;
     }
   `
+  const MobileGameStudioBox = styled.div`
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: left;
+    line-height: 20px;
+    font-size: 13px;
+  `
   const HSeparator = styled.div`
     display: flex;
     height: 1px;
@@ -259,6 +322,12 @@ export default function Ranking(props: any) {
       box-sizing: border-box;
       padding: 10px 12px 7px 19px;
     }
+  `
+  const MobileAlphaBigBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 13px 21px 11px 21px;
   `
   const AlphaBox = styled.div`
     display: flex;
@@ -289,6 +358,18 @@ export default function Ranking(props: any) {
       line-height: 18px;
     }
   `
+  const MobileAlpha = styled.div`
+    border-radius: 8px;
+    background: rgba(228, 228, 228, 0.1);
+    color: rgb(95, 117, 238);
+    font-weight: 400;
+    text-align: center;
+    margin-right: 8px;
+    width: 80px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 24px;
+  `
   const HideBox = styled.div`
     display: flex;
     align-items: center;
@@ -309,6 +390,11 @@ export default function Ranking(props: any) {
       font-size: 9px;
     }
   `
+  const MobileHideText = styled.div`
+    font-weight: 400;
+    margin-right: 7px;
+    font-size: 12px;
+  `
   const InformationBox = styled.div``
   const ROIBox = styled.div`
     display: flex;
@@ -319,6 +405,11 @@ export default function Ranking(props: any) {
       align-items: center;
       margin-bottom: 16px;
     }
+  `
+  const MobileROIBox = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
   `
   const ROI = styled.div`
     color: rgb(128, 129, 145);
@@ -334,6 +425,13 @@ export default function Ranking(props: any) {
       font-size: 10px;
     }
   `
+  const MobileROI = styled.div`
+    color: rgb(128, 129, 145);
+    font-weight: 400;
+    text-align: left;
+    width: 97px;
+    font-size: 13px;
+  `
   const ROINumBox = styled.div`
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -346,6 +444,12 @@ export default function Ranking(props: any) {
       font-size: 9px;
     }
   `
+  const MobileROINumBox = styled.div`
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: left;
+    font-size: 13px;
+  `
   const VolumeBox = styled.div`
     display: flex;
     align-items: center;
@@ -355,6 +459,11 @@ export default function Ranking(props: any) {
       align-items: center;
       margin-bottom: 11px;
     }
+  `
+  const MobileVolumeBox = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
   `
   const Volume = styled.div`
     color: rgb(128, 129, 145);
@@ -370,6 +479,13 @@ export default function Ranking(props: any) {
       font-size: 10px;
     }
   `
+  const MobileVolume = styled.div`
+    color: rgb(128, 129, 145);
+    font-weight: 400;
+    text-align: left;
+    width: 97px;
+    font-size: 13px;
+  `
   const VolumeNumBox = styled.div`
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -382,6 +498,12 @@ export default function Ranking(props: any) {
       font-size: 9px;
     }
   `
+  const MobileVolumeNumBox = styled.div`
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: left;
+    font-size: 13px;
+  `
   const TotalNFTBox = styled.div`
     display: flex;
     align-items: center;
@@ -391,6 +513,11 @@ export default function Ranking(props: any) {
       align-items: center;
       margin-bottom: 11px;
     }
+  `
+  const MobileTotalNFTBox = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
   `
   const TotalNFT = styled.div`
     color: rgb(128, 129, 145);
@@ -406,6 +533,13 @@ export default function Ranking(props: any) {
       font-size: 10px;
     }
   `
+  const MobileTotalNFT = styled.div`
+    color: rgb(128, 129, 145);
+    font-weight: 400;
+    text-align: left;
+    width: 97px;
+    font-size: 13px;
+  `
   const TotalNFTNum = styled.div`
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -417,6 +551,12 @@ export default function Ranking(props: any) {
       text-align: left;
       font-size: 9px;
     }
+  `
+  const MobileTotalNFTNum = styled.div`
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-align: left;
+    font-size: 13px;
   `
   const BtnFlex = styled.div`
     display: flex;
@@ -436,6 +576,13 @@ export default function Ranking(props: any) {
       background: rgba(108, 93, 211, 1);
     }
   `
+  const MobileBynSwapBox = styled.div`
+    width: 101px;
+    height: 27px;
+    border-radius: 8px;
+    opacity: 1;
+    background: rgba(108, 93, 211, 1);
+  `
   const SwapText = styled.div`
     color: rgba(255, 255, 255, 1);
     font-size: 12px;
@@ -452,19 +599,216 @@ export default function Ranking(props: any) {
       line-height: 20px;
     }
   `
+  const MobileSwapText = styled.div`
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Inter';
+    text-align: center;
+    line-height: 27px;
+  `
 
   return (
     <>
       {isMobile() ? (
         <MobileTrendingGamesBox>
           <MobileTitle>Trending games</MobileTitle>
-          <MobileMoreBtn
+          {/* <MobileMoreBtn
             onClick={() => {
               history.push({ pathname: '/moregame' })
             }}
           >
             Load More
-          </MobileMoreBtn>
+          </MobileMoreBtn> */}
+          <div
+            style={{
+              display: 'Flex',
+              justifyContent: 'end',
+              marginTop: '33px',
+              marginBottom: '38px',
+            }}
+          >
+            <Dropdown
+              render={
+                <Dropdown.Menu>
+                  <Dropdown.Item
+                    onClick={() => {
+                      chooseSort('liked')
+                      setShowText('LIKE')
+                    }}
+                  >
+                    LIKE
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => {
+                      chooseSort('initialReleaseDate')
+                      setShowText('INITIALRELEASE DATE')
+                    }}
+                  >
+                    INITIALRELEASE DATE
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              }
+            >
+              <Tag> {showText}</Tag>
+            </Dropdown>
+          </div>
+          <TrendingGamesBox>
+            <Masonry
+              breakpointCols={{
+                default: 3,
+                1400: 3,
+                1100: 3,
+                700: 2,
+                500: 1,
+              }}
+              className="note-masonry-grid"
+              columnClassName="note-masonry-grid_column"
+            >
+              {GameCardData?.length > 0 &&
+                GameCardData.map((item: any, index: any) => {
+                  return (
+                    <MobileGameCardDataBox key={`item+${index}`}>
+                      <GameCardImageBox
+                        onClick={() => {
+                          localStorage.setItem('game', JSON.stringify(item))
+                          history.push({
+                            pathname: '/gamedetails',
+                          })
+                        }}
+                      >
+                        <MobileGameCardImage src={item?.imgs[0].url} alt="" />
+                      </GameCardImageBox>
+                      <MobileGameCardNameBox>
+                        <MobileGameCardName>{item.name}</MobileGameCardName>
+
+                        <PlayFlexBox>
+                          <MobileRingBox></MobileRingBox>
+                          <MobileFollowersBox>{formatNumber(item.twitterFollower)} followers</MobileFollowersBox>
+                          <MobileRingplayBox></MobileRingplayBox>
+                          <MobilePlayersBox>{formatNumber(item.top[0].activeUsers)} players</MobilePlayersBox>
+                        </PlayFlexBox>
+                        <GameCardHeaderBox>
+                          <MobileHeaderBox>
+                            <HeaderImage src={item.gameUserIcon} alt="" />
+                          </MobileHeaderBox>
+                          <MobileGameStudioBox>{item.gameStudio}®</MobileGameStudioBox>
+                        </GameCardHeaderBox>
+                      </MobileGameCardNameBox>
+                      <HSeparator></HSeparator>
+                      <MobileAlphaBigBox>
+                        <AlphaBox className="PopoverBox">
+                          <MobileAlpha>Alpha</MobileAlpha>
+                          {/* <Menu>
+                            <MenuButton p="0px">
+                              <Icon
+                                as={MdHelpOutline}
+                                color="#808191"
+                                w={{
+                                  base: '16px',
+                                  md: '14px',
+                                  xl: '16px',
+                                  '2xl': '20px',
+                                }}
+                                h={{
+                                  base: '16px',
+                                  md: '14px',
+                                  xl: '16px',
+                                  '2xl': '20px',
+                                }}
+                              />
+                            </MenuButton>
+                            <MenuList
+                              p="0px"
+                              background="var(--chakra-colors-navy-900)"
+                              borderRadius="20px"
+                              border="none"
+                            >
+                              <Flex w="100%" mb="0px">
+                                <Text p="10px 20px" w="100%" fontSize="sm" fontWeight="700">
+                                  Initial release date： {formatDate(item.initialReleaseDate || 1582905600000)}
+                                </Text>
+                              </Flex>
+                            </MenuList>
+                          </Menu> */}
+                          <Popover
+                            position="bottomLeft"
+                            content={<article className="articleBox">Initial release date: Aug 2021</article>}
+                          >
+                            <Tag>
+                              <IconHelpCircle />
+                            </Tag>
+                          </Popover>
+                        </AlphaBox>
+                        <HideBox
+                          onClick={(e) => {
+                            setIsshow(!isShow)
+                            // @ts-ignore
+                            setIdx(e.target.getAttribute('data-idx'))
+                            console.log(isShow, idx)
+                          }}
+                          data-idx={`${index}`}
+                        >
+                          <MobileHideText data-idx={`${index}`}>
+                            {idx == index ? (isShow ? 'Hide' : 'Details') : 'Details'}
+                          </MobileHideText>
+                          {/* <Icon
+                            as={MdKeyboardArrowDown}
+                            data-idx={`${index}`}
+                            transform={idx == index ? (isShow ? 'rotate(180deg)' : 'rotate(0deg)') : 'rotate(0deg)'}
+                            w={{
+                              base: '16px',
+                              md: '14px',
+                              xl: '16px',
+                              '2xl': '20px',
+                            }}
+                            h={{
+                              base: '16px',
+                              md: '14px',
+                              xl: '16px',
+                              '2xl': '20px',
+                            }}
+                          /> */}
+                          <IconChevronDown
+                            data-idx={`${index}`}
+                            className={
+                              idx == index
+                                ? isShow
+                                  ? 'MobileIconChevronDownBoxIShow'
+                                  : 'MobileIconChevronDownBox'
+                                : 'IconChevronDown'
+                            }
+                          />
+                        </HideBox>
+                      </MobileAlphaBigBox>
+                      <InformationBox
+                        className={
+                          idx == index ? (isShow ? 'MobileInformationBoxIShow' : 'InformationBox') : 'InformationBoxHid'
+                        }
+                      >
+                        <MobileROIBox>
+                          <MobileROI>ROI</MobileROI>
+                          <MobileROINumBox>{item.backPeriod}%</MobileROINumBox>
+                        </MobileROIBox>
+                        <MobileVolumeBox>
+                          <MobileVolume>Volume</MobileVolume>
+                          <MobileVolumeNumBox>{item.volume}</MobileVolumeNumBox>
+                        </MobileVolumeBox>
+                        <MobileTotalNFTBox>
+                          <MobileTotalNFT>Total NFTs</MobileTotalNFT>
+                          <MobileTotalNFTNum>{item.totalNFT}</MobileTotalNFTNum>
+                        </MobileTotalNFTBox>
+                        <BtnFlex>
+                          <MobileBynSwapBox>
+                            <MobileSwapText>swap</MobileSwapText>
+                          </MobileBynSwapBox>
+                        </BtnFlex>
+                      </InformationBox>
+                    </MobileGameCardDataBox>
+                  )
+                })}
+            </Masonry>
+          </TrendingGamesBox>
         </MobileTrendingGamesBox>
       ) : (
         <div>

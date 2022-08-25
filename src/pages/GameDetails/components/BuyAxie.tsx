@@ -28,6 +28,14 @@ export default function BuyAxie(props: any) {
       margin: 0px 0 30px 0;
     }
   `
+  const MobileTitleText = styled.div`
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter';
+    text-align: left;
+    margin-bottom: 16px;
+  `
   const ActiviesCard = styled.div`
     width: 100%;
   `
@@ -58,6 +66,18 @@ export default function BuyAxie(props: any) {
       padding-left: 20px;
     }
   `
+  const MobileActiviesFlex = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(228, 228, 228, 0.1);
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    height: 80px;
+    padding-right: 8px;
+    padding-left: 8px;
+  `
   const NFTImage = styled.img`
     width: 50px;
     height: 50px;
@@ -65,6 +85,10 @@ export default function BuyAxie(props: any) {
       width: 40px;
       height: 40px;
     }
+  `
+  const MobileNFTImage = styled.img`
+    width: 50px;
+    height: 50px;
   `
   const NumberFlex = styled.div`
     margin-left: 8px;
@@ -102,6 +126,19 @@ export default function BuyAxie(props: any) {
       margin: 16px 0px 10px;
     }
   `
+  const MobileAxieFlex = styled.div`
+    width: 77px;
+    height: 18px;
+    padding: 0px 4px;
+    background: rgb(251, 154, 4);
+    line-height: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+    margin: 16px 0px 10px;
+  `
   const AxieIconImage = styled.img`
     width: 10px;
     height: 12px;
@@ -109,6 +146,10 @@ export default function BuyAxie(props: any) {
       width: 8px;
       height: 10px;
     }
+  `
+  const MobileAxieIconImage = styled.img`
+    width: 10px;
+    height: 12px;
   `
   const NumbersText = styled.span`
     font-size: 10px;
@@ -171,46 +212,92 @@ export default function BuyAxie(props: any) {
     })
   }, [])
   return (
-    <div>
-      <TitleText>Trading Activies</TitleText>
-      <ActiviesCard>
-        {normalDate &&
-          normalDate.map((item: any, index: any) => (
-            <ActiviesFlex key={index}>
-              <HeaderImgFlex>
-                {item.imageUrl ? <NFTImage src={item.imageUrl} /> : ''}
-                <NumberFlex>
-                  <AxieFlex>
-                    <AxieIconImage src={axieIcon} />
-                    <NumbersText>#{item.blockNo}</NumbersText>
-                  </AxieFlex>
-                </NumberFlex>
-              </HeaderImgFlex>
-              <RightTimeFlex>
-                <RightFlexBox>
-                  <EthValueFlex>
-                    <IconBox>Ξ</IconBox>
-                    <EthValueText>{new BigNumber(item.ethValue).toFixed(2)}</EthValueText>
-                  </EthValueFlex>
-                  <PriceText>
-                    $
-                    {toThousands(
-                      new BigNumber(new BigNumber(item.ethValue).toFixed(2)).times(ethPrice).toFixed(2).toString()
-                    )}
-                  </PriceText>
-                  <TimeText>{dateDiff(item.time * 1000, null)}</TimeText>
-                </RightFlexBox>
-                <ArrowImage
-                  src={arrow}
-                  onClick={() => {
-                    window.open(`https://etherscan.io/tx/${item.txid}`)
-                  }}
-                ></ArrowImage>
-              </RightTimeFlex>
-            </ActiviesFlex>
-          ))}
-      </ActiviesCard>
-    </div>
+    <>
+      {isMobile() ? (
+        <div>
+          Mobile
+          <MobileTitleText>Trading Activies</MobileTitleText>
+          <ActiviesCard>
+            {normalDate &&
+              normalDate.map((item: any, index: any) => (
+                <MobileActiviesFlex key={index}>
+                  <HeaderImgFlex>
+                    {item.imageUrl ? <MobileNFTImage src={item.imageUrl} /> : ''}
+                    <NumberFlex>
+                      <MobileAxieFlex>
+                        <MobileAxieIconImage src={axieIcon} />
+                        <NumbersText>#{item.blockNo}</NumbersText>
+                      </MobileAxieFlex>
+                    </NumberFlex>
+                  </HeaderImgFlex>
+                  <RightTimeFlex>
+                    <RightFlexBox>
+                      <EthValueFlex>
+                        <IconBox>Ξ</IconBox>
+                        <EthValueText>{new BigNumber(item.ethValue).toFixed(2)}</EthValueText>
+                      </EthValueFlex>
+                      <PriceText>
+                        $
+                        {toThousands(
+                          new BigNumber(new BigNumber(item.ethValue).toFixed(2)).times(ethPrice).toFixed(2).toString()
+                        )}
+                      </PriceText>
+                      <TimeText>{dateDiff(item.time * 1000, null)}</TimeText>
+                    </RightFlexBox>
+                    <ArrowImage
+                      src={arrow}
+                      onClick={() => {
+                        window.open(`https://etherscan.io/tx/${item.txid}`)
+                      }}
+                    ></ArrowImage>
+                  </RightTimeFlex>
+                </MobileActiviesFlex>
+              ))}
+          </ActiviesCard>
+        </div>
+      ) : (
+        <div>
+          <TitleText>Trading Activies</TitleText>
+          <ActiviesCard>
+            {normalDate &&
+              normalDate.map((item: any, index: any) => (
+                <ActiviesFlex key={index}>
+                  <HeaderImgFlex>
+                    {item.imageUrl ? <NFTImage src={item.imageUrl} /> : ''}
+                    <NumberFlex>
+                      <AxieFlex>
+                        <AxieIconImage src={axieIcon} />
+                        <NumbersText>#{item.blockNo}</NumbersText>
+                      </AxieFlex>
+                    </NumberFlex>
+                  </HeaderImgFlex>
+                  <RightTimeFlex>
+                    <RightFlexBox>
+                      <EthValueFlex>
+                        <IconBox>Ξ</IconBox>
+                        <EthValueText>{new BigNumber(item.ethValue).toFixed(2)}</EthValueText>
+                      </EthValueFlex>
+                      <PriceText>
+                        $
+                        {toThousands(
+                          new BigNumber(new BigNumber(item.ethValue).toFixed(2)).times(ethPrice).toFixed(2).toString()
+                        )}
+                      </PriceText>
+                      <TimeText>{dateDiff(item.time * 1000, null)}</TimeText>
+                    </RightFlexBox>
+                    <ArrowImage
+                      src={arrow}
+                      onClick={() => {
+                        window.open(`https://etherscan.io/tx/${item.txid}`)
+                      }}
+                    ></ArrowImage>
+                  </RightTimeFlex>
+                </ActiviesFlex>
+              ))}
+          </ActiviesCard>
+        </div>
+      )}
+    </>
   )
 }
 function useColorModeValue(arg0: string, arg1: string) {
