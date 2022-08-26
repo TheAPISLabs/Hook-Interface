@@ -12,13 +12,13 @@ const renderName = (text: any, record: any, index: any) => {
   return <div>{text}</div>
 }
 const renderPrice = (text: any, record: any, index: any) => {
-  return <div>${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
+  return <div className="textOver">${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
 }
 const renderVolume = (text: any, record: any, index: any) => {
-  return <div>${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
+  return <div className="textOver">${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
 }
 const renderSales = (text: any, record: any, index: any) => {
-  return <div>${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
+  return <div className="textOver">${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
 }
 const { Column } = Table
 export default function TrendingAddresses(props: any) {

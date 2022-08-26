@@ -59,6 +59,7 @@ export default function TrendingAddresses(props: any) {
     width: 100%;
     padding: 25px 19px 39px 32px;
     @media screen and (max-width: 1440px) {
+      overflow: hidden;
       height: 258px;
       border-radius: 22px;
       opacity: 1;
