@@ -22,10 +22,10 @@ const renderName = (text: any, record: any, index: any) => {
   )
 }
 const renderPrice = (text: any, record: any, index: any) => {
-  return <div>${new BigNumber(text).toFixed(4)}</div>
+  return <div>${Number(new BigNumber(text).toFixed(4)).toLocaleString()}</div>
 }
 const renderVolume = (text: any, record: any, index: any) => {
-  return <div>${new BigNumber(text).toFixed(2)}</div>
+  return <div>${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
 }
 const renderHours = (text: any, record: any, index: any) => {
   return <div className={text > 0 ? 'SineNum' : 'RedSineNum'}>{text?.toFixed(2)}%</div>
