@@ -23,6 +23,15 @@ export default function DeFiChartsData(props: { [x: string]: any; chartData: any
       width: 100%;
       padding: 18px 21px 17px 25px;
     }
+    @media screen and (max-width: 700px) {
+      height: 258px;
+      border-radius: 22px;
+      opacity: 1;
+      background: rgba(17, 28, 68, 1);
+      width: 100%;
+      padding: 18px 21px 17px 25px;
+      margin-bottom: 16px;
+    }
   `
   const Title = styled.div`
     color: rgba(255, 255, 255, 1);

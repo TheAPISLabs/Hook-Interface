@@ -3,6 +3,10 @@
 
   .semi-tabs-bar {
     margin-left: 53px;
+
+    @media screen and (max-width: 700px) {
+      margin-left: 0px;
+    }
   }
 
   .semi-tabs-bar-button .semi-tabs-tab-active,
@@ -80,6 +84,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media screen and (max-width: 700px) {
+    white-space: nowrap;
+    overflow: none;
+    text-overflow: ellipsis;
+  }
 }
 
 .Tabss {
@@ -134,6 +144,26 @@
 
       text-align: left;
     }
+
+    @media screen and (max-width: 700px) {
+      background-color: transparent;
+      color: var(--semi-color-text-2);
+      text-align: left;
+      border-bottom: 1px solid rgb(110 116 124 / 23%);
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 16px;
+      padding-bottom: 4px;
+      vertical-align: middle;
+      word-break: break-all;
+      word-wrap: break-word;
+      position: relative;
+      color: rgba(163, 174, 208, 1);
+      font-size: 15px;
+      font-weight: 400;
+
+      text-align: left;
+    }
   }
 
   .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
@@ -168,6 +198,23 @@
       font-weight: 500;
       text-align: left;
     }
+
+    @media screen and (max-width: 7000px) {
+      display: table-cell;
+      word-wrap: break-word;
+      word-break: break-all;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid var(--semi-color-border);
+      padding: 15px 0px 0px 0px;
+      box-sizing: border-box;
+      position: relative;
+      vertical-align: middle;
+      color: rgba(255, 255, 255, 1);
+      font-size: 15px;
+      font-weight: 500;
+      text-align: left;
+    }
   }
 }
 
@@ -196,6 +243,15 @@
 
   @media screen and (max-width: 1440px) {
     width: 219px;
+  }
+}
+
+.TrendingBox {
+  .semi-table-body {
+    @media screen and (max-width: 700px) {
+      max-height: 254px !important;
+    }
+
   }
 }
 
@@ -246,9 +302,9 @@
       word-wrap: break-word;
       position: relative;
       color: rgba(163, 174, 208, 1);
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 400;
-
+      width: 110px;
       text-align: left;
     }
   }
@@ -285,6 +341,31 @@
       font-weight: 500;
       text-align: left;
     }
+
+    @media screen and (max-width: 700px) {
+      display: table-cell;
+      word-wrap: break-word;
+      word-break: break-all;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid var(--semi-color-border);
+      padding: 15px 0px 0px 0px;
+      box-sizing: border-box;
+      position: relative;
+      vertical-align: middle;
+      color: rgba(255, 255, 255, 1);
+      font-size: 15px !important;
+      font-weight: 500;
+      text-align: left;
+      width: 108px;
+    }
+  }
+
+  .semi-table-body {
+    @media screen and (max-width: 700px) {
+      max-height: 254px !important;
+    }
+
   }
 
   .semi-avatar-small {
@@ -378,6 +459,32 @@
 
       text-align: left;
     }
+
+    @media screen and (max-width: 700px) {
+      background-color: transparent;
+      color: var(--semi-color-text-2);
+      text-align: left;
+      border-bottom: 1px solid rgb(110 116 124 / 23%);
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 16px;
+      padding-bottom: 4px;
+      vertical-align: middle;
+      word-break: break-all;
+      word-wrap: break-word;
+      position: relative;
+      color: rgba(163, 174, 208, 1);
+      font-size: 15px;
+      font-weight: 400;
+      width: 160px;
+      text-align: left;
+    }
+  }
+
+  .semi-table-body {
+    @media screen and (max-width: 700px) {
+      max-height: 254px !important;
+    }
   }
 
   .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
@@ -411,6 +518,24 @@
       font-size: 10px;
       font-weight: 500;
       text-align: left;
+    }
+
+    @media screen and (max-width: 700px) {
+      display: table-cell;
+      word-wrap: break-word;
+      word-break: break-all;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid var(--semi-color-border);
+      padding: 15px 0px 0px 0px;
+      box-sizing: border-box;
+      position: relative;
+      vertical-align: middle;
+      color: rgba(255, 255, 255, 1);
+      font-size: 15px !important;
+      font-weight: 500;
+      text-align: left;
+      width: 160px;
     }
   }
 

@@ -100,6 +100,7 @@ export default function Earn(props) {
                     // justifyContent: 'center',
                     alignItems: 'center',
                     display: 'flex',
+                    justifyContent: 'center',
                   }}
                   className={idx == index ? (animate ? 'animate' : '') : ''}
                   data-idx={`${index}`}
@@ -157,6 +158,8 @@ export default function Earn(props) {
                     width: '200px',
                     position: 'absolute',
                     maxWidth: 'none',
+                    top: '-20px',
+                    left: '-60px',
                   }}
                 />
               </div>

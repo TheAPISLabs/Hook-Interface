@@ -9,7 +9,7 @@ const renderIndex = (text: any, record: any, index: any) => {
   return <div>{index + 1}</div>
 }
 const renderName = (text: any, record: any, index: any) => {
-  return <div>{text}</div>
+  return <div className="textOver">{text}</div>
 }
 const renderPrice = (text: any, record: any, index: any) => {
   return <div className="textOver">${Number(new BigNumber(text).toFixed(2)).toLocaleString()}</div>
@@ -65,6 +65,14 @@ export default function TrendingAddresses(props: any) {
       background: rgba(17, 28, 68, 1);
       width: 100%;
       padding: 15px 12px 0px 26px;
+    }
+    @media screen and (max-width: 700px) {
+      height: 100%;
+      border-radius: 22px;
+      opacity: 1;
+      background: rgba(17, 28, 68, 1);
+      width: 100%;
+      padding: 15px 12px 15px 26px;
     }
   `
   const TitleBox = styled.div`

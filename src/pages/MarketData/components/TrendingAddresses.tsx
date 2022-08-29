@@ -67,6 +67,15 @@ export default function TrendingAddresses(props: any) {
       width: 100%;
       padding: 15px 12px 0px 26px;
     }
+    @media screen and (max-width: 700px) {
+      overflow: hidden;
+      height: 360px;
+      border-radius: 22px;
+      opacity: 1;
+      background: rgba(17, 28, 68, 1);
+      width: 100%;
+      padding: 15px 12px 0px 26px;
+    }
   `
   const TitleBox = styled.div`
     width: 100%;
@@ -109,7 +118,7 @@ export default function TrendingAddresses(props: any) {
     }
   `
   return (
-    <TrendingBox>
+    <TrendingBox className="TrendingBox">
       <TitleBox>
         <Title>Trending Addresses</Title>
         <Volume className="iconfont">&#xe600;</Volume>

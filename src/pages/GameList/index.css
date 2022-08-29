@@ -59,14 +59,14 @@
   height: 160px;
   padding: 13px 21px 21px 20px;
   box-sizing: border-box;
-  transition: 1s;
+  transition: all 1s;
   overflow: hidden;
 }
 @media screen and (max-width: 1440px) {
   .InformationBoxIShow {
     padding: 13px 21px 21px 20px;
     box-sizing: border-box;
-    transition: 1s;
+    transition: all 1s;
     overflow: hidden;
     height: 130px;
   }
@@ -75,21 +75,21 @@
   height: 160px;
   padding: 13px 21px 21px 20px;
   box-sizing: border-box;
-  transition: 1s;
+  transition: all 1s;
   overflow: hidden;
 }
 .InformationBox {
   height: 0px;
   padding: 0px 20px;
   box-sizing: border-box;
-  transition: 1s;
+  transition: all 1s;
   overflow: hidden;
 }
 .InformationBoxHid {
   height: 0px;
   padding: 0px;
   box-sizing: border-box;
-  transition: 1s;
+  transition: all 1s;
   overflow: hidden;
 }
 .IconChevronDownBoxIShow {

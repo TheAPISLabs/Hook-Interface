@@ -6,6 +6,7 @@ import BigNumber from 'bignumber.js'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
+import { isMobile } from '../../GameDetails/components/until.js'
 export default function MarketCapData(props: any) {
   const { value } = props
   // const [MarketCapData, setMarketCapData] = useState(value)
@@ -75,6 +76,15 @@ export default function MarketCapData(props: any) {
       border-radius: 22px;
     }
   `
+  const MobileMarketCap = styled.div`
+    height: 94px;
+    background-color: #111c44;
+    padding: 17px 0px 0px 24px;
+    box-sizing: border-box;
+    border-radius: 22px;
+    margin-bottom: 16px;
+  `
+
   const MarkBox = styled.div`
     // display: flex;
     // width: 100%;
@@ -136,58 +146,116 @@ export default function MarketCapData(props: any) {
     }
   `
   return (
-    <div className="max">
-      <Tabs type="button">
-        {MarketCapData &&
-          MarketCapData.map(
-            (
-              item: {
-                MarketName: string
-                indexNum: string | undefined
-                children: any[]
-              },
-              index: any
-            ) => {
-              return (
-                <TabPane tab={item.MarketName} itemKey={item.indexNum}>
-                  <>
-                    <MarkBox className="grid">
-                      <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
-                        {item?.children?.map(
-                          (
-                            item: {
-                              MarkTitle: string
-                              valueNum: number
-                              VolumRatios: number
-                            },
-                            index: any
-                          ) => {
-                            return (
-                              <Col xs={8} sm={8} md={8} lg={8} xl={8}>
-                                <MarketCap className="MarketCapTab">
-                                  <MarkTitle>{item.MarkTitle}</MarkTitle>
-                                  <CapNum>{item.valueNum?.toLocaleString()}</CapNum>
-                                  <SineLast>
-                                    <SineNum className={item.VolumRatios > 0 ? 'SineNum' : 'RedSineNum'}>
-                                      {item?.VolumRatios && Number(item.VolumRatios.toFixed(2)) > 0
-                                        ? `+${new BigNumber(item.VolumRatios || 0).times(100).toFixed(2)}%`
-                                        : new BigNumber(item.VolumRatios || 0).times(100).toFixed(2) + '%'}
-                                    </SineNum>
-                                    since last 24H
-                                  </SineLast>
-                                </MarketCap>
-                              </Col>
-                            )
-                          }
-                        )}
-                      </Row>
-                    </MarkBox>
-                  </>
-                </TabPane>
-              )
-            }
-          )}
-      </Tabs>
-    </div>
+    <>
+      {isMobile() ? (
+        <div className="max">
+          <Tabs type="button">
+            {MarketCapData &&
+              MarketCapData.map(
+                (
+                  item: {
+                    MarketName: string
+                    indexNum: string | undefined
+                    children: any[]
+                  },
+                  index: any
+                ) => {
+                  return (
+                    <TabPane tab={item.MarketName} itemKey={item.indexNum}>
+                      <>
+                        <MarkBox className="grid">
+                          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+                            {item?.children?.map(
+                              (
+                                item: {
+                                  MarkTitle: string
+                                  valueNum: number
+                                  VolumRatios: number
+                                },
+                                index: any
+                              ) => {
+                                return (
+                                  <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                                    <MobileMarketCap className="MarketCapTab">
+                                      <MarkTitle>{item.MarkTitle}</MarkTitle>
+                                      <CapNum>{item.valueNum?.toLocaleString()}</CapNum>
+                                      <SineLast>
+                                        <SineNum className={item.VolumRatios > 0 ? 'SineNum' : 'RedSineNum'}>
+                                          {item?.VolumRatios && Number(item.VolumRatios.toFixed(2)) > 0
+                                            ? `+${new BigNumber(item.VolumRatios || 0).times(100).toFixed(2)}%`
+                                            : new BigNumber(item.VolumRatios || 0).times(100).toFixed(2) + '%'}
+                                        </SineNum>
+                                        since last 24H
+                                      </SineLast>
+                                    </MobileMarketCap>
+                                  </Col>
+                                )
+                              }
+                            )}
+                          </Row>
+                        </MarkBox>
+                      </>
+                    </TabPane>
+                  )
+                }
+              )}
+          </Tabs>
+        </div>
+      ) : (
+        <div className="max">
+          <Tabs type="button">
+            {MarketCapData &&
+              MarketCapData.map(
+                (
+                  item: {
+                    MarketName: string
+                    indexNum: string | undefined
+                    children: any[]
+                  },
+                  index: any
+                ) => {
+                  return (
+                    <TabPane tab={item.MarketName} itemKey={item.indexNum}>
+                      <>
+                        <MarkBox className="grid">
+                          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+                            {item?.children?.map(
+                              (
+                                item: {
+                                  MarkTitle: string
+                                  valueNum: number
+                                  VolumRatios: number
+                                },
+                                index: any
+                              ) => {
+                                return (
+                                  <Col xs={8} sm={8} md={8} lg={8} xl={8}>
+                                    <MarketCap className="MarketCapTab">
+                                      <MarkTitle>{item.MarkTitle}</MarkTitle>
+                                      <CapNum>{item.valueNum?.toLocaleString()}</CapNum>
+                                      <SineLast>
+                                        <SineNum className={item.VolumRatios > 0 ? 'SineNum' : 'RedSineNum'}>
+                                          {item?.VolumRatios && Number(item.VolumRatios.toFixed(2)) > 0
+                                            ? `+${new BigNumber(item.VolumRatios || 0).times(100).toFixed(2)}%`
+                                            : new BigNumber(item.VolumRatios || 0).times(100).toFixed(2) + '%'}
+                                        </SineNum>
+                                        since last 24H
+                                      </SineLast>
+                                    </MarketCap>
+                                  </Col>
+                                )
+                              }
+                            )}
+                          </Row>
+                        </MarkBox>
+                      </>
+                    </TabPane>
+                  )
+                }
+              )}
+          </Tabs>
+        </div>
+      )}
+    </>
   )
 }

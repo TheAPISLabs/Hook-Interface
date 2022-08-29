@@ -983,6 +983,11 @@ export default function Ranking(props: any) {
                         </HideBox>
                       </AlphaBigBox>
                       <InformationBox
+                        // style={{
+                        //   transition: 'all 1s',
+                        //   height: idx == index ? (isShow ? '0px' : '160px') : '160px',
+                        // }}
+                        // className="InformationBoxIShow"
                         className={
                           idx == index ? (isShow ? 'InformationBoxIShow' : 'InformationBox') : 'InformationBoxHid'
                         }

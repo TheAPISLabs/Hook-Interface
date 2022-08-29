@@ -5,6 +5,7 @@ import { Col, Row, Skeleton } from '@douyinfe/semi-ui'
 import React, { useEffect, useState } from 'react'
 
 import { getCmcDatas, getGraphData, getMarketCapAndVolume, getSearchRank } from '../../hook/hook'
+import { isMobile } from '../GameDetails/components/until.js'
 import DeFi from './components/DeFi'
 import DeFiTrending from './components/DeFiTrending'
 import NFTTrending from './components/NFTTrending'
@@ -167,28 +168,54 @@ export default function MarketData() {
   }, [])
 
   return (
-    <div className="grid">
-      <Skeleton placeholder={placeholder} loading={false} active>
-        <Row className="Tabss">
-          <Tabss value={tabsData} />
-        </Row>
-      </Skeleton>
-      <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
-        <Col xs={16} sm={16} md={16} lg={16} xl={16}>
-          <DeFi chartData={chartData} />
-        </Col>
-        <Col xs={8} sm={8} md={8} lg={8} xl={8} className="Trending">
-          <Trending value={TrendAddData} />
-        </Col>
-      </Row>
-      <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }} className="mt">
-        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-          <DeFiTrending value={defiRank} />
-        </Col>
-        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-          <NFTTrending value={nftRank} />
-        </Col>
-      </Row>
-    </div>
+    <>
+      {isMobile() ? (
+        <div className="grid">
+          <Skeleton placeholder={placeholder} loading={false} active>
+            <Row className="Tabss">
+              <Tabss value={tabsData} />
+            </Row>
+          </Skeleton>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+            <DeFi chartData={chartData} />
+          </Row>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+            <div className="Trending">
+              <Trending value={TrendAddData} />
+            </div>
+          </Row>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }} className="mt">
+            <DeFiTrending value={defiRank} />
+          </Row>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }} className="mt">
+            <NFTTrending value={nftRank} />
+          </Row>
+        </div>
+      ) : (
+        <div className="grid">
+          <Skeleton placeholder={placeholder} loading={false} active>
+            <Row className="Tabss">
+              <Tabss value={tabsData} />
+            </Row>
+          </Skeleton>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }}>
+            <Col xs={16} sm={16} md={16} lg={16} xl={16}>
+              <DeFi chartData={chartData} />
+            </Col>
+            <Col xs={8} sm={8} md={8} lg={8} xl={8} className="Trending">
+              <Trending value={TrendAddData} />
+            </Col>
+          </Row>
+          <Row gutter={{ xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24 }} className="mt">
+            <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+              <DeFiTrending value={defiRank} />
+            </Col>
+            <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+              <NFTTrending value={nftRank} />
+            </Col>
+          </Row>
+        </div>
+      )}
+    </>
   )
 }
