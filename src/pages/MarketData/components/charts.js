@@ -47,7 +47,7 @@ export const lineChartOptionsTotalSpent = {
     },
     dropShadow: {
       enabled: true,
-      top: 13,
+      top: 0,
       left: 0,
       blur: 10,
       opacity: 0.1,

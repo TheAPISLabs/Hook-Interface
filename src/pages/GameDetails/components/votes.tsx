@@ -84,7 +84,7 @@ export default function Vote(props: any) {
     }
   `
   const MobileSupplyBox = styled.div`
-    width: 162px;
+    width: 182px;
     height: 147px;
     padding: 20px;
     border-right: 1px solid rgba(228, 228, 228, 0.1);
