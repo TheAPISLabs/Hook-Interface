@@ -3,6 +3,8 @@ import styled from 'styled-components/macro'
 
 import PassCard from '../../assets/images/logo/HookPASS.png'
 import Free from '../../assets/images/logo/Subscription.png'
+import PassImgs from '../../assets/img/logo/HookPassMobiles.png'
+import { isMobile } from '../GameDetails/components/until.js'
 
 export default function HookPass() {
   const HookPassBigBox = styled.div`
@@ -11,6 +13,10 @@ export default function HookPass() {
     @media screen and (max-width: 1440px) {
       margin: auto;
       width: 690px;
+    }
+    @media screen and (max-width: 700px) {
+      text-align: center;
+      width: 100%;
     }
   `
   const HookPassBox = styled.div`
@@ -128,30 +134,42 @@ export default function HookPass() {
       height: 562px;
     }
   `
+  const PassImg = styled.img`
+    width: 311px;
+    height: 476px;
+  `
   return (
-    <HookPassBigBox>
-      <HookPassBox>
-        <FlexBox>
-          <HookPassBoxTitle>
-            <TextBox>
-              <HOOKPASSText>HOOK PASS</HOOKPASSText>
-              <APISText>By The APIS</APISText>
-            </TextBox>
+    <>
+      {isMobile() ? (
+        <HookPassBigBox>
+          <PassImg src={PassImgs}></PassImg>
+        </HookPassBigBox>
+      ) : (
+        <HookPassBigBox>
+          <HookPassBox>
+            <FlexBox>
+              <HookPassBoxTitle>
+                <TextBox>
+                  <HOOKPASSText>HOOK PASS</HOOKPASSText>
+                  <APISText>By The APIS</APISText>
+                </TextBox>
 
-            <HookText>
-              Hook pass will be the key to premium features
-              <br />
-              and experiences.
-            </HookText>
-          </HookPassBoxTitle>
-          <HookCardBox>
-            <HookCardImage src={PassCard} />
-          </HookCardBox>
-        </FlexBox>
-        <FreeBox>
-          <FreeImage src={Free} />
-        </FreeBox>
-      </HookPassBox>
-    </HookPassBigBox>
+                <HookText>
+                  Hook pass will be the key to premium features
+                  <br />
+                  and experiences.
+                </HookText>
+              </HookPassBoxTitle>
+              <HookCardBox>
+                <HookCardImage src={PassCard} />
+              </HookCardBox>
+            </FlexBox>
+            <FreeBox>
+              <FreeImage src={Free} />
+            </FreeBox>
+          </HookPassBox>
+        </HookPassBigBox>
+      )}
+    </>
   )
 }

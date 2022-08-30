@@ -237,6 +237,16 @@
     width: 219px;
   }
 }
+@media screen and (max-width: 1920px) {
+  .TrendingBox .semi-table-body {
+    max-height: 214px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .TrendingBox .semi-table-body {
+    max-height: 150px !important;
+  }
+}
 @media screen and (max-width: 700px) {
   .TrendingBox .semi-table-body {
     max-height: 254px !important;
@@ -344,6 +354,16 @@
     width: 108px;
   }
 }
+@media screen and (max-width: 1920px) {
+  .DeFiTrending .semi-table-body {
+    max-height: 214px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .DeFiTrending .semi-table-body {
+    max-height: 150px !important;
+  }
+}
 @media screen and (max-width: 700px) {
   .DeFiTrending .semi-table-body {
     max-height: 254px !important;
@@ -428,6 +448,16 @@
     font-weight: 400;
     width: 160px;
     text-align: left;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .NFTTrending .semi-table-body {
+    max-height: 214px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .NFTTrending .semi-table-body {
+    max-height: 150px !important;
   }
 }
 @media screen and (max-width: 700px) {

@@ -14,7 +14,7 @@ export default function Ranking(props: any) {
   const { gameData } = props
   const history = useHistory()
   const [GameCardData, setGameCardData] = useState(gameData)
-  const [isShow, setIsshow] = useState(false)
+  const [isShow, setIsshow] = useState(true)
   const [idx, setIdx] = useState('')
   const [showText, setShowText] = useState('SORT')
   useEffect(() => {
