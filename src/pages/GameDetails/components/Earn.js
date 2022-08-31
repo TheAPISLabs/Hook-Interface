@@ -293,7 +293,7 @@ export default function Comments(props) {
             color: '#fff',
             position: 'relative',
             left: '50%',
-            marginLeft: '-25%',
+            marginLeft: '-16%',
           }}
           variant="brand"
           onClick={() => {
