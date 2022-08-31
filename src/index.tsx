@@ -8,7 +8,7 @@ import { MulticallUpdater } from 'lib/state/multicall'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import Blocklist from './components/Blocklist'
 import Web3Provider from './components/Web3Provider'
@@ -47,7 +47,7 @@ const container = document.getElementById('root') as HTMLElement
 createRoot(container).render(
   <StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <LanguageProvider>
           <Web3Provider>
             <Blocklist>
@@ -61,7 +61,7 @@ createRoot(container).render(
             </Blocklist>
           </Web3Provider>
         </LanguageProvider>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </StrictMode>
 )
