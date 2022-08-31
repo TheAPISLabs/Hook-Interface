@@ -148,7 +148,7 @@ export default class ErrorBoundary extends React.Component<PropsWithChildren<unk
 
 function getRelevantState(): null | keyof AppState {
   const path = window.location.hash
-  if (!path.startsWith('#/')) {
+  if (!path.startsWith('')) {
     return null
   }
   const pieces = path.substring(2).split(/[/\\?]/)
