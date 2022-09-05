@@ -1,7 +1,7 @@
 import './index.css'
 
 import { Nav } from '@douyinfe/semi-ui'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo/HookLogo.png'
@@ -14,9 +14,14 @@ export default function NavigationBar() {
   const handleCollapse = (e: boolean) => {
     setIsClolapse(e)
   }
+  useEffect(() => {
+    if (isMobile()) {
+      setIsClolapse(true)
+    }
+  }, [])
   const history = useHistory()
   return (
-    <div style={{ height: '100%' }}>
+    <div style={{ minHeight: '100vh', height: '100%' }}>
       {isMobile() ? (
         <Nav
           className="NavBar"
@@ -25,6 +30,7 @@ export default function NavigationBar() {
           onSelect={(data) => console.log('trigger onSelect: ', data)}
           onClick={(data) => console.log('trigger onClick: ', data)}
           onCollapseChange={handleCollapse}
+          defaultIsCollapsed={true}
         >
           <Nav.Header logo={isClolapse ? <img src={Logo} /> : <img src={Logos} />} />
           <Nav.Item
@@ -45,14 +51,14 @@ export default function NavigationBar() {
               history.push({ pathname: '/marketdata' })
             }}
           />{' '}
-          {/* <Nav.Item
+          <Nav.Item
             itemKey={'unions'}
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
               history.push({ pathname: '/portfolioTrack' })
             }}
-          /> */}
+          />
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
             <PassCard />
           </div>
@@ -91,14 +97,14 @@ export default function NavigationBar() {
               history.push({ pathname: '/marketdata' })
             }}
           />{' '}
-          {/* <Nav.Item
+          <Nav.Item
             itemKey={'unions'}
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
               history.push({ pathname: '/portfolioTrack' })
             }}
-          /> */}
+          />
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
             <PassCard />
           </div>

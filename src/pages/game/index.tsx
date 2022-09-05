@@ -3,6 +3,7 @@ import 'swiper/swiper.min.css'
 import 'swiper/modules/pagination/pagination.min.css'
 
 import { IconPlusCircle } from '@douyinfe/semi-icons'
+import { isMobile } from 'pages/GameDetails/components/until'
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
@@ -767,12 +768,10 @@ export default function Track() {
         <Box
           className="swiper-container1"
           style={{
-            width: '900px',
+            width: isMobile() ? '80vw' : '900px',
             display: 'flex',
-            // marginLeft: ' 212px',
             overflow: 'hidden',
             position: 'relative',
-            // left: '3vw',
           }}
         >
           <Swiper

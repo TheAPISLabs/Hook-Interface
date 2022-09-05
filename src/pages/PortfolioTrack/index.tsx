@@ -9,14 +9,14 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import { getSearchRank } from '../../hook/hook'
+import { getSearchDatas, getSearchRank, setSearchHeats } from '../../hook/hook'
 export default function Track(props: any) {
   const { variant, background, children, placeholder, borderRadius, ...rest } = props
   const [inputValue, setInputValue] = useState('')
   const [TrendingData, setTrendingData] = useState([])
   const history = useHistory()
   const TrackBigBox = styled.div`
-    padding-top: 80px;
+    // padding-top: 80px;
     width: 100%;
   `
   const BackImage = styled.img`
@@ -49,6 +49,7 @@ export default function Track(props: any) {
     margin: auto;
     margin-top: 50px;
     width: 860px;
+    color: #fff;
   `
   const WalletFlex = styled.div`
   margin: auto;
@@ -109,7 +110,19 @@ export default function Track(props: any) {
     getSearchRank(6).then((res) => {
       setTrendingData(res.data.data)
     })
-  })
+  }, [])
+  let timeout: NodeJS.Timeout | null
+  const debounce = (fn: (...args: any[]) => void, wait: number) => {
+    if (timeout !== null) clearTimeout(timeout)
+    timeout = setTimeout(fn, wait)
+    console.log(timeout)
+  }
+  const hanldeChange = (e: any) => {
+    console.log(e)
+    debounce(() => {
+      setInputValue(e)
+    }, 200)
+  }
   return (
     <TrackBigBox>
       <BackImage src={backLogo}></BackImage>
@@ -117,28 +130,28 @@ export default function Track(props: any) {
       <TrackTitles>Track any wallets you want.</TrackTitles>
       <InputBox>
         <Input
+          defaultValue={inputValue}
           prefix={<IconSearch />}
           placeholder="Search by Ens/ Ethereum address "
           showClear
-          // onChange={(value) => {
-          //   setInputValue(value.target.value)
-          // }}
-          // onKeyDown={(res) => {
-          //   if (res.key == 'Enter') {
-          //     getSearchDatas(inputValue.toLowerCase()).then((searchRes) => {
-          //       if (searchRes.data.code == 200) {
-          //         if (searchRes.data.data.tokenBalance.code == 1) {
-          //           localStorage.setItem('searchData', JSON.stringify(searchRes.data.data))
-          //           localStorage.setItem('searchAddress', inputValue.toLowerCase())
-          //           setSearchHeats(inputValue.toLowerCase())
-          //           history.push({ pathname: '/admin/info' })
-          //         } else {
-          //           history.push({ pathname: '/admin/profile/searcherr' })
-          //         }
-          //       }
-          //     })
-          //   }
-          // }}
+          style={{ color: '#fff' }}
+          onChange={hanldeChange}
+          onKeyDown={(res) => {
+            if (res.key == 'Enter') {
+              getSearchDatas(inputValue.toLowerCase()).then((searchRes) => {
+                if (searchRes.data.code == 200) {
+                  if (searchRes.data.data.tokenBalance.code == 1) {
+                    localStorage.setItem('searchData', JSON.stringify(searchRes.data.data))
+                    localStorage.setItem('searchAddress', inputValue.toLowerCase())
+                    setSearchHeats(inputValue.toLowerCase())
+                    history.push({ pathname: '/addressinfo' })
+                  } else {
+                    history.push({ pathname: '/errorpage' })
+                  }
+                }
+              })
+            }
+          }}
         ></Input>
       </InputBox>
       <WalletFlex>
@@ -164,8 +177,8 @@ export default function Track(props: any) {
                 )}
               </FireIconBox>
               <div>
-                {/* <NumberNftBox
-                  onClick={(e) => {
+                <NumberNftBox
+                  onClick={(e: any) => {
                     // console.log()
                     getSearchDatas(e.target.innerText.toLowerCase()).then((searchRes) => {
                       if (searchRes.data.code == 200) {
@@ -173,10 +186,10 @@ export default function Track(props: any) {
                           localStorage.setItem('searchData', JSON.stringify(searchRes.data.data))
                           localStorage.setItem('searchAddress', e.target.innerText.toLowerCase())
                           setSearchHeats(e.target.innerText.toLowerCase())
-                          history.push({ pathname: '/admin/info' })
+                          history.push({ pathname: '/addressinfo' })
                         } else {
                           history.push({
-                            pathname: '/admin/profile/searcherr',
+                            pathname: '/errorpage',
                           })
                         }
                       }
@@ -184,7 +197,7 @@ export default function Track(props: any) {
                   }}
                 >
                   {item.searchName}
-                </NumberNftBox> */}
+                </NumberNftBox>
               </div>
             </TrendingFlex>
           )

@@ -52,7 +52,7 @@ createRoot(container).render(
           <Web3Provider>
             <Blocklist>
               <BlockNumberProvider>
-                <Updaters />
+                {/* <Updaters /> */}
                 <ThemeProvider>
                   <ThemedGlobalStyle />
                   <App />

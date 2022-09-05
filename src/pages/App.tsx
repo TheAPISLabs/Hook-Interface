@@ -26,6 +26,7 @@ import { RedirectPathToSwapOnly } from './home/redirects'
 import HookPass from './HookPass'
 import MarketData from './MarketData'
 import MoreGame from './MoreGame'
+import Info from './Overview'
 import PortfolioTrack from './PortfolioTrack'
 const AppWrapper = styled.div`
   display: flex;
@@ -109,6 +110,7 @@ export default function App() {
                     <Route exact path="/errorpage" component={ErrorPage} />
                     <Route exact path="/moregame" component={MoreGame} />
                     <Route exact path="/hookpass" component={HookPass} />
+                    <Route exact path="/addressinfo" component={Info} />
                     {/* <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} /> */}
                     {/* <Route exact strict path="/swap" component={Swap} /> */}
 
