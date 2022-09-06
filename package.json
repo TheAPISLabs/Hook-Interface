@@ -155,7 +155,7 @@
     "bignumber.js": "^9.0.2",
     "braft-editor": "^2.3.9",
     "cids": "^1.0.0",
-    "copy-to-clipboard": "^3.2.0",
+    "copy-to-clipboard": "^3.3.2",
     "d3": "^7.0.0",
     "emoji-mart": "^5.2.0",
     "ethers": "^5.1.4",

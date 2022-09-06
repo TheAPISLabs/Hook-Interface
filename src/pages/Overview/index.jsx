@@ -2,11 +2,18 @@
 import './index.css'
 
 import { IconGlobeStroke } from '@douyinfe/semi-icons';
+import { IconCopy } from '@douyinfe/semi-icons';
 import { Table } from '@douyinfe/semi-ui'
+import { Col, Row } from '@douyinfe/semi-ui';
 import BigNumber from 'bignumber.js'
+import copy from 'copy-to-clipboard'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
+import HeaderImg from '../../assets/images/logo/avatar4.png'
+import fakeGraph from '../../assets/images/logo/fakeGraph.png'
+import NFTLogo from '../../assets/images/logo/NFTLogo.png'
+import SLogo from '../../assets/images/logo/SLogo.png'
 import { getTags, getTxDatas } from '../../hook/hook'
 export const initTime = (timestamp) => {
   let date = new Date(timestamp)
@@ -44,6 +51,7 @@ export default function Overview () {
     }
   )
   const { Column } = Table
+  const nftPercentage = 100 - defiPercentage
   const renderIndex = (text, record, index) => {
     return <div>{index + 1}</div>
   }
@@ -85,6 +93,10 @@ export default function Overview () {
         {text}
       </div>
     )
+  }
+  const handleClick = () => {
+    // e.stopPropagation()
+    copy(searchAddress)
   }
   const renderLink = (text, record, index) => {
     return (
@@ -150,10 +162,140 @@ export default function Overview () {
     <div className='overviewTable'>
       <div className='overTop'>
         <div className='overLeft'>
-          <div className='leftTop'>
-            <img src="" alt="" />
+          <div className='backTop'>
+            <img src={HeaderImg} alt="" className='HeaderImg'/>
           </div>
-          <div className=''></div>
+          <div className='HookWhale'>
+          Hook Whale
+          </div>
+        
+          <div className='handleClickBox'>
+            <div className='handleClickText'
+             onClick={handleClick}
+            >
+            {searchAddress.slice(0, 5)}...
+          {searchAddress.slice(
+            searchAddress.length - 5,
+            searchAddress.length - 1
+          )}
+            </div>
+            <IconCopy className='IconCopy'/>
+          </div>
+          <div className='ResBoxBig'>
+          <Row gutter={[16, 24]} justify="space-around">
+          
+          {tagArr.map((res, index) => {
+            return (
+              <Col span={6}  key={index + 1}>
+              <div
+              className='ResBox'
+               
+              >
+                
+                #{res}
+              </div>
+                </Col>
+            )
+          })}
+          
+        </Row>
+          </div>
+        
+        <div
+        className=' EtherscanBigBox'
+       
+      >
+        <div
+        className='EtherscanText'
+         
+          onClick={() => {
+            window.open(`https://etherscan.io/address/${searchAddress}`)
+          }}
+        >
+          Etherscan
+        </div>
+
+        <div
+        className='OpenseaText'
+          onClick={() => {
+            window.open(`https://opensea.io/${searchAddress}`)
+          }}
+        
+        >
+          Opensea
+        </div>
+        <div
+        className='CyberText'
+          onClick={() => {
+            window.open(`https://www.cyber.xyz/@${searchAddress}`)
+          }}
+        
+        >
+          Cyber.xyz
+        </div>
+     
+        </div>
+        <div className='PortfolioBigBox'>
+      <div className='PortfolioBox'>
+        <div>
+          <div
+          className='PortfolioText'
+         
+          >
+            Portfolio
+          </div>
+          <div
+          className='total2UsdText'
+          >
+            ${total2Usd}
+          </div>
+        </div>
+        <div className='fakeGraphImgBox' align="flex-end">
+          <img src={fakeGraph} alt="" className='fakeGraphImg' />
+        </div>
+      </div>
+    
+    </div>
+      <div className='NFTLogoNft2Usd'>
+        <div>
+          <div className='NFTLogoImgBox'>
+            <img src={NFTLogo} alt="" className='NFTLogoImg'/>
+          </div>
+          <div className='ERC721TextBox'>
+            <div className='ERC721Text'>
+              Assets on ERC721
+            </div>
+            <div className='nft2UsdBox'>
+              <div className='nft2UsdText' >
+                ${nft2Usd}
+              </div>
+              <div className='nftPercentageText'>
+                {nftPercentage}%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='SLogoBox'>
+          <div className='SLogoImgBox'>
+            <img src={SLogo} className='SLogoImg' alt="" />
+          </div>
+          <div className='ERC20Box'>
+            <div>
+              <div className='ERC20Text'>
+                Assets on ERC20
+              </div>
+            </div>
+            <div className='defi2UsdBox'>
+              <div className='defi2UsdText'>
+                ${defi2Usd}
+              </div>
+              <div className='defiPercentageText' >
+                {defiPercentage}%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
         <div className='tokenTrending'>
           <Table dataSource={defiToken} pagination={false} >
