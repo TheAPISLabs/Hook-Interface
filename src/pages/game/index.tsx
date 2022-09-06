@@ -21,7 +21,12 @@ const Box = styled.div`
 const GameBox = styled.div`
   // display: flex;
   margin: 0 auto;
-  min-height: 84vh;
+  max-height: 60vh;
+  // transform: ;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-35%) scale(0.9);
 `
 const Flex = styled.div`
   display: flex;
