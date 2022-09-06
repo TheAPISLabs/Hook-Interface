@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/display-name */
 import '../index.css'
 
+import { isMobile } from 'pages/GameDetails/components/until'
 import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 // import { isMobile } from '../../gameDetail/compoments/until.js'
-import { isMobile } from '../../GameDetails/components/until.js'
 import SwiperItem from './SwiperItem'
-export default function GameSwipper() {
+export default function GameSwipper () {
   const [images, setImages] = useState([
     {
       thumbnail: `https://picsum.photos/id/1019/1000/600/`,
@@ -112,7 +113,7 @@ export default function GameSwipper() {
       <div
         style={{
           width: '100%',
-          height: '34vw',
+          height: isMobile() ? '392px' : '34vw',
           borderRadius: '22px',
           background: 'rgba(228,228,228,0.1)',
           overflow: 'hidden',
@@ -122,9 +123,9 @@ export default function GameSwipper() {
           thumbnailPosition="right"
           items={images}
           showFullscreenButton={false}
-          showNav={isMobile() ? true : false}
+          showNav={false}
           showPlayButton={false}
-          showThumbnails={isMobile() ? false : true}
+          showThumbnails={true}
         />
       </div>
     </div>

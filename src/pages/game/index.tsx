@@ -875,7 +875,7 @@ export default function Track() {
               })}
           </Swiper>
         </Box>
-        <Link href="/gamelist">
+        <Link href="/layout/gamelist">
           <Box
             className="VIewBtn"
             style={{

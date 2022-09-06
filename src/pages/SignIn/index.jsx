@@ -40,6 +40,8 @@ export default function SignIn () {
     console.log(email, password);
     userLoginByPwd(email, password).then(res => {
       if (res.data.code == '200') {
+        localStorage.setItem('token', res.data.data.token)
+        localStorage.setItem('uid', res.data.data.uid)
         history.push({ pathname: '/layout/game' })
       } else {
         Notification.open({

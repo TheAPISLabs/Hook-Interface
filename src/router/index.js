@@ -46,7 +46,7 @@ const routes = [
         component: GameDetails,
       },
       {
-        path: '/layout/about',
+        path: '/layout/gamelist',
         component: GameList,
       },
       {

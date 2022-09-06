@@ -1,11 +1,11 @@
 /* eslint-disable react/display-name */
+import { Carousel } from '@douyinfe/semi-ui'
 import React, { useEffect, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
 
-import { isMobile } from '../../gameDetail/compoments/until.js'
 import SwiperItem from './SwiperItem.js'
 
-export default function GameSwipper({}) {
+export default function GameSwipper ({ }) {
   const [images, setImages] = useState([
     {
       thumbnail: `https://picsum.photos/id/1019/1000/600/`,
@@ -117,13 +117,14 @@ export default function GameSwipper({}) {
         background="rgba(228,228,228,0.1)"
         overflow="hidden"
       >
+        <Carousel></Carousel>
         <ImageGallery
           thumbnailPosition="right"
           items={images}
           showFullscreenButton={false}
-          showNav={isMobile() ? true : false}
+          showNav={false}
           showPlayButton={false}
-          showThumbnails={isMobile() ? false : true}
+          showThumbnails={true}
         />
       </div>
     </div>

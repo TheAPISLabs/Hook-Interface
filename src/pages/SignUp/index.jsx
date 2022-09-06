@@ -104,7 +104,8 @@ export default function SignIn () {
     console.log(email, password);
     userRegister(email, password, code, username).then(res => {
       if (res.data.code == '200') {
-        history.push({ pathname: '/layout/game' })
+
+        history.push({ pathname: '/signin' })
       } else {
         Notification.open({
           title: `${res.data.msg}`,

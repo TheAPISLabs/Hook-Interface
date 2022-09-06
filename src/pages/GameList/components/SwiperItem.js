@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+import { isMobile } from 'pages/GameDetails/components/until'
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
 import Players from '../../game/compoment/player'
-export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name, game }) {
+// eslint-disable-next-line prettier/prettier
+export default function SwiperItem ({ src, gameStudio, gameUserIcon, genres, name, game }) {
   const GameData = {
     copyright: 'Game Studio',
     generes: 'Game generes ',
@@ -19,7 +21,7 @@ export default function SwiperItem({ src, gameStudio, gameUserIcon, genres, name
         height: '720px',
       }}
     >
-      <div style={{ borderRadius: '22px', overflow: 'hidden', height: '26vw' }}>
+      <div style={{ borderRadius: '22px', overflow: 'hidden', height: isMobile() ? '349px' : '26vw' }}>
         <Players borderRadius="32px" divht={{ sm: '140vw', md: '26vw' }} ht="100%" wd="100%" src={src}></Players>
       </div>
       <div
