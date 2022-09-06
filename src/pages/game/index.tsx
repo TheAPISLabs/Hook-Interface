@@ -852,7 +852,7 @@ export default function Track() {
                               localStorage.setItem('game', JSON.stringify(item))
 
                               history.push({
-                                pathname: '/gamedetails',
+                                pathname: '/layout/gamedetails',
                               })
                             }}
                           >

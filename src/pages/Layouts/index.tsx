@@ -1,17 +1,23 @@
-import './App.css'
+import './index.css'
 
 import { Layout } from '@douyinfe/semi-ui'
 import { initializeAnalytics } from 'components/AmplitudeAnalytics'
+import Polling from 'components/Header/Polling'
+import Loader from 'components/Loader'
+import Popups from 'components/Popups'
+import TopLevelModals from 'components/TopLevelModals'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { renderRoutes } from 'react-router-config'
 import { Route, useHistory, useLocation } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import { useAnalyticsReporter } from '../components/analytics'
-import ErrorBoundary from '../components/ErrorBoundary'
-import routes from '../router'
-import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
+import { useAnalyticsReporter } from '../../components/analytics'
+import ErrorBoundary from '../../components/ErrorBoundary'
+import Headers from '../../components/Header'
+import NavigationBar from '../../components/NavigationBar'
+import DarkModeQueryParamReader from '../../theme/DarkModeQueryParamReader'
+import Foot from '../Footer'
 const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -47,13 +53,13 @@ const Marginer = styled.div`
   margin-top: 5rem;
 `
 const { Header, Footer, Sider, Content } = Layout
-export default function App() {
+export default function Layouts(props: any) {
   const history = useHistory()
   useAnalyticsReporter(useLocation())
   initializeAnalytics()
 
   useEffect(() => {
-    console.log(routes)
+    console.log(props.route.routes)
 
     const unlisten = history.listen(() => {
       window.scrollTo(0, 0)
@@ -67,7 +73,33 @@ export default function App() {
     <ErrorBoundary>
       <Route component={DarkModeQueryParamReader} />
       <Route component={ApeModeQueryParamReader} />
-      {renderRoutes(routes)}
+      <Layout className="components-layout-demo">
+        <Sider>
+          <NavigationBar />
+        </Sider>
+        <Layout>
+          <Header>
+            <Headers />
+          </Header>
+          <Content>
+            <AppWrapper>
+              {/* <HeaderWrapper>
+       
+        </HeaderWrapper> */}
+              <BodyWrapper>
+                <Popups />
+                <Polling />
+                <TopLevelModals />
+                <Suspense fallback={<Loader />}>{renderRoutes(props.route.routes)}</Suspense>
+                <Marginer />
+              </BodyWrapper>
+            </AppWrapper>
+          </Content>
+          <Footer>
+            <Foot />
+          </Footer>
+        </Layout>
+      </Layout>
     </ErrorBoundary>
   )
 }

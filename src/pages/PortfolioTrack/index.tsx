@@ -144,9 +144,9 @@ export default function Track(props: any) {
                     localStorage.setItem('searchData', JSON.stringify(searchRes.data.data))
                     localStorage.setItem('searchAddress', inputValue.toLowerCase())
                     setSearchHeats(inputValue.toLowerCase())
-                    history.push({ pathname: '/addressinfo' })
+                    history.push({ pathname: '/layout/addressinfo' })
                   } else {
-                    history.push({ pathname: '/errorpage' })
+                    history.push({ pathname: '/layout/errorpage' })
                   }
                 }
               })
@@ -186,10 +186,10 @@ export default function Track(props: any) {
                           localStorage.setItem('searchData', JSON.stringify(searchRes.data.data))
                           localStorage.setItem('searchAddress', e.target.innerText.toLowerCase())
                           setSearchHeats(e.target.innerText.toLowerCase())
-                          history.push({ pathname: '/addressinfo' })
+                          history.push({ pathname: '/layout/addressinfo' })
                         } else {
                           history.push({
-                            pathname: '/errorpage',
+                            pathname: '/layout/errorpage',
                           })
                         }
                       }

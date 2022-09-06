@@ -1,0 +1,56 @@
+.Headers {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 16px;
+}
+.Headers input::-webkit-input-placeholder {
+  color: #fff;
+}
+.Headers input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+.Headers input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+.Headers input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+.Headers .headerItems {
+  width: 315px;
+  height: 46px;
+  border-radius: 22.4px;
+  opacity: 1;
+  background: #111c44;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+.Headers .headerItems .semi-input-wrapper .semi-icon {
+  color: #fff;
+}
+.Headers .headerItems .semi-input-wrapper-clearable,
+.Headers .headerItems .semi-input-wrapper-modebtn {
+  width: 160px;
+  height: 31px;
+  border-radius: 36.58px;
+  opacity: 1;
+  background: #0b1437;
+  outline: unset;
+  color: #fff;
+}
+.Headers .headerItems .signInBox {
+  width: 60px;
+  height: 31px;
+  border-radius: 36.58px;
+  opacity: 1;
+  background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
+  font-size: 14px;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  cursor: pointer;
+}

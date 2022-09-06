@@ -1,0 +1,414 @@
+.SignIn {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+
+  input[placeholder],
+  [placeholder],
+  *[placeholder] {
+    color: #A3AED0 !important;
+  }
+
+  .signInLeft {
+    width: 50vw;
+    height: 100%;
+    padding: 40px 0px 40px 300px;
+
+    .leftHeader {
+      a {
+        opacity: 1;
+        color: rgba(163, 174, 208, 1);
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Inter";
+        text-align: left;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+
+    .leftContent {
+      margin-top: 200px;
+
+      .leftTitle {
+        opacity: 1;
+        color: rgba(255, 255, 255, 1);
+        font-size: 36px;
+        font-weight: 700;
+        font-family: "Inter";
+        text-align: left;
+      }
+
+      .leftInfo {
+        opacity: 1;
+        color: rgba(163, 174, 208, 1);
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Inter";
+        text-align: left;
+        line-height: 16px;
+        margin-top: 16px;
+      }
+
+      .inputCell {
+        margin-top: 26px;
+
+
+
+        .cellTitle {
+          opacity: 1;
+          color: rgba(255, 255, 255, 1);
+          font-size: 14px;
+          font-weight: 500;
+          font-family: "Inter";
+          text-align: left;
+          line-height: 14px;
+
+          span {
+            opacity: 1;
+            color: rgba(117, 81, 255, 1);
+            font-size: 14px;
+            font-weight: 500;
+            font-family: "Inter";
+            text-align: left;
+            line-height: 14px;
+          }
+
+          .cellErr {
+            color: rgb(167, 4, 4);
+            font-weight: 500;
+
+          }
+
+        }
+
+        .cellInput {
+
+          margin-top: 14px;
+
+          .semi-input-wrapper-clearable,
+          .semi-input-wrapper-modebtn {
+            border: none !important;
+
+          }
+
+          .semi-input-wrapper .semi-icon {
+            color: #fff;
+
+            &:hover {
+              color: rgb(115, 79, 253);
+            }
+          }
+
+          .semi-input-wrapper-default,
+          .semi-input-wrapper {
+            width: 410px;
+            height: 50px;
+            border-radius: 16px !important;
+            opacity: 1;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+
+            input {
+              width: 410px;
+              height: 50px;
+            }
+          }
+        }
+      }
+
+      .CheckboxCell {
+        display: flex;
+        justify-content: space-between;
+        width: 410px;
+        margin-top: 31px;
+
+        .semi-checkbox-addon {
+          color: #fff !important;
+          opacity: 1;
+          font-size: 14px;
+          font-weight: 400;
+          font-family: "Inter";
+          text-align: left;
+          line-height: 20px;
+        }
+
+        .semi-checkbox-inner-display {
+          box-shadow: inset 0 0 0 1px #fff
+        }
+
+        .semi-checkbox-indeterminate .semi-checkbox-inner-display,
+        .semi-checkbox-checked .semi-checkbox-inner-display {
+          background: #7551FF;
+          color: #FFF;
+          box-shadow: inset 0 0 0 1px transparent;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          opacity: 1;
+          font-size: 14px;
+          font-weight: 500;
+          font-family: "Inter";
+          text-align: left;
+          line-height: 20px;
+
+        }
+      }
+
+      .buttonCell {
+        width: 410px;
+        height: 54px;
+        border-radius: 16px;
+        opacity: 1;
+        background: rgba(117, 81, 255, 1);
+        opacity: 1;
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Inter";
+        text-align: center;
+        line-height: 54px;
+        margin-top: 33px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .signUpTips {
+        opacity: 1;
+        color: rgba(163, 174, 208, 1);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        line-height: 26px;
+        font-family: "Inter";
+        margin-top: 26px;
+
+        a {
+          opacity: 1;
+          color: rgba(255, 255, 255, 1);
+          font-size: 14px;
+          font-weight: 700;
+          text-align: left;
+          line-height: 26px;
+          font-family: "Inter";
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+
+  .signInRight {
+    width: 50vw;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .signInfooter {
+    display: flex;
+    color: #FFF;
+    position: absolute;
+    bottom: 40px;
+
+    .footerLeft {
+      padding-left: 300px;
+      width: 50vw;
+    }
+
+    .footerRight {
+      display: flex;
+      width: 50vw;
+      padding-left: 300px;
+
+      div {
+        margin-right: 51px;
+      }
+    }
+  }
+
+  @media screen and (max-width:1440px) {
+    .signInLeft {
+      padding: 30px 0px 30px 230px;
+
+      .leftHeader {
+        a {
+          font-size: 12px;
+
+        }
+      }
+
+      .leftContent {
+        margin-top: 150px;
+
+        .leftTitle {
+          font-size: 27px;
+
+        }
+
+        .leftInfo {
+          font-size: 12px;
+        }
+
+        .inputCell {
+          margin-top: 18px;
+
+          .cellTitle {
+            font-size: 12px;
+
+            span {
+              font-size: 12px;
+            }
+          }
+
+          .cellInput {
+            margin-top: 14px;
+
+            .semi-input-wrapper-default {
+              width: 370px;
+              height: 37px;
+
+              input {
+                width: 370px;
+                height: 37px;
+              }
+            }
+          }
+        }
+
+        .CheckboxCell {
+          width: 370px;
+          margin-top: 23px;
+
+          .semi-checkbox-addon,
+          a {
+            font-size: 12px;
+          }
+        }
+
+        .buttonCell {
+          width: 370px;
+          font-size: 12px;
+        }
+
+        .signUpTips {
+
+          font-size: 12px;
+
+          margin-top: 19px;
+
+          a {
+            font-size: 12px;
+          }
+
+        }
+      }
+    }
+
+    .signInfooter {
+      bottom: 30px;
+
+      .footerLeft {
+        padding-left: 230px;
+        width: 50vw;
+        font-size: 12px;
+      }
+
+      .footerRight {
+        display: flex;
+        width: 50vw;
+        font-size: 12px;
+        padding-left: 230px;
+
+        div {
+          margin-right: 38px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:735px) {
+    .signInLeft {
+      padding: 30px 40px !important;
+      width: 100% !important;
+
+      .leftHeader {
+        a {
+          font-size: 12px;
+
+        }
+      }
+
+      .leftContent {
+        margin-top: 50px !important;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+
+        .inputCell {
+          margin-top: 18px;
+
+
+          .cellInput {
+
+            .semi-input-wrapper-default {
+              width: 300px !important;
+
+              input {
+                width: 300px !important;
+              }
+            }
+          }
+        }
+
+        .CheckboxCell {
+          width: 300px !important;
+
+        }
+
+        .buttonCell {
+          width: 300px !important;
+        }
+
+
+      }
+    }
+
+    .signInRight {
+      display: none;
+    }
+
+    .signInfooter {
+      bottom: 30px;
+      padding: 0 30px;
+      flex-direction: column;
+
+      .footerLeft {
+        padding-left: 0px !important;
+        width: 100% !important;
+        font-size: 12px;
+        // justify-content: ;
+      }
+
+      .footerRight {
+        display: flex;
+        padding-left: 0px !important;
+        width: 100% !important;
+        margin-top: 30px;
+        justify-content: space-around;
+
+        div {
+          // margin-right: 20px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

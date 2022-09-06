@@ -86,7 +86,7 @@ export default function ErrorPage(props: any) {
       <BackBnt
         className="VIewBtn"
         onClick={() => {
-          history.push({ pathname: '/portfolioTrack' })
+          history.push({ pathname: '/layout/portfolioTrack' })
         }}
       >
         Back home

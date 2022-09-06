@@ -39,7 +39,7 @@ export default function NavigationBar() {
             text={'Games'}
             icon={<div className="iconfont">&#xe606;</div>}
             onClick={() => {
-              history.push({ pathname: '/game' })
+              history.push({ pathname: '/layout/game' })
             }}
           />
           {/* <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '} */}
@@ -48,7 +48,7 @@ export default function NavigationBar() {
             text={'MarketData'}
             icon={<div className="iconfont">&#xe615;</div>}
             onClick={() => {
-              history.push({ pathname: '/marketdata' })
+              history.push({ pathname: '/layout/marketdata' })
             }}
           />{' '}
           <Nav.Item
@@ -56,7 +56,7 @@ export default function NavigationBar() {
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
-              history.push({ pathname: '/portfolioTrack' })
+              history.push({ pathname: '/layout/portfolioTrack' })
             }}
           />
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
@@ -85,7 +85,7 @@ export default function NavigationBar() {
             text={'Games'}
             icon={<div className="iconfont">&#xe606;</div>}
             onClick={() => {
-              history.push({ pathname: '/game' })
+              history.push({ pathname: '/layout/game' })
             }}
           />
           {/* <Nav.Item itemKey={'user'} text={'WalletScan'} icon={<div className="iconfont">&#xe618;</div>} />{' '} */}
@@ -94,7 +94,7 @@ export default function NavigationBar() {
             text={'MarketData'}
             icon={<div className="iconfont">&#xe615;</div>}
             onClick={() => {
-              history.push({ pathname: '/marketdata' })
+              history.push({ pathname: '/layout/marketdata' })
             }}
           />{' '}
           <Nav.Item
@@ -102,7 +102,7 @@ export default function NavigationBar() {
             text={'Trending'}
             icon={<div className="iconfont">&#xe605;</div>}
             onClick={() => {
-              history.push({ pathname: '/portfolioTrack' })
+              history.push({ pathname: '/layout/portfolioTrack' })
             }}
           />
           <div className={isClolapse ? 'PassCardHid' : 'PassCardShow'}>
