@@ -88,7 +88,6 @@ const BotBox = styled.div`
 export default function Track() {
   // Chakra Color Mode
 
-  const [inputValue, setInputValue] = useState('')
   const history = useHistory()
 
   const [swiperData, setSwiperData] = useState([
@@ -737,7 +736,6 @@ export default function Track() {
     //   },
     // })
   }
-  const [isShowCreate, setIsShowCreate] = useState(false)
 
   useEffect(() => {
     swiper()
