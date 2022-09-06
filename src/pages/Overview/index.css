@@ -40,13 +40,48 @@
   border-radius: 20px;
   margin-top: 24px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overBot {
+    background: #111c44;
+    padding: 14px 24px;
+    border-radius: 15px;
+    margin-top: 16px;
+  }
+}
+.overviewTable .overBot .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  padding-top: 0px;
+  font-size: 16px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overBot .semi-table-thead > .semi-table-row > .semi-table-row-head {
+    padding-top: 0px;
+    font-size: 12px;
+  }
+}
+.overviewTable .overBot .textOver {
+  font-size: 16px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overBot .textOver {
+    font-size: 12px;
+  }
+}
 .overviewTable .overBot .overBotTitle {
   opacity: 1;
   color: #ffffff;
   font-size: 24.46px;
   font-weight: 700;
   text-align: left;
-  line-height: 32.61px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overBot .overBotTitle {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 0px;
+  }
 }
 .overviewTable .overBot .linkIcon {
   color: #ffffff;
@@ -59,6 +94,16 @@
   font-family: "Inter";
   text-align: left;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overBot .typeTime {
+    opacity: 1;
+    color: #a3aed0;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Inter";
+    text-align: left;
+  }
+}
 .overviewTable .overTop {
   display: flex;
   justify-content: space-between;
@@ -69,10 +114,29 @@
   padding: 30px 38px;
   opacity: 1;
   background: #111c44;
-  height: 687px;
+  height: 700px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending {
+    width: 32%;
+    border-radius: 22px;
+    padding: 11px 24px;
+    opacity: 1;
+    background: #111c44;
+    height: 552px;
+  }
 }
 .overviewTable .overTop .tokenTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
   padding-top: 0px;
+  color: #fff;
+  font-size: 20px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+    padding-top: 0px;
+    color: #fff;
+    font-size: 15px;
+  }
 }
 .overviewTable .overTop .tokenTrending .tokenName {
   opacity: 1;
@@ -82,6 +146,16 @@
   font-family: "Inter";
   text-align: left;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending .tokenName {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: left;
+  }
+}
 .overviewTable .overTop .tokenTrending .tokenBalance {
   opacity: 1;
   color: #a3aed0;
@@ -89,6 +163,16 @@
   font-weight: 500;
   font-family: "Inter";
   text-align: left;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending .tokenBalance {
+    opacity: 1;
+    color: #a3aed0;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: left;
+  }
 }
 .overviewTable .overTop .tokenTrending .token2Usd {
   opacity: 1;
@@ -98,6 +182,16 @@
   font-family: "Inter";
   text-align: right;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending .token2Usd {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: right;
+  }
+}
 .overviewTable .overTop .tokenTrending .tokenPrice {
   opacity: 1;
   color: #a3aed0;
@@ -106,32 +200,37 @@
   font-family: "Inter";
   text-align: right;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .tokenTrending .tokenPrice {
+    opacity: 1;
+    color: #a3aed0;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: right;
+  }
+}
 .overviewTable .overTop .overLeft {
   width: 32%;
   border-radius: 30px;
   padding: 30px 15px 30px 15px;
   opacity: 1;
   background: #111c44;
-  height: 687px;
+  height: 700px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .overLeft {
+    width: 32%;
+    border-radius: 22px;
+    padding: 11px 24px;
+    opacity: 1;
+    background: #111c44;
+    height: 552px;
+  }
 }
 .overviewTable .overTop .overLeft .semi-table-thead > .semi-table-row > .semi-table-row-head {
   padding-top: 0px;
-}
-.overviewTable .overTop .overLeft .tokenName {
-  opacity: 1;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Inter";
-  text-align: left;
-}
-.overviewTable .overTop .overLeft .tokenBalance {
-  opacity: 1;
-  color: #a3aed0;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: "Inter";
-  text-align: left;
+  color: #fff;
 }
 .overviewTable .overTop .overLeft .token2Usd {
   opacity: 1;
@@ -141,6 +240,16 @@
   font-family: "Inter";
   text-align: right;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .overLeft .token2Usd {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: right;
+  }
+}
 .overviewTable .overTop .overLeft .tokenPrice {
   opacity: 1;
   color: #a3aed0;
@@ -149,11 +258,29 @@
   font-family: "Inter";
   text-align: right;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .overLeft .tokenPrice {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+    text-align: right;
+  }
+}
 .overviewTable .overTop .backTop {
   background: url(../../assets/images/logo/banner.png);
   width: 100%;
   height: 129px;
   border-radius: 16px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .backTop {
+    background: url(../../assets/images/logo/banner.png);
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+  }
 }
 .overviewTable .overTop .HeaderImg {
   width: 87px;
@@ -162,6 +289,16 @@
   margin-left: 41%;
   border-radius: 50%;
   border: 4px solid #111C44;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .HeaderImg {
+    width: 60px;
+    height: 60px;
+    margin-top: 67px;
+    margin-left: 41%;
+    border-radius: 50%;
+    border: 2px solid #111C44;
+  }
 }
 .overviewTable .overTop .HookWhale {
   font-family: 'Inter';
@@ -173,12 +310,33 @@
   color: #FFFFFF;
   margin-top: 55px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .HookWhale {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    margin-top: 40px;
+  }
+}
 .overviewTable .overTop .handleClickBox {
   margin: auto;
   display: flex;
   align-items: center;
   width: 104px;
   margin-top: 10px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .handleClickBox {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    margin-top: 10px;
+  }
 }
 .overviewTable .overTop .handleClickText {
   font-family: 'Inter';
@@ -189,6 +347,17 @@
   letter-spacing: -0.28px;
   color: #A3AED0;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .handleClickText {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: -0.28px;
+    color: #A3AED0;
+  }
+}
 .overviewTable .overTop .IconCopy {
   width: 13px;
   height: 13px;
@@ -197,11 +366,26 @@
   margin-left: 3px;
   cursor: pointer;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .IconCopy {
+    width: 10px;
+    height: 10px;
+    color: #A3AED0;
+    font-size: 12px;
+    margin-left: 3px;
+    cursor: pointer;
+  }
+}
 .overviewTable .overTop .IconCopy:hover {
   color: #a3aed094;
 }
 .overviewTable .overTop .ResBoxBig {
   margin-top: 15px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .ResBoxBig {
+    margin-top: 15px;
+  }
 }
 .overviewTable .overTop .ResBox {
   margin-right: 7px;
@@ -211,6 +395,19 @@
   border-radius: 11px;
   user-select: none;
   color: #ffffff;
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .ResBox {
+    margin-right: 7px;
+    font-size: 12px;
+    background: #1B254B;
+    padding: 5px 10px;
+    border-radius: 8px;
+    user-select: none;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 .overviewTable .overTop .EtherscanBigBox {
   display: flex;
@@ -220,12 +417,30 @@
   margin-bottom: 20px;
   margin-top: 15px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .EtherscanBigBox {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 259px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+}
 .overviewTable .overTop .CyberText,
 .overviewTable .overTop .OpenseaText,
 .overviewTable .overTop .EtherscanText {
   cursor: pointer;
   color: #438EFF;
   font-size: 14px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .CyberText,
+  .overviewTable .overTop .OpenseaText,
+  .overviewTable .overTop .EtherscanText {
+    color: #438EFF;
+    font-size: 12px;
+  }
 }
 .overviewTable .overTop .CyberText:hover {
   color: #438effad;
@@ -247,6 +462,22 @@
   background-color: #1B254B;
   margin: auto;
   margin-top: 33px;
+  background-size: cover;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .PortfolioBigBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 69px;
+    background: url(../../assets/images/logo/balanceImg.png);
+    background-color: #1B254B;
+    margin: auto;
+    margin-top: 24px;
+    background-size: cover;
+  }
 }
 .overviewTable .overTop .PortfolioBox {
   align-items: center;
@@ -265,6 +496,13 @@
   font-size: 29px;
   font-weight: 700;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .total2UsdText {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
 .overviewTable .overTop .fakeGraphImgBox {
   align-items: flex-end;
 }
@@ -273,21 +511,44 @@
   height: 17px;
   margin-top: 6px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .fakeGraphImg {
+    width: 44px;
+    height: 12px;
+    margin-top: 6px;
+  }
+}
 .overviewTable .overTop .NFTLogoNft2Usd {
   display: flex;
   justify-content: space-around;
   margin-top: 24px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .NFTLogoNft2Usd {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 17px;
+  }
+}
 .overviewTable .overTop .NFTLogoImgBox {
   text-align: center;
   margin-bottom: 9px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .NFTLogoImgBox {
+    text-align: center;
+    margin-bottom: 6px;
+  }
 }
 .overviewTable .overTop .NFTLogoImg {
   width: 60px;
   height: 60px;
 }
-.overviewTable .overTop .ERC721TextBox {
-  margin-left: 16px;
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .NFTLogoImg {
+    width: 42px;
+    height: 42px;
+  }
 }
 .overviewTable .overTop .ERC721Text {
   font-size: 16px;
@@ -296,18 +557,42 @@
   text-align: center;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .ERC721Text {
+    font-size: 12px;
+    color: #A3AED0;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
 .overviewTable .overTop .nft2UsdText {
   font-size: 18px;
   color: #fff;
   margin-bottom: 5px;
   text-align: center;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .nft2UsdText {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}
 .overviewTable .overTop .nftPercentageText {
   font-size: 18px;
   color: #fff;
-  margin-left: 10px;
   text-align: center;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .nftPercentageText {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 }
 .overviewTable .overTop .SLogoBox {
   margin-left: 10px;
@@ -316,9 +601,21 @@
   text-align: center;
   margin-bottom: 9px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .SLogoImgBox {
+    text-align: center;
+    margin-bottom: 9px;
+  }
+}
 .overviewTable .overTop .SLogoImg {
   width: 60px;
   height: 60px;
+}
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .SLogoImg {
+    width: 42px;
+    height: 42px;
+  }
 }
 .overviewTable .overTop .ERC20Text {
   font-size: 16px;
@@ -327,22 +624,58 @@
   text-align: center;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .ERC20Text {
+    font-size: 12px;
+    color: #A3AED0;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
 .overviewTable .overTop .defi2UsdText {
   font-size: 18px;
   color: #fff;
   text-align: center;
   margin-bottom: 5px;
 }
-.overviewTable .overTop .ERC20Box {
-  margin-left: 16px;
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .defi2UsdText {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 }
 .overviewTable .overTop .defiPercentageText {
   font-size: 18px;
   color: #fff;
-  margin-left: 10px;
   text-align: center;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 1440px) {
+  .overviewTable .overTop .defiPercentageText {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
 .semi-table-body {
   margin-top: 10px;
+}
+.semi-col-6 {
+  display: block;
+  box-sizing: border-box;
+  width: 33%;
+}
+@media screen and (max-width: 1440px) {
+  .semi-col-6 {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+.overviewTable .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  padding-top: 0px;
 }

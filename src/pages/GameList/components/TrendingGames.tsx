@@ -815,13 +815,13 @@ export default function Ranking(props: any) {
           <TrendingGamesTitleBox>
             <div>
               <Title>Trending games</Title>
-              <MoreTitle
+              {/* <MoreTitle
                 onClick={() => {
                   history.push({ pathname: '/moregame' })
                 }}
               >
                 (more)
-              </MoreTitle>
+              </MoreTitle> */}
             </div>
             <div>
               <Dropdown

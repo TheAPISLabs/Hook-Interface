@@ -99,7 +99,7 @@ export default function Overview () {
     // e.stopPropagation()
     copy(searchAddress)
   }
-  const scroll = { y: getScreenWidth() > 1440 ? 611 : 150 }
+  const scroll = { y: getScreenWidth() > 1440 ? 611 : 490 }
   const renderLink = (text, record, index) => {
     return (
       <a className='linkIcon' href={text} target="_blank" rel="noreferrer">
