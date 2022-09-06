@@ -177,3 +177,7 @@
   z-index: 999;
   border-radius: 20px;
 }
+.swiper-pagination {
+  position: relative;
+  top: 10px;
+}

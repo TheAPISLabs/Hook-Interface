@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-restricted-imports
 import 'braft-editor/dist/index.css'
+import '../index.css'
 
 // Chakra imports
 import { Avatar, Button, Card, Notification } from '@douyinfe/semi-ui'
@@ -292,9 +293,9 @@ export default function Comments(props) {
             background: 'rgba(117,81,255,1)',
             color: '#fff',
             position: 'relative',
-            left: '50%',
             marginLeft: '-16%',
           }}
+          className="WriteCommentBtn"
           variant="brand"
           onClick={() => {
             if (!uId) {

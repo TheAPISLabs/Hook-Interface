@@ -91,7 +91,6 @@ export default function Earn(props) {
                   style={{
                     height: '44px',
                     width: '44px',
-                    marginLeft: '14px',
                     background: '#0c1437',
                     cursor: 'pointer',
                     borderRadius: '50%',

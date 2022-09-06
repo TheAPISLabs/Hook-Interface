@@ -1,7 +1,6 @@
 import './index.css'
 
 import { IconSearch } from '@douyinfe/semi-icons'
-import { IconChevronRight } from '@douyinfe/semi-icons'
 // import { useHistory } from 'react-router-dom'
 import { Input } from '@douyinfe/semi-ui'
 import backLogo from 'assets/images/logo/BgImage.svg'
@@ -23,6 +22,11 @@ export default function Track(props: any) {
     height: 250px;
     width: 100%;
     margin: auto;
+    @media screen and (max-width: 1440px) {
+      height: 189px;
+      width: 100%;
+      margin: auto;
+    }
   `
   const TrackTitle = styled.div`
     color: rgba(255, 255, 255, 1);
@@ -34,6 +38,17 @@ export default function Track(props: any) {
     letter-spacing: -1.08px;
     margin-top: 52px;
     text-align: center;
+    @media screen and (max-width: 1440px) {
+      color: rgba(255, 255, 255, 1);
+      font-size: 40px;
+      font-weight: 500;
+      font-family: 'Inter';
+      text-align: center;
+      line-height: 40px;
+      letter-spacing: -0.81px;
+      margin-top: 52px;
+      text-align: center;
+    }
   `
   const TrackTitles = styled.div`
     color: rgba(163, 174, 208, 1);
@@ -44,20 +59,43 @@ export default function Track(props: any) {
     line-height: 24px;
     margin-top: 15px;
     text-align: center;
+    @media screen and (max-width: 1440px) {
+      color: rgba(163, 174, 208, 1);
+      font-size: 14px;
+      font-weight: 400;
+      font-family: 'Inter';
+      text-align: left;
+      line-height: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
   `
   const InputBox = styled.div`
     margin: auto;
     margin-top: 50px;
     width: 860px;
     color: #fff;
+    @media screen and (max-width: 1440px) {
+      margin: auto;
+      margin-top: 38px;
+      width: 645px;
+      color: #fff;
+    }
   `
   const WalletFlex = styled.div`
-  margin: auto;
-  margin-top: 22px;
-  width: 860px;
-  alignItems="center";
-  display: flex;
-`
+    margin: auto;
+    margin-top: 22px;
+    width: 860px;
+    align-items: center;
+    display: flex;
+    @media screen and (max-width: 1440px) {
+      margin: auto;
+      margin-top: 15px;
+      width: 645px;
+      align-items: center;
+      display: flex;
+    }
+  `
   const WalletText = styled.div`
     color: rgba(255, 255, 255, 1);
     font-size: 18px;
@@ -65,7 +103,14 @@ export default function Track(props: any) {
     font-family: 'Inter';
     text-align: left;
     line-height: 24px;
-    margin-right: 20px;
+    @media screen and (max-width: 1440px) {
+      color: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Inter';
+      text-align: left;
+      line-height: 18px;
+    }
   `
   const TrendingBox = styled.div`
     margin: auto;
@@ -74,12 +119,26 @@ export default function Track(props: any) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 1440px) {
+      margin: auto;
+      margin-top: 17px;
+      width: 645px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   `
   const TrendingFlex = styled.div`
     display: flex;
     align-items: center;
     width: 322px;
     margin-bottom: 16px;
+    @media screen and (max-width: 1440px) {
+      display: flex;
+      align-items: center;
+      width: 232px;
+      margin-bottom: 12px;
+    }
   `
   const FireIconBox = styled.div`
     margin-right: 14px;
@@ -90,6 +149,16 @@ export default function Track(props: any) {
     font-size: 18px;
     line-height: 24px;
     color: #a3aed0;
+    @media screen and (max-width: 1440px) {
+      margin-right: 14px;
+      text-align: center;
+      width: 13px;
+      height: 18px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: #a3aed0;
+    }
   `
   const NumberNftBox = styled.div`
     font-weight: 400;
@@ -104,6 +173,18 @@ export default function Track(props: any) {
     cursor: pointer;
     &:hover {
       color: #4264a1;
+    }
+    @media screen and (max-width: 1440px) {
+      font-weight: 400;
+      color: #3899d0;
+      letter-spacing: -0.27px;
+      width: 203px;
+      overflow: hidden;
+      display: block;
+      word-break: keep-all;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
     }
   `
   useEffect(() => {
@@ -131,10 +212,10 @@ export default function Track(props: any) {
       <InputBox>
         <Input
           defaultValue={inputValue}
-          prefix={<IconSearch />}
+          prefix={<IconSearch style={{ color: '#fff' }} />}
           placeholder="Search by Ens/ Ethereum address "
           showClear
-          style={{ color: '#fff' }}
+          style={{ color: '#fff', background: '#111C44' }}
           onChange={hanldeChange}
           onKeyDown={(res) => {
             if (res.key == 'Enter') {
@@ -156,7 +237,7 @@ export default function Track(props: any) {
       </InputBox>
       <WalletFlex>
         <WalletText>Trending Wallet</WalletText>
-        <IconChevronRight style={{ color: '#fff' }} size="extra-large" />
+        {/* <IconChevronRight style={{ color: '#fff' }} size="extra-large" /> */}
       </WalletFlex>
       <TrendingBox>
         {TrendingData.map((item: any, index: any) => {

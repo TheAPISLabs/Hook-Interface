@@ -1,14 +1,17 @@
 .max {
   width: 100%;
 }
+
 .max .semi-tabs-bar {
   margin-left: 53px;
 }
+
 @media screen and (max-width: 700px) {
   .max .semi-tabs-bar {
     margin-left: 0px;
   }
 }
+
 .max .semi-tabs-bar-button .semi-tabs-tab-active,
 .max .semi-tabs-bar-button .semi-tabs-tab-active:hover {
   border: none;
@@ -22,7 +25,9 @@
   text-align: center;
   line-height: 40px;
 }
+
 @media screen and (max-width: 1440px) {
+
   .max .semi-tabs-bar-button .semi-tabs-tab-active,
   .max .semi-tabs-bar-button .semi-tabs-tab-active:hover {
     width: 52px;
@@ -36,6 +41,7 @@
     line-height: 30px;
   }
 }
+
 .max .semi-tabs-bar-button .semi-tabs-tab {
   padding: 0px;
   border: none;
@@ -49,6 +55,7 @@
   border-radius: 49px;
   line-height: 40px;
 }
+
 @media screen and (max-width: 1440px) {
   .max .semi-tabs-bar-button .semi-tabs-tab {
     padding: 0px;
@@ -64,11 +71,13 @@
     line-height: 30px;
   }
 }
+
 .max .semi-tabs-content {
   width: 100%;
   padding: 0px;
   margin-top: 38px;
 }
+
 @media screen and (max-width: 1440px) {
   .max .semi-tabs-content {
     width: 100%;
@@ -76,14 +85,17 @@
     margin-top: 28px;
   }
 }
+
 .max .semi-tabs {
   width: 100%;
 }
+
 .textOver {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 @media screen and (max-width: 700px) {
   .textOver {
     white-space: nowrap;
@@ -91,18 +103,22 @@
     text-overflow: ellipsis;
   }
 }
+
 .Tabss {
   margin-bottom: 20px;
 }
+
 @media screen and (max-width: 1440px) {
   .Tabss {
     margin-bottom: 16px;
   }
 }
+
 .grid {
   width: 100%;
 }
-.Trending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+
+.Trending .semi-table-thead>.semi-table-row>.semi-table-row-head {
   background-color: transparent;
   color: var(--semi-color-text-2);
   border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -119,8 +135,9 @@
   font-weight: 400;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .Trending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  .Trending .semi-table-thead>.semi-table-row>.semi-table-row-head {
     background-color: transparent;
     color: var(--semi-color-text-2);
     border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -138,8 +155,9 @@
     text-align: left;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .Trending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  .Trending .semi-table-thead>.semi-table-row>.semi-table-row-head {
     background-color: transparent;
     color: var(--semi-color-text-2);
     border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -157,7 +175,8 @@
     text-align: left;
   }
 }
-.Trending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+
+.Trending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
   display: table-cell;
   word-wrap: break-word;
   word-break: break-all;
@@ -173,8 +192,9 @@
   font-weight: 500;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .Trending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  .Trending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -191,8 +211,9 @@
     text-align: left;
   }
 }
-@media screen and (max-width: 7000px) {
-  .Trending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+
+@media screen and (max-width: 700px) {
+  .Trending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -209,11 +230,13 @@
     text-align: left;
   }
 }
+
 .ProgressBox {
   display: flex;
   justify-content: space-between;
   width: 142px;
 }
+
 @media screen and (max-width: 1440px) {
   .ProgressBox {
     display: flex;
@@ -221,49 +244,60 @@
     width: 106px;
   }
 }
+
 .ProgressBoxWit {
   width: 108px;
 }
+
 @media screen and (max-width: 1440px) {
   .ProgressBoxWit {
     width: 81px;
   }
 }
+
 .AddressesBox {
   width: 305px;
 }
+
 @media screen and (max-width: 1440px) {
   .AddressesBox {
     width: 219px;
   }
 }
+
 @media screen and (max-width: 1920px) {
   .TrendingBox .semi-table-body {
     max-height: 214px !important;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .TrendingBox .semi-table-body {
     max-height: 150px !important;
   }
 }
+
 @media screen and (max-width: 700px) {
   .TrendingBox .semi-table-body {
     max-height: 254px !important;
   }
 }
+
 .semi-progress-track {
   background-color: rgba(241, 241, 241, 0.17) !important;
 }
+
 .mt {
   margin-top: 20px;
 }
+
 @media screen and (max-width: 1440px) {
   .mt {
     margin-top: 16px;
   }
 }
-.DeFiTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+
+.DeFiTrending .semi-table-thead>.semi-table-row>.semi-table-row-head {
   background-color: transparent;
   color: var(--semi-color-text-2);
   font-weight: 600;
@@ -281,8 +315,9 @@
   font-weight: 400;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .DeFiTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  .DeFiTrending .semi-table-thead>.semi-table-row>.semi-table-row-head {
     background-color: transparent;
     color: var(--semi-color-text-2);
     border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -295,13 +330,14 @@
     word-wrap: break-word;
     position: relative;
     color: #a3aed0;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 400;
     width: 110px;
     text-align: left;
   }
 }
-.DeFiTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+
+.DeFiTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
   display: table-cell;
   word-wrap: break-word;
   word-break: break-all;
@@ -317,8 +353,9 @@
   font-weight: 500;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .DeFiTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  .DeFiTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -335,8 +372,9 @@
     text-align: left;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .DeFiTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  .DeFiTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -354,46 +392,56 @@
     width: 108px;
   }
 }
+
 @media screen and (max-width: 1920px) {
   .DeFiTrending .semi-table-body {
     max-height: 214px !important;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .DeFiTrending .semi-table-body {
     max-height: 150px !important;
   }
 }
+
 @media screen and (max-width: 700px) {
   .DeFiTrending .semi-table-body {
     max-height: 254px !important;
   }
 }
+
 .DeFiTrending .semi-avatar-small {
   width: 20px;
   height: 20px;
 }
+
 @media screen and (max-width: 1440px) {
   .DeFiTrending .semi-avatar-small {
     width: 15px;
     height: 15px;
   }
 }
+
 .DeFiTrending .SineNum {
   color: #01B574;
 }
+
 .DeFiTrending .RedSineNum {
   color: #ac0909;
 }
+
 .DeFiTrending .KeyWidth {
   width: 76px;
 }
+
 @media screen and (max-width: 1440px) {
   .DeFiTrending .KeyWidth {
     width: 58px;
   }
 }
-.NFTTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+
+.NFTTrending .semi-table-thead>.semi-table-row>.semi-table-row-head {
   background-color: transparent;
   color: var(--semi-color-text-2);
   font-weight: 600;
@@ -411,8 +459,9 @@
   font-weight: 400;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .NFTTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  .NFTTrending .semi-table-thead>.semi-table-row>.semi-table-row-head {
     background-color: transparent;
     color: var(--semi-color-text-2);
     border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -430,8 +479,9 @@
     text-align: left;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .NFTTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  .NFTTrending .semi-table-thead>.semi-table-row>.semi-table-row-head {
     background-color: transparent;
     color: var(--semi-color-text-2);
     border-bottom: 1px solid rgba(110, 116, 124, 0.23);
@@ -450,22 +500,26 @@
     text-align: left;
   }
 }
+
 @media screen and (max-width: 1920px) {
   .NFTTrending .semi-table-body {
     max-height: 214px !important;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .NFTTrending .semi-table-body {
     max-height: 150px !important;
   }
 }
+
 @media screen and (max-width: 700px) {
   .NFTTrending .semi-table-body {
     max-height: 254px !important;
   }
 }
-.NFTTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+
+.NFTTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
   display: table-cell;
   word-wrap: break-word;
   word-break: break-all;
@@ -481,8 +535,9 @@
   font-weight: 500;
   text-align: left;
 }
+
 @media screen and (max-width: 1440px) {
-  .NFTTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  .NFTTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -499,8 +554,9 @@
     text-align: left;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .NFTTrending .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  .NFTTrending .semi-table-tbody>.semi-table-row>.semi-table-row-cell {
     display: table-cell;
     word-wrap: break-word;
     word-break: break-all;
@@ -518,36 +574,45 @@
     width: 160px;
   }
 }
+
 .NFTTrending .renderName {
   width: 224px;
 }
+
 @media screen and (max-width: 1440px) {
   .NFTTrending .renderName {
     width: 167px;
   }
 }
+
 .NFTTrending .KeyWidth {
   width: 76px;
 }
+
 @media screen and (max-width: 1440px) {
   .NFTTrending .KeyWidth {
     width: 58px;
   }
 }
+
 .MarketCapTab .SineNum {
   color: #01B574;
 }
+
 .MarketCapTab .RedSineNum {
   color: #ac0909;
 }
+
 .SkeletonParagraph {
   width: 1583px;
 }
+
 @media screen and (max-width: 1440px) {
   .SkeletonParagraph {
     width: 1184px;
   }
 }
+
 .semi-skeleton-active .semi-skeleton-paragraph li {
   background: linear-gradient(90deg, rgba(81, 87, 96, 0.66) 25%, var(--semi-color-fill-1) 44%, var(--semi-color-fill-0) 88%);
   background-size: 400% 100%;

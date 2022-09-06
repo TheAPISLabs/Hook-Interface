@@ -15,6 +15,7 @@ import fakeGraph from '../../assets/images/logo/fakeGraph.png'
 import NFTLogo from '../../assets/images/logo/NFTLogo.png'
 import SLogo from '../../assets/images/logo/SLogo.png'
 import { getTags, getTxDatas } from '../../hook/hook'
+import { getScreenWidth } from '../../hook/untils'
 export const initTime = (timestamp) => {
   let date = new Date(timestamp)
   const Y = date.getFullYear() + '-'
@@ -98,6 +99,7 @@ export default function Overview () {
     // e.stopPropagation()
     copy(searchAddress)
   }
+  const scroll = { y: getScreenWidth() > 1440 ? 611 : 150 }
   const renderLink = (text, record, index) => {
     return (
       <a className='linkIcon' href={text} target="_blank" rel="noreferrer">
@@ -298,13 +300,13 @@ export default function Overview () {
       </div>
         </div>
         <div className='tokenTrending'>
-          <Table dataSource={defiToken} pagination={false} >
+          <Table dataSource={defiToken} pagination={false} scroll={scroll}>
             <Column title="DeFi Token" dataIndex="tokenInfo" key="key" render={renderInfo} className="KeyWidth" />
             <Column title="" dataIndex="tokenInfo" key="Sales" render={renderUsd} />
           </Table>
         </div>
         <div className='tokenTrending'>
-          <Table dataSource={nftData} pagination={false} >
+          <Table dataSource={nftData} pagination={false} scroll={scroll}>
             <Column title="NFTs token" dataIndex="tokenInfo" key="key" render={renderInfo} className="KeyWidth" />
             <Column title="" dataIndex="tokenInfo" key="Sales" render={renderUsd} />
           </Table>

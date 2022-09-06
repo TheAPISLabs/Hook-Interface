@@ -49,9 +49,8 @@ const TypeBox = styled.div`
   width: 97px;
   height: 26px;
   border-radius: 8.64px;
-  opacity: 0.5;
-  background: rgba(108, 93, 211, 1);
-  color: rgba(95, 117, 238, 1);
+  background: rgb(163 150 255);
+  color: rgb(61 78 176);
   font-size: 14px;
   font-weight: 400;
   text-align: center;
@@ -83,6 +82,7 @@ const AddBox = styled.div`
   align-items: center;
   color: #fff;
   cursor: pointer;
+  margin-top: 3px;
 `
 const BotBox = styled.div`
   display: flex;

@@ -46,7 +46,7 @@ export default function NavigationBar() {
           <Nav.Item
             itemKey={'union-management'}
             text={'MarketData'}
-            icon={<div className="iconfont">&#xe615;</div>}
+            icon={<div className="HouseIcon iconfont">&#xe615;</div>}
             onClick={() => {
               history.push({ pathname: '/layout/marketdata' })
             }}
@@ -92,7 +92,7 @@ export default function NavigationBar() {
           <Nav.Item
             itemKey={'union-management'}
             text={'MarketData'}
-            icon={<div className="iconfont">&#xe615;</div>}
+            icon={<div className="iconfont HouseIcon">&#xe615;</div>}
             onClick={() => {
               history.push({ pathname: '/layout/marketdata' })
             }}

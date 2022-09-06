@@ -43,14 +43,16 @@
   color: #fff;
 }
 .Headers .headerItems .signInBox {
-  width: 60px;
-  height: 31px;
-  border-radius: 36.58px;
+  width: 117px;
+  height: 41px;
+  border-radius: 49px;
   opacity: 1;
   background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
   font-size: 14px;
+  font-family: 'Inter';
   text-align: center;
-  line-height: 31px;
+  line-height: 41px;
+  letter-spacing: -0.28px;
   color: #fff;
   cursor: pointer;
 }

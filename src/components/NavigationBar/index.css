@@ -70,6 +70,16 @@
     object-fit: scale-down;
   }
 }
+.NavBar .HouseIcon {
+  font-size: 21px !important;
+  margin-left: -2px;
+}
+@media screen and (max-width: 1440px) {
+  .NavBar .HouseIcon {
+    font-size: 18px !important;
+    margin-left: -2px;
+  }
+}
 .NavBar .iconfont {
   font-size: 18px;
 }
