@@ -178,6 +178,6 @@
   border-radius: 20px;
 }
 .swiper-pagination {
-  position: relative;
+  position: relative !important;
   top: 10px;
 }
