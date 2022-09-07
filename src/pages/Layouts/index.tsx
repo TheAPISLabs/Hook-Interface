@@ -28,7 +28,7 @@ const BodyWrapper = styled.div`
   display: flex;
 
   width: 100%;
-  padding: 20px 20px 20px 30px;
+  padding: 0px 20px 20px 30px;
   flex: 1;
   z-index: 1;
 

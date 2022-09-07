@@ -1,7 +1,7 @@
 .Headers {
   display: flex;
   justify-content: flex-end;
-  padding: 40px 16px;
+  padding: 40px 16px 16px 16px;
 }
 .Headers input::-webkit-input-placeholder {
   color: #fff;

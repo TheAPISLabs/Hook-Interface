@@ -20,7 +20,7 @@ export default function Ranking(props: any) {
   `
   const TrendingGames = styled.div`
     height: 706px;
-    margin-top: 36px;
+    margin-top: 22px;
     @media screen and (max-width: 1440px) {
       height: 543px;
       margin-top: 22px;

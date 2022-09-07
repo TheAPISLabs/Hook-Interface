@@ -11,7 +11,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
 import HeaderImg from '../../assets/images/logo/avatar4.png'
-import fakeGraph from '../../assets/images/logo/fakeGraph.png'
 import NFTLogo from '../../assets/images/logo/NFTLogo.png'
 import SLogo from '../../assets/images/logo/SLogo.png'
 import { getTags, getTxDatas } from '../../hook/hook'
@@ -252,9 +251,9 @@ export default function Overview () {
             ${total2Usd}
           </div>
         </div>
-        <div className='fakeGraphImgBox' align="flex-end">
+        {/* <div className='fakeGraphImgBox' align="flex-end">
           <img src={fakeGraph} alt="" className='fakeGraphImg' />
-        </div>
+        </div> */}
       </div>
     
     </div>

@@ -1,5 +1,7 @@
 // Chakra imports
 // import { Avatar, AvatarGroup, div, Button, div, Image, Text, useToast } from '@chakra-ui/react'
+import '../index.css'
+
 import { Avatar, AvatarGroup, Button, Card, Notification } from '@douyinfe/semi-ui'
 import data from '@emoji-mart/data'
 // import Card from 'components/card/Card.js'
@@ -42,19 +44,7 @@ export default function Earn(props) {
 
   return (
     <div>
-      <span
-        style={{
-          color: ' rgba(255,255,255,1)',
-          fontSize: '24px',
-          fontWeight: ' 500',
-          textAlign: 'left',
-          lineHeight: '32px',
-          marginBottom: '10px',
-        }}
-        className="font-Inter-SemiBold"
-      >
-        React to earn
-      </span>
+      <span className="font-Inter-SemiBold earnTitle">React to earn</span>
       <Card
         style={{
           width: '100%',

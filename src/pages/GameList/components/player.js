@@ -101,9 +101,8 @@ export default function GameSwipper () {
           // fontSize: '24px',
           fontWeight: ' 500',
           spanAlign: 'left',
-          lineHeight: '32px',
           fontSize: '7.2w',
-          marginBottom: '30px',
+          marginBottom: '22px',
           // marginBottom: '26px',
         }}
         className="font-Inter-SemiBold"
