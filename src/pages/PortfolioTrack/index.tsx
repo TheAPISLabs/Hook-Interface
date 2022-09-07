@@ -17,11 +17,30 @@ export default function Track(props: any) {
   const TrackBigBox = styled.div`
     // padding-top: 80px;
     width: 100%;
+    input::-webkit-input-placeholder {
+      color: #a3aed0;
+    }
+
+    input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #a3aed0;
+    }
+
+    input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #a3aed0;
+    }
+
+    input:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #a3aed0;
+    }
   `
   const BackImage = styled.img`
     height: 250px;
     width: 100%;
     margin: auto;
+
     @media screen and (max-width: 1440px) {
       height: 189px;
       width: 100%;
