@@ -51,7 +51,6 @@ export default function Ranking(props: any) {
     font-weight: 500;
     font-family: 'Inter';
     text-align: left;
-    line-height: 56px;
     @media screen and (max-width: 1440px) {
       color: rgba(255, 255, 255, 1);
       font-size: 18px;

@@ -158,12 +158,12 @@ export default function GamePlayers(props: any) {
     padding: 40px 55px 38px 35px;
     box-sizing: border-box;
     height: 273px;
-    border-bottom: 1px solid #e4e4e442;
+    border-bottom: 1px solid rgba(228, 228, 228, 0.1);
     @media screen and (max-width: 1440px) {
       padding: 30px 41px 28px 26px;
       box-sizing: border-box;
       height: 203px;
-      border-bottom: 1px solid #e4e4e442;
+      border-bottom: 1px solid rgba(228, 228, 228, 0.1);
     }
   `
   const MobileBorerBox = styled.div`
@@ -263,7 +263,7 @@ export default function GamePlayers(props: any) {
     background: rgba(108, 93, 211, 1);
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
     line-height: 56px;
 
@@ -280,7 +280,7 @@ export default function GamePlayers(props: any) {
       background: rgba(108, 93, 211, 1);
       color: rgba(255, 255, 255, 1);
       font-size: 10px;
-      font-weight: 400;
+      font-weight: 500;
       text-align: center;
       line-height: 42px;
       margin-top: 5px;

@@ -24,7 +24,7 @@ const GameBox = styled.div`
   max-height: 60vh;
   // transform: ;
   position: absolute;
-  top: 10px;
+  top: 60px;
   left: 50%;
   transform: translate(-35%) scale(0.9);
 `
@@ -891,7 +891,7 @@ export default function Track() {
               fontSize: ' 21.84px',
               textAlign: 'center',
               lineHeight: '71.76px',
-              marginTop: '113.24px',
+              marginTop: '50px',
             }}
           >
             Explore all games

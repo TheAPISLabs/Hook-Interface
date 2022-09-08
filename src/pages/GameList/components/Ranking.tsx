@@ -7,10 +7,10 @@ import { isMobile } from '../../GameDetails/components/until.js'
 export default function Ranking(props: any) {
   const { gameData } = props
   const TrendingGamesBox = styled.div`
-    height: 782px;
+    height: 710px;
     margin-bottom: 52px;
     @media screen and (max-width: 1440px) {
-      height: 590px;
+      height: 530px;
       margin-bottom: 39px;
     }
   `
