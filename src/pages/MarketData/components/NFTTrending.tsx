@@ -119,7 +119,7 @@ export default function TrendingAddresses(props: any) {
     <TrendingBox className="NFTTrending">
       <TitleBox>
         <Title>NFT Gaming Trending</Title>
-        <Volume className="iconfont">&#xe600;</Volume>
+        {/* <Volume className="iconfont">&#xe600;</Volume> */}
       </TitleBox>
       <Table dataSource={NFTGameData} pagination={false} scroll={scroll}>
         <Column title="#" dataIndex="key" key="key" render={renderIndex} className="KeyWidth" />

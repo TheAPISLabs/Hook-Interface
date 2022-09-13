@@ -69,6 +69,10 @@ const ViewBox = styled.div`
   line-height: 52px;
   margin-right: 16px;
   cursor: pointer;
+  :hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 `
 const AddBox = styled.div`
   width: 48px;
@@ -894,7 +898,7 @@ export default function Track() {
               marginTop: '50px',
             }}
           >
-            Explore all games
+            Explore
           </Box>
         </Link>
       </GameBox>

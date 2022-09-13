@@ -148,7 +148,7 @@ export default function Earn(props) {
                     position: 'absolute',
                     maxWidth: 'none',
                     top: '-20px',
-                    left: '-60px',
+                    left: '-75px',
                   }}
                 />
               </div>

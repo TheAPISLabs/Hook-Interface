@@ -148,12 +148,14 @@ export default function Ranking(props: any) {
     text-align: left;
     line-height: 24px;
     font-size: 18px;
+    cursor: pointer;
     @media screen and (max-width: 1440px) {
       color: rgb(255, 255, 255);
       font-weight: 500;
       text-align: left;
       line-height: 18px;
       font-size: 14px;
+      cursor: pointer;
     }
   `
   const MobileGameCardName = styled.div`
@@ -691,7 +693,7 @@ export default function Ranking(props: any) {
                           <MobileHeaderBox>
                             <HeaderImage src={item.gameUserIcon} alt="" />
                           </MobileHeaderBox>
-                          <MobileGameStudioBox>{item.gameStudio}®</MobileGameStudioBox>
+                          <MobileGameStudioBox>{item.gameStudio}</MobileGameStudioBox>
                         </GameCardHeaderBox>
                       </MobileGameCardNameBox>
                       <HSeparator></HSeparator>
@@ -879,7 +881,14 @@ export default function Ranking(props: any) {
                       >
                         <GameCardImage src={item?.imgs[0].url} alt="" />
                       </GameCardImageBox>
-                      <GameCardNameBox>
+                      <GameCardNameBox
+                        onClick={() => {
+                          localStorage.setItem('game', JSON.stringify(item))
+                          history.push({
+                            pathname: '/layout/gamedetails',
+                          })
+                        }}
+                      >
                         <GameCardName>{item.name}</GameCardName>
 
                         <PlayFlexBox>
@@ -892,7 +901,7 @@ export default function Ranking(props: any) {
                           <HeaderBox>
                             <HeaderImage src={item.gameUserIcon} alt="" />
                           </HeaderBox>
-                          <GameStudioBox>{item.gameStudio}®</GameStudioBox>
+                          <GameStudioBox>{item.gameStudio}</GameStudioBox>
                         </GameCardHeaderBox>
                       </GameCardNameBox>
                       <HSeparator></HSeparator>

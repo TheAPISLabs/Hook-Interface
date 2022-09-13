@@ -135,7 +135,7 @@ export default function DeFiTrending(props: any) {
     <TrendingBox className="DeFiTrending">
       <TitleBox>
         <Title>Gaming Token Trending</Title>
-        <Volume className="iconfont">&#xe600;</Volume>
+        {/* <Volume className="iconfont">&#xe600;</Volume> */}
       </TitleBox>
       <Table dataSource={DiFiGameData} pagination={false} scroll={scroll}>
         <Column title="#" dataIndex="key" key="key" render={renderIndex} className="KeyWidth" />

@@ -141,7 +141,7 @@ export default function Ranking(props: any) {
     font-size: 12px;
     font-weight: 400;
     text-align: left;
-    line-height: 15px;
+    line-height: 21px;
     lineclamp: 3;
     overflow: hidden;
     @media screen and (max-width: 1440px) {
@@ -150,7 +150,7 @@ export default function Ranking(props: any) {
       font-size: 10px;
       font-weight: 400;
       text-align: left;
-      line-height: 12px;
+      line-height: 16px;
       lineclamp: 3;
       overflow: hidden;
     }

@@ -120,7 +120,7 @@ export default function TrendingAddresses(props: any) {
     <TrendingBox className="TrendingBox">
       <TitleBox>
         <Title>Trending Addresses</Title>
-        <Volume className="iconfont">&#xe600;</Volume>
+        {/* <Volume className="iconfont">&#xe600;</Volume> */}
       </TitleBox>
       <Table dataSource={AddessData} pagination={false} scroll={scroll}>
         <Column title="Addresses" dataIndex="searchName" key="name" render={renderName} className="AddressesBox" />
