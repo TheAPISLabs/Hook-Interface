@@ -265,15 +265,15 @@ export default function Track(props: any) {
               <FireIconBox>
                 {index === 0 ? (
                   //   <Image src={hot} width="17px" height="24px" />
-                  <>🔥</>
+                  <div style={{ color: '#F13016' }}>{index + 1}</div>
                 ) : index === 1 ? (
-                  <div style={{ color: '#F13016' }}>{index}</div>
+                  <div style={{ color: '#F13016' }}>{index + 1}</div>
                 ) : index === 2 ? (
-                  <div style={{ color: '#FF6A36' }}>{index}</div>
+                  <div style={{ color: '#FF6A36' }}>{index + 1}</div>
                 ) : index === 3 ? (
-                  <div style={{ color: '#FFD44E' }}>{index}</div>
+                  <div style={{ color: '#FF6A36' }}>{index + 1}</div>
                 ) : (
-                  index
+                  index + 1
                 )}
               </FireIconBox>
               <div>
