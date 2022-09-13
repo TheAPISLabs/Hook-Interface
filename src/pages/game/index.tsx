@@ -817,7 +817,7 @@ export default function Track() {
                       </Box>
 
                       <Box style={{ padding: '35px', boxSizing: 'border-box' }}>
-                        <TypeBox>{item.genres}111</TypeBox>
+                        <TypeBox>{item.genres}</TypeBox>
                         <Box
                           style={{
                             color: '#FFFFFF',
