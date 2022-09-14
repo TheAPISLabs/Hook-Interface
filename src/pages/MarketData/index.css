@@ -91,6 +91,9 @@
     text-overflow: ellipsis;
   }
 }
+.AepColore {
+  color: #A3AED0;
+}
 .Tabss {
   margin-bottom: 24px;
 }
@@ -386,11 +389,13 @@
   color: #ac0909;
 }
 .DeFiTrending .KeyWidth {
-  width: 76px;
+  width: 28px;
+  color: #A3AED0 !important;
 }
 @media screen and (max-width: 1440px) {
   .DeFiTrending .KeyWidth {
-    width: 58px;
+    width: 26px;
+    color: #A3AED0 !important;
   }
 }
 .NFTTrending .semi-table-thead > .semi-table-row > .semi-table-row-head {
@@ -527,11 +532,13 @@
   }
 }
 .NFTTrending .KeyWidth {
-  width: 76px;
+  width: 28px;
+  color: #A3AED0 !important;
 }
 @media screen and (max-width: 1440px) {
   .NFTTrending .KeyWidth {
-    width: 58px;
+    width: 26px;
+    color: #A3AED0 !important;
   }
 }
 .MarketCapTab .SineNum {

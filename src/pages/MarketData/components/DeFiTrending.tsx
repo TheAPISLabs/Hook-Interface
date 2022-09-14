@@ -10,7 +10,7 @@ import imgHeader from '../../../assets/images/logo/flowers.png'
 
 const renderName = (text: any, record: any, index: any) => {
   return (
-    <div className="textOver">
+    <div className="textOver AepColore">
       <Avatar
         size="small"
         shape="square"

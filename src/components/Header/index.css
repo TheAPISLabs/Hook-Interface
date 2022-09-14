@@ -32,9 +32,12 @@
 .Headers .headerItems .semi-input-wrapper .semi-icon {
   color: #fff;
 }
+.Headers .headerItems .semi-input-wrapper__with-prefix .semi-input {
+  padding-right: 0px;
+}
 .Headers .headerItems .semi-input-wrapper-clearable,
 .Headers .headerItems .semi-input-wrapper-modebtn {
-  width: 160px;
+  width: 170px;
   height: 31px;
   border-radius: 36.58px;
   opacity: 1;
