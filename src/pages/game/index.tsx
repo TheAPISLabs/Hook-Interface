@@ -27,6 +27,12 @@ const GameBox = styled.div`
   top: 60px;
   left: 50%;
   transform: translate(-35%) scale(0.9);
+  @media screen and (max-width: 720px) {
+    transform: translate(-50%) scale(0.9);
+    max-height: 100vh;
+    position: relative;
+    margin-top: -100px;
+  }
 `
 const Flex = styled.div`
   display: flex;
